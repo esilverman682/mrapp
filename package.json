@@ -1,54 +1,39 @@
 {
-  "name": "root",
+  "name": "next-headless-getting-started",
+  "version": "0.1.0",
   "private": true,
   "engines": {
     "node": ">=14.0.0",
-    "npm": ">=7.0.0"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/core",
-      "packages/react",
-      "packages/next",
-      "examples/next/getting-started",
-      "plugins/faustwp"
-    ]
+    "npm": ">=6.0.0"
   },
   "scripts": {
-    "build": "npm run build --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "build:core": "npm run build --workspace=@faustjs/core",
-    "build:next": "npm run build --workspace=@faustjs/next",
-    "build:react": "npm run build --workspace=@faustjs/react",
-    "clean": "npm run clean --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "clean:examples": "rimraf examples/**/node_modules",
-    "lint": "npm run lint --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "lint:fix": "npm run lint:fix --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "format": "npm run format --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "dev": "npm run build && npm run dev:next:getting-started",
-    "dev:next:getting-started": "rimraf examples/next/getting-started/.next && npm run dev ---workspace=examples/next/getting-started",
-    "docs": "npm start --prefix internal/website",
-    "docs:build": "npm run build --prefix internal/website",
-    "docs:clear": "npm run clear --prefix internal/website",
-    "docs:install": "cd internal/website && npm i && cd ..",
-    "docs:start": "npm start --prefix internal/website",
-    "test": "npm run build && npm test --workspace=@faustjs/core --workspace=@faustjs/react --workspace=@faustjs/next",
-    "start": "npm run serve:prod --prefix internal/website",
-    "wp-env": "wp-env",
-    "wp:start": "wp-env start",
-    "wp:stop": "wp-env stop",
-    "wp:destroy": "wp-env destroy",
-    "wpe-build": "cd internal/website && npm i && cd .. && npm run docs:build",
-    "changeset": "changeset",
-    "version": "changeset version && node scripts/versionPlugin.js",
-    "version:status": "changeset status",
-    "release": "npm run build && changeset publish"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "gqty": "^2.0.3",
-    "rimraf": "^3.0.2"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rimraf .next node_modules",
+    "lint": "next lint",
+    "generate": "gqty generate",
+    "wpe-build": "next build"
   },
   "dependencies": {
-    "@changesets/cli": "^2.17.0"
+    "@faustjs/core": "^0.15.2",
+    "@faustjs/next": "^0.15.1",
+    "next": "^12.0.9",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.44.0",
+    "sharp": "^0.29.3"
+  },
+  "devDependencies": {
+    "@gqty/cli": "^2.3.1",
+    "@types/node": "^17.0.14",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "dotenv-flow": "3.2.0",
+    "eslint": "^8.4.1",
+    "eslint-config-next": "^12.0.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.2"
   }
 }
