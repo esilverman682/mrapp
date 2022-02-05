@@ -1,5 +1,10 @@
 import { config as coreConfig } from '@faustjs/core';
 
+// THIS IS FOR GLOBAL ISR
+import { config as nextConfig } from '@faustjs/next';
+
+
+ 
 if (!process.env.NEXT_PUBLIC_WORDPRESS_URL) {
   console.error(
     'You must provide a NEXT_PUBLIC_WORDPRESS_URL environment variable, did you forget to load your .env.local file?',
@@ -12,4 +17,17 @@ if (!process.env.NEXT_PUBLIC_WORDPRESS_URL) {
 export default coreConfig({
   wpUrl: process.env.NEXT_PUBLIC_WORDPRESS_URL,
   apiClientSecret: process.env.FAUSTWP_SECRET_KEY,
+});
+
+
+
+
+
+
+
+
+
+// THIS IS GLOBAL ISR
+nextConfig({
+  revalidate: 1, // 60 seconds
 });
