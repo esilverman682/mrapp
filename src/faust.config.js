@@ -18,7 +18,7 @@ export default coreConfig({
   apiClientSecret: process.env.FAUSTWP_SECRET_KEY,
   
   //THIS IS FOR AUTHENTICATION 
-  authType: 'https://misterappfaust.vercel.app',
+  authType: 'misterappfaust.vercel.app',
   loginPagePath: '/login',
 });
 
