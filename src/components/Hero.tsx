@@ -3,6 +3,7 @@ import styles from 'scss/components/Hero.module.scss';
 
 interface Props {
   title: string;
+  subtitle?: string;
   id?: string;
   bgImage?: string;
   buttonText?: string;
@@ -14,6 +15,7 @@ interface Props {
 
 function Hero({
   title = 'Hero Title',
+  subtitle,
   id,
   bgImage,
   buttonText,
@@ -30,6 +32,7 @@ function Hero({
       className={styles.hero}>
       <div className={styles.wrap}>
         <h1>{title}</h1>
+        <h2>{subtitle}</h2>
         <div className={styles.intro}>
           <div className={styles.children}>{children}</div>
           {buttonText && buttonURL && (

@@ -30,6 +30,9 @@ export function PageComponent({ page }: PageProps) {
        // title={page?.title()}
        // bgImage={page?.featuredImage.node.sourceUrl()}
        title={page?.standardPage?.heroTitle}
+       subtitle={page?.standardPage?.heroDescription}
+       buttonText={page?.standardPage?.heroButton}
+       buttonURL={page?.standardPage?.buttonLink.url}
        bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
 
       />
