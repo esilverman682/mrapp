@@ -3,7 +3,6 @@ import { Footer, Header, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { client, Page as PageType } from 'client';
-import { PageIdType } from '@faustjs/core/dist/cjs/export/client';
 
 export interface PageProps {
   page: PageType | PageType['preview']['node'] | null | undefined;
@@ -31,10 +30,9 @@ export function PageComponent({ page }: PageProps) {
        // bgImage={page?.featuredImage.node.sourceUrl()}
        title={page?.standardPage?.heroTitle}
        subtitle={page?.standardPage?.heroDescription}
-       buttonText={page?.standardPage?.heroButton}
+       buttonText={page?.standardPage?.fieldGroupName}
        buttonURL={page?.standardPage?.buttonLink.url}
        bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
-
       />
 
       <main className="content content-single">
