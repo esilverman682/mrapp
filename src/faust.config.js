@@ -10,24 +10,24 @@ if (!process.env.NEXT_PUBLIC_WORDPRESS_URL) {
   );
 }
 
-/**
+/****
  * @type {import("@faustjs/core").Config}
  */
 export default coreConfig({
   wpUrl: process.env.NEXT_PUBLIC_WORDPRESS_URL,
   apiClientSecret: process.env.FAUSTWP_SECRET_KEY,
+  
+  //THIS IS FOR AUTHENTICATION 
+  authType: 'local',
+  loginPagePath: '/login',
 });
-
-
-
-
-
-
-
-
- 
 
 // THIS IS GLOBAL ISR
 nextConfig({
   revalidate: 1, // 60 seconds
 });
+
+ 
+/****
+ * @type {import("@faustjs/core").Config}
+ */
