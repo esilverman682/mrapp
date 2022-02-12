@@ -17,9 +17,7 @@ export default coreConfig({
   wpUrl: process.env.NEXT_PUBLIC_WORDPRESS_URL,
   apiClientSecret: process.env.FAUSTWP_SECRET_KEY,
   
-  //THIS IS FOR AUTHENTICATION 
-  authType: 'local',
-  loginPagePath: '/login',
+
 });
 
 // THIS IS GLOBAL ISR
@@ -28,6 +26,3 @@ nextConfig({
 });
 
  
-/****
- * @type {import("@faustjs/core").Config}
- */
