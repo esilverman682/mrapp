@@ -3,6 +3,7 @@ import { Footer, Header, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { client, Page as PageType } from 'client';
+import { PageIdType } from '@faustjs/core/dist/cjs/export/client';
 
 export interface PageProps {
   page: PageType | PageType['preview']['node'] | null | undefined;
@@ -27,7 +28,9 @@ export function PageComponent({ page }: PageProps) {
 
       <Hero
         title={page?.title()}
-        bgImage={page?.featuredImage?.node.sourceUrl()}
+       // bgImage={page?.featuredImage.node.sourceUrl()}
+        bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
+  
       />
 
       <main className="content content-single">
@@ -43,8 +46,10 @@ export function PageComponent({ page }: PageProps) {
 
 export default function Page() {
   const { usePage } = client;
-  const page = usePage();
-
+ // const page = usePage();
+  const page = usePage({
+    id: 'hello-world'
+});
   return <PageComponent page={page} />;
 }
 
