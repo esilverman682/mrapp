@@ -27,10 +27,11 @@ export function PageComponent({ page }: PageProps) {
       </Head>
 
       <Hero
-        title={page?.title()}
+       // title={page?.title()}
        // bgImage={page?.featuredImage.node.sourceUrl()}
-        bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
-  
+       title={page?.standardPage?.heroTitle}
+       bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
+    
       />
 
       <main className="content content-single">
