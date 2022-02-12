@@ -31,7 +31,7 @@ export function PageComponent({ page }: PageProps) {
        // bgImage={page?.featuredImage.node.sourceUrl()}
        title={page?.standardPage?.heroTitle}
        bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
-    
+
       />
 
       <main className="content content-single">
@@ -47,10 +47,10 @@ export function PageComponent({ page }: PageProps) {
 
 export default function Page() {
   const { usePage } = client;
- // const page = usePage();
-  const page = usePage({
-    id: 'hello-world'
-});
+  const page = usePage();
+ // const page = usePage({
+//    id: 'hello-world'
+//});
   return <PageComponent page={page} />;
 }
 
