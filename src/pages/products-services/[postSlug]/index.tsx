@@ -8,7 +8,7 @@ export interface PostProps {
   post: Post | Post['preview']['node'] | null | undefined;
 }
 
-export function PostComponent({ post }: PostProps) {
+export function ProductsComponent({ post }: PostProps) {
   const { useQuery } = client;
   const generalSettings = useQuery().generalSettings;
 
@@ -26,11 +26,8 @@ export function PostComponent({ post }: PostProps) {
       </Head>
 
       <Hero
-
-// This is for the actual individual posts
         title={post?.title()}
         bgImage={post?.featuredImage?.node?.sourceUrl()}
-        
       />
 
       <main className="content content-single">
@@ -48,7 +45,7 @@ export default function Page() {
   const { usePost } = client;
   const post = usePost();
 
-  return <PostComponent post={post} />;
+  return <ProductsComponent post={post} />;
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
