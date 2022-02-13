@@ -1,7 +1,8 @@
 import { getNextStaticProps } from '@faustjs/next';
 import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
-import { Footer, Header, Pagination, Posts } from 'components';
+import { Footer, Header, Pagination } from 'components';
 import { GetStaticPropsContext } from 'next';
+import Blog from '../../components/Blog'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -40,7 +41,7 @@ export default function Page() {
       </Head>
 
       <main className="content content-index">
-        <Posts
+        <Blog
           posts={posts.nodes}
           heading="Blog Posts"
           headingLevel="h2"
