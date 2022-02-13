@@ -1,6 +1,6 @@
 import { getNextStaticProps } from '@faustjs/next';
-import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from '../../client';
-import { Footer, Header, Pagination, Posts } from '../../components';
+import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
+import { Footer, Header, Pagination, Posts } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -48,7 +48,7 @@ export default function Page() {
           id={styles.post_list}
         />
  
-        <Pagination pageInfo={posts.pageInfo} basePath="/posts" />
+        <Pagination pageInfo={posts.pageInfo} basePath="/blog" />
       </main>
 
       <Footer copyrightHolder={generalSettings.title} />
