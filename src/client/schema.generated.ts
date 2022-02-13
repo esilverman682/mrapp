@@ -22,6 +22,544 @@ export interface Scalars {
   Boolean: boolean;
   Int: number;
   Float: number;
+  /** The `Upload` special type represents a file to be uploaded in the same HTTP request as specified by [graphql-multipart-request-spec](https://github.com/jaydenseric/graphql-multipart-request-spec). */
+  Upload: any;
+}
+
+/** Countries supported by Gravity Forms Address Field. */
+export enum AddressFieldCountryEnum {
+  /** Andorra . */
+  AD = "AD",
+  /** United Arab Emirates . */
+  AE = "AE",
+  /** Afghanistan . */
+  AF = "AF",
+  /** Antigua and Barbuda . */
+  AG = "AG",
+  /** Anguilla . */
+  AI = "AI",
+  /** Albania . */
+  AL = "AL",
+  /** Armenia . */
+  AM = "AM",
+  /** Angola . */
+  AO = "AO",
+  /** Antarctica . */
+  AQ = "AQ",
+  /** Argentina . */
+  AR = "AR",
+  /** American Samoa . */
+  AS = "AS",
+  /** Austria . */
+  AT = "AT",
+  /** Australia . */
+  AU = "AU",
+  /** Aruba . */
+  AW = "AW",
+  /** Åland Islands . */
+  AX = "AX",
+  /** Azerbaijan . */
+  AZ = "AZ",
+  /** Bosnia and Herzegovina . */
+  BA = "BA",
+  /** Barbados . */
+  BB = "BB",
+  /** Bangladesh . */
+  BD = "BD",
+  /** Belgium . */
+  BE = "BE",
+  /** Burkina Faso . */
+  BF = "BF",
+  /** Bulgaria . */
+  BG = "BG",
+  /** Bahrain . */
+  BH = "BH",
+  /** Burundi . */
+  BI = "BI",
+  /** Benin . */
+  BJ = "BJ",
+  /** Saint Barthélemy . */
+  BL = "BL",
+  /** Bermuda . */
+  BM = "BM",
+  /** Brunei Darussalam . */
+  BN = "BN",
+  /** Bolivia . */
+  BO = "BO",
+  /** Bonaire, Sint Eustatius and Saba . */
+  BQ = "BQ",
+  /** Brazil . */
+  BR = "BR",
+  /** Bahamas . */
+  BS = "BS",
+  /** Bhutan . */
+  BT = "BT",
+  /** Bouvet Island . */
+  BV = "BV",
+  /** Botswana . */
+  BW = "BW",
+  /** Belarus . */
+  BY = "BY",
+  /** Belize . */
+  BZ = "BZ",
+  /** Canada . */
+  CA = "CA",
+  /** Cocos Islands . */
+  CC = "CC",
+  /** Congo, Democratic Republic of the . */
+  CD = "CD",
+  /** Central African Republic . */
+  CF = "CF",
+  /** Congo, Republic of the . */
+  CG = "CG",
+  /** Switzerland . */
+  CH = "CH",
+  /** Côte d'Ivoire . */
+  CI = "CI",
+  /** Cook Islands . */
+  CK = "CK",
+  /** Chile . */
+  CL = "CL",
+  /** Cameroon . */
+  CM = "CM",
+  /** China . */
+  CN = "CN",
+  /** Colombia . */
+  CO = "CO",
+  /** Costa Rica . */
+  CR = "CR",
+  /** Cuba . */
+  CU = "CU",
+  /** Cape Verde . */
+  CV = "CV",
+  /** Curaçao . */
+  CW = "CW",
+  /** Christmas Island . */
+  CX = "CX",
+  /** Cyprus . */
+  CY = "CY",
+  /** Czech Republic . */
+  CZ = "CZ",
+  /** Germany . */
+  DE = "DE",
+  /** Djibouti . */
+  DJ = "DJ",
+  /** Denmark . */
+  DK = "DK",
+  /** Dominica . */
+  DM = "DM",
+  /** Dominican Republic . */
+  DO = "DO",
+  /** Algeria . */
+  DZ = "DZ",
+  /** Ecuador . */
+  EC = "EC",
+  /** Estonia . */
+  EE = "EE",
+  /** Egypt . */
+  EG = "EG",
+  /** Western Sahara . */
+  EH = "EH",
+  /** Eritrea . */
+  ER = "ER",
+  /** Spain . */
+  ES = "ES",
+  /** Ethiopia . */
+  ET = "ET",
+  /** Finland . */
+  FI = "FI",
+  /** Fiji . */
+  FJ = "FJ",
+  /** Falkland Islands . */
+  FK = "FK",
+  /** Micronesia . */
+  FM = "FM",
+  /** Faroe Islands . */
+  FO = "FO",
+  /** France . */
+  FR = "FR",
+  /** Gabon . */
+  GA = "GA",
+  /** United Kingdom . */
+  GB = "GB",
+  /** Grenada . */
+  GD = "GD",
+  /** Georgia . */
+  GE = "GE",
+  /** French Guiana . */
+  GF = "GF",
+  /** Guernsey . */
+  GG = "GG",
+  /** Ghana . */
+  GH = "GH",
+  /** Gibraltar . */
+  GI = "GI",
+  /** Greenland . */
+  GL = "GL",
+  /** Gambia . */
+  GM = "GM",
+  /** Guinea . */
+  GN = "GN",
+  /** Guadeloupe . */
+  GP = "GP",
+  /** Equatorial Guinea . */
+  GQ = "GQ",
+  /** Greece . */
+  GR = "GR",
+  /** South Georgia . */
+  GS = "GS",
+  /** Guatemala . */
+  GT = "GT",
+  /** Guam . */
+  GU = "GU",
+  /** Guinea-Bissau . */
+  GW = "GW",
+  /** Guyana . */
+  GY = "GY",
+  /** Hong Kong . */
+  HK = "HK",
+  /** Heard and McDonald Islands . */
+  HM = "HM",
+  /** Honduras . */
+  HN = "HN",
+  /** Croatia . */
+  HR = "HR",
+  /** Haiti . */
+  HT = "HT",
+  /** Hungary . */
+  HU = "HU",
+  /** Indonesia . */
+  ID = "ID",
+  /** Ireland . */
+  IE = "IE",
+  /** Israel . */
+  IL = "IL",
+  /** Isle of Man . */
+  IM = "IM",
+  /** India . */
+  IN = "IN",
+  /** British Indian Ocean Territory . */
+  IO = "IO",
+  /** Iraq . */
+  IQ = "IQ",
+  /** Iran . */
+  IR = "IR",
+  /** Iceland . */
+  IS = "IS",
+  /** Italy . */
+  IT = "IT",
+  /** Jersey . */
+  JE = "JE",
+  /** Jamaica . */
+  JM = "JM",
+  /** Jordan . */
+  JO = "JO",
+  /** Japan . */
+  JP = "JP",
+  /** Kenya . */
+  KE = "KE",
+  /** Kyrgyzstan . */
+  KG = "KG",
+  /** Cambodia . */
+  KH = "KH",
+  /** Kiribati . */
+  KI = "KI",
+  /** Comoros . */
+  KM = "KM",
+  /** Saint Kitts and Nevis . */
+  KN = "KN",
+  /** North Korea . */
+  KP = "KP",
+  /** South Korea . */
+  KR = "KR",
+  /** Kuwait . */
+  KW = "KW",
+  /** Cayman Islands . */
+  KY = "KY",
+  /** Kazakhstan . */
+  KZ = "KZ",
+  /** Lao People's Democratic Republic . */
+  LA = "LA",
+  /** Lebanon . */
+  LB = "LB",
+  /** Saint Lucia . */
+  LC = "LC",
+  /** Liechtenstein . */
+  LI = "LI",
+  /** Sri Lanka . */
+  LK = "LK",
+  /** Liberia . */
+  LR = "LR",
+  /** Lesotho . */
+  LS = "LS",
+  /** Lithuania . */
+  LT = "LT",
+  /** Luxembourg . */
+  LU = "LU",
+  /** Latvia . */
+  LV = "LV",
+  /** Libya . */
+  LY = "LY",
+  /** Morocco . */
+  MA = "MA",
+  /** Monaco . */
+  MC = "MC",
+  /** Moldova . */
+  MD = "MD",
+  /** Montenegro . */
+  ME = "ME",
+  /** Saint Martin . */
+  MF = "MF",
+  /** Madagascar . */
+  MG = "MG",
+  /** Marshall Islands . */
+  MH = "MH",
+  /** Macedonia . */
+  MK = "MK",
+  /** Mali . */
+  ML = "ML",
+  /** Myanmar . */
+  MM = "MM",
+  /** Mongolia . */
+  MN = "MN",
+  /** Macau . */
+  MO = "MO",
+  /** Northern Mariana Islands . */
+  MP = "MP",
+  /** Martinique . */
+  MQ = "MQ",
+  /** Mauritania . */
+  MR = "MR",
+  /** Montserrat . */
+  MS = "MS",
+  /** Malta . */
+  MT = "MT",
+  /** Mauritius . */
+  MU = "MU",
+  /** Maldives . */
+  MV = "MV",
+  /** Malawi . */
+  MW = "MW",
+  /** Mexico . */
+  MX = "MX",
+  /** Malaysia . */
+  MY = "MY",
+  /** Mozambique . */
+  MZ = "MZ",
+  /** Namibia . */
+  NA = "NA",
+  /** New Caledonia . */
+  NC = "NC",
+  /** Niger . */
+  NE = "NE",
+  /** Norfolk Island . */
+  NF = "NF",
+  /** Nigeria . */
+  NG = "NG",
+  /** Nicaragua . */
+  NI = "NI",
+  /** Netherlands . */
+  NL = "NL",
+  /** Norway . */
+  NO = "NO",
+  /** Nepal . */
+  NP = "NP",
+  /** Nauru . */
+  NR = "NR",
+  /** Niue . */
+  NU = "NU",
+  /** New Zealand . */
+  NZ = "NZ",
+  /** Oman . */
+  OM = "OM",
+  /** Panama . */
+  PA = "PA",
+  /** Peru . */
+  PE = "PE",
+  /** French Polynesia . */
+  PF = "PF",
+  /** Papua New Guinea . */
+  PG = "PG",
+  /** Philippines . */
+  PH = "PH",
+  /** Pakistan . */
+  PK = "PK",
+  /** Poland . */
+  PL = "PL",
+  /** Saint Pierre and Miquelon . */
+  PM = "PM",
+  /** Pitcairn . */
+  PN = "PN",
+  /** Puerto Rico . */
+  PR = "PR",
+  /** Palestine, State of . */
+  PS = "PS",
+  /** Portugal . */
+  PT = "PT",
+  /** Palau . */
+  PW = "PW",
+  /** Paraguay . */
+  PY = "PY",
+  /** Qatar . */
+  QA = "QA",
+  /** Réunion . */
+  RE = "RE",
+  /** Romania . */
+  RO = "RO",
+  /** Serbia . */
+  RS = "RS",
+  /** Russia . */
+  RU = "RU",
+  /** Rwanda . */
+  RW = "RW",
+  /** Saudi Arabia . */
+  SA = "SA",
+  /** Solomon Islands . */
+  SB = "SB",
+  /** Seychelles . */
+  SC = "SC",
+  /** Sudan . */
+  SD = "SD",
+  /** Sweden . */
+  SE = "SE",
+  /** Singapore . */
+  SG = "SG",
+  /** Saint Helena . */
+  SH = "SH",
+  /** Slovenia . */
+  SI = "SI",
+  /** Svalbard and Jan Mayen Islands . */
+  SJ = "SJ",
+  /** Slovakia . */
+  SK = "SK",
+  /** Sierra Leone . */
+  SL = "SL",
+  /** San Marino . */
+  SM = "SM",
+  /** Senegal . */
+  SN = "SN",
+  /** Somalia . */
+  SO = "SO",
+  /** Suriname . */
+  SR = "SR",
+  /** South Sudan . */
+  SS = "SS",
+  /** Sao Tome and Principe . */
+  ST = "ST",
+  /** El Salvador . */
+  SV = "SV",
+  /** Sint Maarten . */
+  SX = "SX",
+  /** Syria . */
+  SY = "SY",
+  /** Eswatini (Swaziland) . */
+  SZ = "SZ",
+  /** Turks and Caicos Islands . */
+  TC = "TC",
+  /** Chad . */
+  TD = "TD",
+  /** French Southern Territories . */
+  TF = "TF",
+  /** Togo . */
+  TG = "TG",
+  /** Thailand . */
+  TH = "TH",
+  /** Tajikistan . */
+  TJ = "TJ",
+  /** Tokelau . */
+  TK = "TK",
+  /** Timor-Leste . */
+  TL = "TL",
+  /** Turkmenistan . */
+  TM = "TM",
+  /** Tunisia . */
+  TN = "TN",
+  /** Tonga . */
+  TO = "TO",
+  /** Turkey . */
+  TR = "TR",
+  /** Trinidad and Tobago . */
+  TT = "TT",
+  /** Tuvalu . */
+  TV = "TV",
+  /** Taiwan . */
+  TW = "TW",
+  /** Tanzania . */
+  TZ = "TZ",
+  /** Ukraine . */
+  UA = "UA",
+  /** Uganda . */
+  UG = "UG",
+  /** US Minor Outlying Islands . */
+  UM = "UM",
+  /** United States . */
+  US = "US",
+  /** Uruguay . */
+  UY = "UY",
+  /** Uzbekistan . */
+  UZ = "UZ",
+  /** Holy See . */
+  VA = "VA",
+  /** Saint Vincent and the Grenadines . */
+  VC = "VC",
+  /** Venezuela . */
+  VE = "VE",
+  /** Virgin Islands, British . */
+  VG = "VG",
+  /** Virgin Islands, U.S. . */
+  VI = "VI",
+  /** Vietnam . */
+  VN = "VN",
+  /** Vanuatu . */
+  VU = "VU",
+  /** Wallis and Futuna . */
+  WF = "WF",
+  /** Samoa . */
+  WS = "WS",
+  /** Yemen . */
+  YE = "YE",
+  /** Mayotte . */
+  YT = "YT",
+  /** South Africa . */
+  ZA = "ZA",
+  /** Zambia . */
+  ZM = "ZM",
+  /** Zimbabwe . */
+  ZW = "ZW",
+}
+
+/** Input fields for Address FormField. */
+export interface AddressFieldInput {
+  /** Address city. */
+  city?: InputMaybe<Scalars["String"]>;
+  /** Address country. */
+  country?: InputMaybe<AddressFieldCountryEnum>;
+  /** Address line two. */
+  lineTwo?: InputMaybe<Scalars["String"]>;
+  /** Address state/region/province name. */
+  state?: InputMaybe<Scalars["String"]>;
+  /** Street address. */
+  street?: InputMaybe<Scalars["String"]>;
+  /** Address zip code. */
+  zip?: InputMaybe<Scalars["String"]>;
+}
+
+/** Determines the type of address to be displayed. */
+export enum AddressFieldTypeEnum {
+  /** Canada address type. */
+  CANADA = "CANADA",
+  /** International address type. */
+  INTERNATIONAL = "INTERNATIONAL",
+  /** United States address type. */
+  US = "US",
+}
+
+/** The AM or PM cycle in a 12-hour clock. */
+export enum AmPmEnum {
+  /** AM. The first 12-hour cycle of the day. */
+  AM = "AM",
+  /** PM. The second 12-hour cycle of the day. */
+  PM = "PM",
 }
 
 /** What rating to display avatars up to. Accepts 'G', 'PG', 'R', 'X', and are judged in that order. Default is the value of the 'avatar_rating' option */
@@ -34,6 +572,34 @@ export enum AvatarRatingEnum {
   R = "R",
   /** Indicates an X level avatar rating level. */
   X = "X",
+}
+
+/** The position to place the (invisible) reCaptcha badge. */
+export enum CaptchaFieldBadgePositionEnum {
+  /** Bottom-left position. */
+  BOTTOM_LEFT = "BOTTOM_LEFT",
+  /** Bottom-right position. */
+  BOTTOM_RIGHT = "BOTTOM_RIGHT",
+  /** Inline position. */
+  INLINE = "INLINE",
+}
+
+/** The theme to be used for the reCAPTCHA field. */
+export enum CaptchaFieldThemeEnum {
+  /** Dark reCAPTCHA theme. */
+  DARK = "DARK",
+  /** Light reCAPTCHA theme. */
+  LIGHT = "LIGHT",
+}
+
+/** Type of CAPTCHA field to be used. */
+export enum CaptchaFieldTypeEnum {
+  /** Math CAPTCHA type. */
+  MATH = "MATH",
+  /** reCAPTCHA type. */
+  RECAPTCHA = "RECAPTCHA",
+  /** Simple CAPTCHA type. */
+  SIMPLE = "SIMPLE",
 }
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -200,6 +766,14 @@ export interface CategoryToPostConnectionWhereArgs {
   title?: InputMaybe<Scalars["String"]>;
 }
 
+/** Input fields for a single checkbox. */
+export interface CheckboxFieldInput {
+  /** Input ID. */
+  inputId?: InputMaybe<Scalars["Float"]>;
+  /** Input value. */
+  value?: InputMaybe<Scalars["String"]>;
+}
+
 /** Arguments for filtering the CommentToCommentConnection connection */
 export interface CommentToCommentConnectionWhereArgs {
   /** Comment author email address. */
@@ -360,6 +934,22 @@ export enum CommentsConnectionOrderbyEnum {
   USER_ID = "USER_ID",
 }
 
+/** The type of action the conditional logic will perform. */
+export enum ConditionalLogicActionTypeEnum {
+  /** Text button (default). */
+  HIDE = "HIDE",
+  /** Image button. */
+  SHOW = "SHOW",
+}
+
+/** Determines how to the rules should be evaluated. */
+export enum ConditionalLogicLogicTypeEnum {
+  /** Evaulate all logic rules. */
+  ALL = "ALL",
+  /** Evaluate any logic rule. */
+  ANY = "ANY",
+}
+
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
 export enum ContentNodeIdTypeEnum {
   /** Identify a resource by the Database ID. */
@@ -468,12 +1058,6 @@ export enum ContentTypesOfNewMediaCenterEnum {
 export enum ContentTypesOfPostFormatEnum {
   /** The Type of Content object */
   POST = "POST",
-  /** The Type of Content object */
-  PRODUCTS_SERVICES = "PRODUCTS_SERVICES",
-}
-
-/** Allowed Content Types of the Pro taxonomy. */
-export enum ContentTypesOfProEnum {
   /** The Type of Content object */
   PRODUCTS_SERVICES = "PRODUCTS_SERVICES",
 }
@@ -814,28 +1398,6 @@ export interface CreateProductCardInput {
   title?: InputMaybe<Scalars["String"]>;
 }
 
-/** Input for the createProductService mutation */
-export interface CreateProductServiceInput {
-  /** The userId to assign as the author of the object */
-  authorId?: InputMaybe<Scalars["ID"]>;
-  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
-  clientMutationId?: InputMaybe<Scalars["String"]>;
-  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
-  date?: InputMaybe<Scalars["String"]>;
-  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
-  menuOrder?: InputMaybe<Scalars["Int"]>;
-  /** The password used to protect the content of the object */
-  password?: InputMaybe<Scalars["String"]>;
-  /** Set connections between the productService and pros */
-  pros?: InputMaybe<ProductServiceProsInput>;
-  /** The slug of the object */
-  slug?: InputMaybe<Scalars["String"]>;
-  /** The status of the object */
-  status?: InputMaybe<PostStatusEnum>;
-  /** The title of the object */
-  title?: InputMaybe<Scalars["String"]>;
-}
-
 /** Input for the createProductsService mutation */
 export interface CreateProductsServiceInput {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -954,6 +1516,34 @@ export interface CreateUserInput {
   yim?: InputMaybe<Scalars["String"]>;
 }
 
+/** How the DateField date is displayed. */
+export enum DateFieldFormatEnum {
+  /** dd/mm/yyyy format. */
+  DMY = "DMY",
+  /** dd-mm-yyyy format. */
+  DMY_DASH = "DMY_DASH",
+  /** dd.mm.yyyy format. */
+  DMY_DOT = "DMY_DOT",
+  /** mm/dd/yyyy format. */
+  MDY = "MDY",
+  /** yyyy/mm/dd format. */
+  YMD_DASH = "YMD_DASH",
+  /** yyyy.mm.dd format. */
+  YMD_DOT = "YMD_DOT",
+  /** yyyy/mm/dd format. */
+  YMD_SLASH = "YMD_SLASH",
+}
+
+/** Type of date field to display. */
+export enum DateFieldTypeEnum {
+  /** A date dropdown. */
+  DROPDOWN = "DROPDOWN",
+  /** A simple date field. */
+  FIELD = "FIELD",
+  /** A datepicker. */
+  PICKER = "PICKER",
+}
+
 /** Date values */
 export interface DateInput {
   /** Day of the month (from 1 to 31) */
@@ -1009,6 +1599,26 @@ export interface DeleteCommentInput {
   /** Whether the comment should be force deleted instead of being moved to the trash */
   forceDelete?: InputMaybe<Scalars["Boolean"]>;
   /** The deleted comment ID */
+  id: Scalars["ID"];
+}
+
+/** Input for the deleteGfDraftEntry mutation */
+export interface DeleteGfDraftEntryInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** Either the global ID of the draft entry, or its resume token. */
+  id: Scalars["ID"];
+  /** The ID type for the draft entry. Defaults to `ID` . */
+  idType?: InputMaybe<DraftEntryIdTypeEnum>;
+}
+
+/** Input for the deleteGfEntry mutation */
+export interface DeleteGfEntryInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** Whether the entry should be force deleted instead of being moved to the trash. */
+  forceDelete?: InputMaybe<Scalars["Boolean"]>;
+  /** ID of the entry to delete, either a global or database ID. */
   id: Scalars["ID"];
 }
 
@@ -1136,16 +1746,6 @@ export interface DeleteProductCardInput {
   id: Scalars["ID"];
 }
 
-/** Input for the deleteProductService mutation */
-export interface DeleteProductServiceInput {
-  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
-  clientMutationId?: InputMaybe<Scalars["String"]>;
-  /** Whether the object should be force deleted instead of being moved to the trash */
-  forceDelete?: InputMaybe<Scalars["Boolean"]>;
-  /** The ID of the productService to delete */
-  id: Scalars["ID"];
-}
-
 /** Input for the deleteProductsService mutation */
 export interface DeleteProductsServiceInput {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -1194,6 +1794,426 @@ export interface DeleteUserInput {
   reassignId?: InputMaybe<Scalars["ID"]>;
 }
 
+/** The Type of Identifier used to fetch a single resource. */
+export enum DraftEntryIdTypeEnum {
+  /** Unique global ID for the object. */
+  ID = "ID",
+  /** The resume token assigned by Gravity Forms. Used by draft entries. */
+  RESUME_TOKEN = "RESUME_TOKEN",
+}
+
+/** Input fields for email field. */
+export interface EmailFieldInput {
+  /** Email confirmation input value. Only used when email confirmation is enabled. */
+  confirmationValue?: InputMaybe<Scalars["String"]>;
+  /** Email input value. */
+  value?: InputMaybe<Scalars["String"]>;
+}
+
+/** Options for ordering the connection. */
+export interface EntriesConnectionOrderbyInput {
+  /** The field name used to sort the results. */
+  field?: InputMaybe<Scalars["String"]>;
+  /** Whether the sorting field's values are numeric. */
+  isNumeric?: InputMaybe<Scalars["Boolean"]>;
+  /** The cardinality of the order of the connection. */
+  order?: InputMaybe<OrderEnum>;
+}
+
+/** Date Filters input fields for Entries queries. */
+export interface EntriesDateFiltersInput {
+  /** End date in Y-m-d H:i:s format. */
+  endDate?: InputMaybe<Scalars["String"]>;
+  /** Start date in Y-m-d H:i:s format. */
+  startDate?: InputMaybe<Scalars["String"]>;
+}
+
+/** Field Filters input fields for Entries queries. */
+export interface EntriesFieldFiltersInput {
+  /** The field value(s) to filter by. Must be boolean values. If using this field, do not also use stringValues, intValues or floatValues. */
+  boolValues?: InputMaybe<Array<InputMaybe<Scalars["Boolean"]>>>;
+  /** The field value(s) to filter by. Must be float values. If using this field, do not also use stringValues, intValues or boolValues. */
+  floatValues?: InputMaybe<Array<InputMaybe<Scalars["Float"]>>>;
+  /** The field value(s) to filter by. Must be integer values. If using this field, do not also use stringValues, floatValues or boolValues. */
+  intValues?: InputMaybe<Array<InputMaybe<Scalars["Int"]>>>;
+  /** Optional. The entry meta key to filter by. You can use the ID of the form field, or the names of any of the columns in Gravity Form's database table for entries, such as "date_created", "is_read, "created_by", etc. If omitted, the value will be checked against all meta keys. . */
+  key?: InputMaybe<Scalars["String"]>;
+  /** The operator to use for filtering. */
+  operator?: InputMaybe<FieldFiltersOperatorEnum>;
+  /** The field value(s) to filter by. Must be string values. If using this field, do not also use intValues, floatValues or boolValues. */
+  stringValues?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+}
+
+/** The Type of Identifier used to fetch a single resource. */
+export enum EntryIdTypeEnum {
+  /** The database ID assigned by Gravity Forms. Used by submitted entries. */
+  DATABASE_ID = "DATABASE_ID",
+  /** Unique global ID for the object. */
+  ID = "ID",
+  /** The resume token assigned by Gravity Forms. Used by draft entries. */
+  RESUME_TOKEN = "RESUME_TOKEN",
+}
+
+/** Status of entries to get. Default is ACTIVE. */
+export enum EntryStatusEnum {
+  /** Active entries (default). */
+  ACTIVE = "ACTIVE",
+  /** All entries. */
+  ALL = "ALL",
+  /** Spam entries. */
+  SPAM = "SPAM",
+  /** Entries in the trash. */
+  TRASH = "TRASH",
+}
+
+/** The type of Gravity Forms entry. */
+export enum EntryTypeEnum {
+  /** A Gravity Forms draft entry. */
+  DRAFT = "DRAFT",
+  /** A Gravity Forms partial entry. */
+  PARTIAL = "PARTIAL",
+  /** A submitted Gravity Forms entry. */
+  SUBMITTED = "SUBMITTED",
+}
+
+/** Whether to filter by ALL or ANY of the field filters. Default is ALL. */
+export enum FieldFiltersModeEnum {
+  /** All field filters (default). */
+  ALL = "ALL",
+  /** Any field filters. */
+  ANY = "ANY",
+}
+
+/** The operator to use for filtering. */
+export enum FieldFiltersOperatorEnum {
+  /** Find field values that contain the passed value. Only one value may be passed when using this operator. SQL Equivalent: `LIKE %value%`. */
+  CONTAINS = "CONTAINS",
+  /** Default. Find field values that are equal to one of the values in the passed array. Default. */
+  IN = "IN",
+  /** Find field values that are an exact match for the passed value. Only one value may be passed when using this operator. SQL Equivalent: `=`. */
+  IS = "IS",
+  /** Find field values that are NOT an exact match for the passed value. Only one value may be passed when using this operator. SQL Equivalent: `NOT`. */
+  IS_NOT = "IS_NOT",
+  /** Find field values that are an exact match for the passed value. SQL wildcards are supported. Only one value may be passed when using this operator. SQL Equivalent: `LIKE`. */
+  LIKE = "LIKE",
+  /** Find field values that do NOT match those in the values array. */
+  NOT_IN = "NOT_IN",
+}
+
+/** Type of button to be displayed. Default is TEXT. */
+export enum FormButtonTypeEnum {
+  /** Image button. */
+  IMAGE = "IMAGE",
+  /** Text button (default). */
+  TEXT = "TEXT",
+}
+
+/** Type of form confirmation to be used. */
+export enum FormConfirmationTypeEnum {
+  /** Use a confirmation "message". */
+  MESSAGE = "MESSAGE",
+  /** Use a redirect to a different WordPress "page". */
+  PAGE = "PAGE",
+  /** Use a "redirect" to a given URL. */
+  REDIRECT = "REDIRECT",
+}
+
+/** Determines where the field description is displayed relative to the field. */
+export enum FormDescriptionPlacementEnum {
+  /** The field description is displayed above the field input (i.e. immediately after the field label). */
+  ABOVE = "ABOVE",
+  /** The field description is displayed below the field input. */
+  BELOW = "BELOW",
+}
+
+/** How the date field displays its calendar icon. */
+export enum FormFieldCalendarIconTypeEnum {
+  /** Default calendar icon. */
+  CALENDAR = "CALENDAR",
+  /** Custom calendar icon. */
+  CUSTOM = "CUSTOM",
+  /** No calendar icon. */
+  NONE = "NONE",
+}
+
+/** Determines where the field description is displayed relative to the field. */
+export enum FormFieldDescriptionPlacementEnum {
+  /** The field description is displayed above the field input (i.e. immediately after the field label). */
+  ABOVE = "ABOVE",
+  /** The field description is displayed below the field input. */
+  BELOW = "BELOW",
+  /** The field description is inherited from the form default settings. */
+  INHERIT = "INHERIT",
+}
+
+/** The field label position. Empty when using the form defaults or a value of "hidden_label". */
+export enum FormFieldLabelPlacementEnum {
+  /** Field label is hidden. */
+  HIDDEN = "HIDDEN",
+  /** Field label is inherited from the form defaults. */
+  INHERIT = "INHERIT",
+  /** Field label is displayed beside the fields and aligned to the left. */
+  LEFT = "LEFT",
+  /** Field label is displayed beside the fields and aligned to the right. */
+  RIGHT = "RIGHT",
+  /** Field label is displayed on top of the fields. */
+  TOP = "TOP",
+}
+
+/** Type of indicator to use when field is required. */
+export enum FormFieldRequiredIndicatorEnum {
+  /** Asterisk (*) indicator. */
+  ASTERISK = "ASTERISK",
+  /** Custom indicator. */
+  CUSTOM = "CUSTOM",
+  /** Text (Required) indicator (default). */
+  TEXT = "TEXT",
+}
+
+/** The size of the field when displayed on the page. */
+export enum FormFieldSizeEnum {
+  /** Large field size. */
+  LARGE = "LARGE",
+  /** Medium field size. */
+  MEDIUM = "MEDIUM",
+  /** Small field size. */
+  SMALL = "SMALL",
+}
+
+/** Determines how sub-labels are aligned. */
+export enum FormFieldSubLabelPlacementEnum {
+  /** The sub-label is displayed above the sub-field input (i.e. immediately after the field label). */
+  ABOVE = "ABOVE",
+  /** The sub-label is displayed below the sub-field input. */
+  BELOW = "BELOW",
+  /** Field label is inherited from the form defaults. */
+  INHERIT = "INHERIT",
+}
+
+/** Gravity Forms Field Type. */
+export enum FormFieldTypeEnum {
+  /** A Gravity Forms address field. */
+  ADDRESS = "ADDRESS",
+  /** A Gravity Forms captcha field. */
+  CAPTCHA = "CAPTCHA",
+  /** A Gravity Forms checkbox field. */
+  CHECKBOX = "CHECKBOX",
+  /** A Gravity Forms consent field. */
+  CONSENT = "CONSENT",
+  /** A Gravity Forms date field. */
+  DATE = "DATE",
+  /** A Gravity Forms email field. */
+  EMAIL = "EMAIL",
+  /** A Gravity Forms fileupload field. */
+  FILEUPLOAD = "FILEUPLOAD",
+  /** A Gravity Forms hidden field. */
+  HIDDEN = "HIDDEN",
+  /** A Gravity Forms html field. */
+  HTML = "HTML",
+  /** A Gravity Forms list field. */
+  LIST = "LIST",
+  /** A Gravity Forms multiselect field. */
+  MULTISELECT = "MULTISELECT",
+  /** A Gravity Forms name field. */
+  NAME = "NAME",
+  /** A Gravity Forms number field. */
+  NUMBER = "NUMBER",
+  /** A Gravity Forms page field. */
+  PAGE = "PAGE",
+  /** A Gravity Forms password field. */
+  PASSWORD = "PASSWORD",
+  /** A Gravity Forms phone field. */
+  PHONE = "PHONE",
+  /** A Gravity Forms post_category field. */
+  POST_CATEGORY = "POST_CATEGORY",
+  /** A Gravity Forms post_content field. */
+  POST_CONTENT = "POST_CONTENT",
+  /** A Gravity Forms post_custom_field field. */
+  POST_CUSTOM_FIELD = "POST_CUSTOM_FIELD",
+  /** A Gravity Forms post_excerpt field. */
+  POST_EXCERPT = "POST_EXCERPT",
+  /** A Gravity Forms post_image field. */
+  POST_IMAGE = "POST_IMAGE",
+  /** A Gravity Forms post_tags field. */
+  POST_TAGS = "POST_TAGS",
+  /** A Gravity Forms post_title field. */
+  POST_TITLE = "POST_TITLE",
+  /** A Gravity Forms radio field. */
+  RADIO = "RADIO",
+  /** A Gravity Forms section field. */
+  SECTION = "SECTION",
+  /** A Gravity Forms select field. */
+  SELECT = "SELECT",
+  /** A Gravity Forms signature field. */
+  SIGNATURE = "SIGNATURE",
+  /** A Gravity Forms text field. */
+  TEXT = "TEXT",
+  /** A Gravity Forms textarea field. */
+  TEXTAREA = "TEXTAREA",
+  /** A Gravity Forms time field. */
+  TIME = "TIME",
+  /** A Gravity Forms website field. */
+  WEBSITE = "WEBSITE",
+}
+
+/** Field values input. Includes a field id, and a valid value Input. */
+export interface FormFieldValuesInput {
+  /** The form field values for Address fields. */
+  addressValues?: InputMaybe<AddressFieldInput>;
+  /** The form field values for Checkbox fields. */
+  checkboxValues?: InputMaybe<Array<InputMaybe<CheckboxFieldInput>>>;
+  /** The form field values for Email fields. */
+  emailValues?: InputMaybe<EmailFieldInput>;
+  /** The form field values for file upload fields. */
+  fileUploadValues?: InputMaybe<Array<InputMaybe<Scalars["Upload"]>>>;
+  /** The field id. */
+  id: Scalars["Int"];
+  /** The form field values for post image fields. */
+  imageValues?: InputMaybe<ImageInput>;
+  /** The form field values for List fields. */
+  listValues?: InputMaybe<Array<InputMaybe<ListFieldInput>>>;
+  /** The form field values for Name fields. */
+  nameValues?: InputMaybe<NameFieldInput>;
+  /** The form field values for basic fields. */
+  value?: InputMaybe<Scalars["String"]>;
+  /** The form field values for fields that accept multiple string values. Used by MultiSelect, Post Category, Post Custom, and Post Tags fields. */
+  values?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+}
+
+/** Field visibility. */
+export enum FormFieldVisibilityEnum {
+  /** The field is for "administrative" use. */
+  ADMINISTRATIVE = "ADMINISTRATIVE",
+  /** The field is "hidden". */
+  HIDDEN = "HIDDEN",
+  /** The field is "visible". */
+  VISIBLE = "VISIBLE",
+}
+
+/** The Type of Identifier used to fetch a single resource. */
+export enum FormIdTypeEnum {
+  /** The database ID assigned by Gravity Forms. */
+  DATABASE_ID = "DATABASE_ID",
+  /** Unique global ID for the object. */
+  ID = "ID",
+}
+
+/** Determines where the field labels should be placed in relation to the field. */
+export enum FormLabelPlacementEnum {
+  /** Field labels are displayed beside the fields and aligned to the left. */
+  LEFT = "LEFT",
+  /** Field labels are displayed beside the fields and aligned to the right. */
+  RIGHT = "RIGHT",
+  /** Field labels are displayed on top of the fields. */
+  TOP = "TOP",
+}
+
+/** When limitEntries is set to 1, this property specifies the time period during which submissions are allowed. */
+export enum FormLimitEntriesPeriodEnum {
+  /** Limit entries by "day". */
+  DAY = "DAY",
+  /** Limit entries by "month". */
+  MONTH = "MONTH",
+  /** Limit entries by "week". */
+  WEEK = "WEEK",
+  /** Limit entries by "year". */
+  YEAR = "YEAR",
+}
+
+/** What to use for the notification "to". */
+export enum FormNotificationToTypeEnum {
+  /** Email address. */
+  EMAIL = "EMAIL",
+  /** Form field. */
+  FIELD = "FIELD",
+  /** Hidden. */
+  HIDDEN = "HIDDEN",
+  /** Routing using conditional rules. */
+  ROUTING = "ROUTING",
+}
+
+/** Style of progress bar. */
+export enum FormPageProgressStyleEnum {
+  /** Blue progress bar style. */
+  BLUE = "BLUE",
+  /** Custom progress bar style. */
+  CUSTOM = "CUSTOM",
+  /** Green progress bar style. */
+  GREEN = "GREEN",
+  /** Grey progress bar style. */
+  GREY = "GREY",
+  /** Orange progress bar style. */
+  ORANGE = "ORANGE",
+  /** Red progress bar style. */
+  RED = "RED",
+}
+
+/** Type of page progress indicator to be displayed. */
+export enum FormPageProgressTypeEnum {
+  /** Don't show a page progress indicator. */
+  NONE = "NONE",
+  /** Show page progress indicator as a percentage. */
+  PERCENTAGE = "PERCENTAGE",
+  /** Show page progress indicator as steps. */
+  STEPS = "STEPS",
+}
+
+/** The Personal Data retention policy. */
+export enum FormRetentionPolicyEnum {
+  /** Entries will be deleted automatically after a specified number of days. */
+  DELETE = "DELETE",
+  /** Entries will be retain indefinitely. */
+  RETAIN = "RETAIN",
+  /** Entries will be trashed automatically after a specified number of days. */
+  TRASH = "TRASH",
+}
+
+/** Operator to be used when evaluating logic rules. */
+export enum FormRuleOperatorEnum {
+  /** Evaluates values that CONTAIN the comparison value. */
+  CONTAINS = "CONTAINS",
+  /** Evaluates values that END with the comparison value. */
+  ENDS_WITH = "ENDS_WITH",
+  /** Evaluates values that are GREATER than the comparison value. */
+  GREATER_THAN = "GREATER_THAN",
+  /** Evaluates values that match the comparison value. */
+  IS = "IS",
+  /** Evaluates values that do NOT match the comparison value. */
+  IS_NOT = "IS_NOT",
+  /** Evaluates values that are LESS than the comparison value. */
+  LESS_THAN = "LESS_THAN",
+  /** Evaluates values that START with the comparison value. */
+  STARTS_WITH = "STARTS_WITH",
+}
+
+/** Status of forms to get. Default is ACTIVE. */
+export enum FormStatusEnum {
+  /** Active forms (default). */
+  ACTIVE = "ACTIVE",
+  /** Inactive forms. */
+  INACTIVE = "INACTIVE",
+  /** Inactive forms in the trash. */
+  INACTIVE_TRASHED = "INACTIVE_TRASHED",
+  /** Active forms in the trash. */
+  TRASHED = "TRASHED",
+}
+
+/** Determines how sub-labels are aligned. */
+export enum FormSubLabelPlacementEnum {
+  /** The sub-label is displayed above the sub-field input (i.e. immediately after the field label). */
+  ABOVE = "ABOVE",
+  /** The sub-label is displayed below the sub-field input. */
+  BELOW = "BELOW",
+}
+
+/** Options for ordering the connection. */
+export interface FormsConnectionOrderbyInput {
+  /** The field name used to sort the results. */
+  field?: InputMaybe<Scalars["String"]>;
+  /** The cardinality of the order of the connection. */
+  order?: InputMaybe<OrderEnum>;
+}
+
 /** Input for the generateAuthorizationCode mutation */
 export interface GenerateAuthorizationCodeInput {
   /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
@@ -1204,6 +2224,98 @@ export interface GenerateAuthorizationCodeInput {
   password?: InputMaybe<Scalars["String"]>;
   /** Username for WordPress user */
   username?: InputMaybe<Scalars["String"]>;
+}
+
+/** Currencies supported by Gravity Forms. */
+export enum GfCurrencyEnum {
+  /** Australian Dollar . */
+  AUD = "AUD",
+  /** Brazilian Real . */
+  BRL = "BRL",
+  /** Canadian Dollar . */
+  CAD = "CAD",
+  /** Swiss Franc . */
+  CHF = "CHF",
+  /** Czech Koruna . */
+  CZK = "CZK",
+  /** Danish Krone . */
+  DKK = "DKK",
+  /** Euro . */
+  EUR = "EUR",
+  /** Pound Sterling . */
+  GBP = "GBP",
+  /** Hong Kong Dollar . */
+  HKD = "HKD",
+  /** Hungarian Forint . */
+  HUF = "HUF",
+  /** Israeli New Sheqel . */
+  ILS = "ILS",
+  /** Japanese Yen . */
+  JPY = "JPY",
+  /** Mexican Peso . */
+  MXN = "MXN",
+  /** Malaysian Ringgit . */
+  MYR = "MYR",
+  /** Norwegian Krone . */
+  NOK = "NOK",
+  /** New Zealand Dollar . */
+  NZD = "NZD",
+  /** Philippine Peso . */
+  PHP = "PHP",
+  /** Polish Zloty . */
+  PLN = "PLN",
+  /** Russian Ruble . */
+  RUB = "RUB",
+  /** Swedish Krona . */
+  SEK = "SEK",
+  /** Singapore Dollar . */
+  SGD = "SGD",
+  /** Thai Baht . */
+  THB = "THB",
+  /** Taiwan New Dollar . */
+  TWD = "TWD",
+  /** U.S. Dollar . */
+  USD = "USD",
+  /** South African Rand . */
+  ZAR = "ZAR",
+}
+
+/** Arguments for filtering the GfEntryToFormFieldConnection connection */
+export interface GfEntryToFormFieldConnectionWhereArgs {
+  /** Array of form field adminLabels to return. */
+  adminLabels?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  /** Array of Gravity Forms Field types to return. */
+  fieldTypes?: InputMaybe<Array<InputMaybe<FormFieldTypeEnum>>>;
+  /** Array of form field IDs to return. */
+  ids?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
+  /** The form page number to return. */
+  pageNumber?: InputMaybe<Scalars["Int"]>;
+}
+
+/** Arguments for filtering the GfFormToFormFieldConnection connection */
+export interface GfFormToFormFieldConnectionWhereArgs {
+  /** Array of form field adminLabels to return. */
+  adminLabels?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
+  /** Array of Gravity Forms Field types to return. */
+  fieldTypes?: InputMaybe<Array<InputMaybe<FormFieldTypeEnum>>>;
+  /** Array of form field IDs to return. */
+  ids?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
+  /** The form page number to return. */
+  pageNumber?: InputMaybe<Scalars["Int"]>;
+}
+
+/** Arguments for filtering the GfFormToGfEntryConnection connection */
+export interface GfFormToGfEntryConnectionWhereArgs {
+  /** Date filters to apply. */
+  dateFilters?: InputMaybe<EntriesDateFiltersInput>;
+  /** Field-specific filters to apply. */
+  fieldFilters?: InputMaybe<Array<InputMaybe<EntriesFieldFiltersInput>>>;
+  /** Whether to filter by ALL or ANY of the field filters. Default is ALL. */
+  fieldFiltersMode?: InputMaybe<FieldFiltersModeEnum>;
+  /** How to sort the entries. */
+  orderby?: InputMaybe<EntriesConnectionOrderbyInput>;
+  /** Entry status. Default is "ACTIVE". */
+  status?: InputMaybe<EntryStatusEnum>;
 }
 
 /** Arguments for filtering the HierarchicalContentNodeToContentNodeAncestorsConnection connection */
@@ -1284,6 +2396,26 @@ export interface HierarchicalContentNodeToContentNodeChildrenConnectionWhereArgs
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars["String"]>;
+}
+
+/** Input fields for a single post Image. */
+export interface ImageInput {
+  /** The image alt text. */
+  altText?: InputMaybe<Scalars["String"]>;
+  /** The image caption. */
+  caption?: InputMaybe<Scalars["String"]>;
+  /** The image description. */
+  description?: InputMaybe<Scalars["String"]>;
+  /** The image to be uploaded. */
+  image: Scalars["Upload"];
+  /** The image title. */
+  title?: InputMaybe<Scalars["String"]>;
+}
+
+/** Input fields for a single List field item. */
+export interface ListFieldInput {
+  /** Input values for the specific listField row. */
+  rowValues?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
 }
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -1628,6 +2760,20 @@ export enum MimeTypeEnum {
   VIDEO_X_MS_WMV = "VIDEO_X_MS_WMV",
   /** MimeType video/x-ms-wmx */
   VIDEO_X_MS_WMX = "VIDEO_X_MS_WMX",
+}
+
+/** Input fields for name field. */
+export interface NameFieldInput {
+  /** First name. */
+  first?: InputMaybe<Scalars["String"]>;
+  /** Last name. */
+  last?: InputMaybe<Scalars["String"]>;
+  /** Middle name. */
+  middle?: InputMaybe<Scalars["String"]>;
+  /** Prefix, such as Mr., Mrs. etc. */
+  prefix?: InputMaybe<Scalars["String"]>;
+  /** Suffix, such as Sr., Jr. etc. */
+  suffix?: InputMaybe<Scalars["String"]>;
 }
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -2238,6 +3384,16 @@ export interface NewPressReleaseToTermNodeConnectionWhereArgs {
   updateTermMetaCache?: InputMaybe<Scalars["Boolean"]>;
 }
 
+/** The format allowed for the number field. . */
+export enum NumberFieldFormatEnum {
+  /** Currency format. */
+  CURRENCY = "CURRENCY",
+  /** Decimal-comma format (e.g. 9.999,99). */
+  DECIMAL_COMMA = "DECIMAL_COMMA",
+  /** Decimal-dot format (e.g. 9,999.99). */
+  DECIMAL_DOT = "DECIMAL_DOT",
+}
+
 /** The cardinality of the connection order */
 export enum OrderEnum {
   /** Sort the query result set in an ascending order */
@@ -2374,6 +3530,26 @@ export enum PartnerIdType {
   SLUG = "SLUG",
   /** Identify a resource by the URI. */
   URI = "URI",
+}
+
+/** Indicates how strong the password should be. */
+export enum PasswordFieldMinStrengthEnum {
+  /** The password strength must be "bad" or better. */
+  BAD = "BAD",
+  /** The password strength must be "good" or better. */
+  GOOD = "GOOD",
+  /** The password strength must be "short" or better. */
+  SHORT = "SHORT",
+  /** The password strength must be "strong". */
+  STRONG = "STRONG",
+}
+
+/** Tthe allowed format for phone numbers. */
+export enum PhoneFieldFormatEnum {
+  /** International phone number format. */
+  INTERNATIONAL = "INTERNATIONAL",
+  /** Standard phone number format. */
+  STANDARD = "STANDARD",
 }
 
 /** Set relationships between the post to categories */
@@ -2552,6 +3728,12 @@ export interface PostFormatToProductsServiceConnectionWhereArgs {
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars["String"]>;
+}
+
+/** List of possible post formats. */
+export enum PostFormatTypeEnum {
+  /** A standard post format. */
+  STANDARD = "STANDARD",
 }
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -3120,46 +4302,6 @@ export enum ProIdType {
   URI = "URI",
 }
 
-/** Arguments for filtering the ProToContentNodeConnection connection */
-export interface ProToContentNodeConnectionWhereArgs {
-  /** The Types of content to filter */
-  contentTypes?: InputMaybe<Array<InputMaybe<ContentTypesOfProEnum>>>;
-  /** Filter the connection based on dates */
-  dateQuery?: InputMaybe<DateQueryInput>;
-  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
-  hasPassword?: InputMaybe<Scalars["Boolean"]>;
-  /** Specific ID of the object */
-  id?: InputMaybe<Scalars["Int"]>;
-  /** Array of IDs for the objects to retrieve */
-  in?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Get objects with a specific mimeType property */
-  mimeType?: InputMaybe<MimeTypeEnum>;
-  /** Slug / post_name of the object */
-  name?: InputMaybe<Scalars["String"]>;
-  /** Specify objects to retrieve. Use slugs */
-  nameIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** What paramater to use to order the objects by. */
-  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
-  /** Use ID to return only children. Use 0 to return only top-level items */
-  parent?: InputMaybe<Scalars["ID"]>;
-  /** Specify objects whose parent is in an array */
-  parentIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Specify posts whose parent is not in an array */
-  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Show posts with a specific password. */
-  password?: InputMaybe<Scalars["String"]>;
-  /** Show Posts based on a keyword search */
-  search?: InputMaybe<Scalars["String"]>;
-  /** Retrieve posts where post status is in an array. */
-  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
-  /** Show posts with a specific status. */
-  status?: InputMaybe<PostStatusEnum>;
-  /** Title of the object */
-  title?: InputMaybe<Scalars["String"]>;
-}
-
 /** Arguments for filtering the ProToProConnection connection */
 export interface ProToProConnectionWhereArgs {
   /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
@@ -3204,52 +4346,6 @@ export interface ProToProConnectionWhereArgs {
   updateTermMetaCache?: InputMaybe<Scalars["Boolean"]>;
 }
 
-/** Arguments for filtering the ProToProductServiceConnection connection */
-export interface ProToProductServiceConnectionWhereArgs {
-  /** The user that's connected as the author of the object. Use the userId for the author object. */
-  author?: InputMaybe<Scalars["Int"]>;
-  /** Find objects connected to author(s) in the array of author's userIds */
-  authorIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Find objects connected to the author by the author's nicename */
-  authorName?: InputMaybe<Scalars["String"]>;
-  /** Find objects NOT connected to author(s) in the array of author's userIds */
-  authorNotIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Filter the connection based on dates */
-  dateQuery?: InputMaybe<DateQueryInput>;
-  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
-  hasPassword?: InputMaybe<Scalars["Boolean"]>;
-  /** Specific ID of the object */
-  id?: InputMaybe<Scalars["Int"]>;
-  /** Array of IDs for the objects to retrieve */
-  in?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Get objects with a specific mimeType property */
-  mimeType?: InputMaybe<MimeTypeEnum>;
-  /** Slug / post_name of the object */
-  name?: InputMaybe<Scalars["String"]>;
-  /** Specify objects to retrieve. Use slugs */
-  nameIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** What paramater to use to order the objects by. */
-  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
-  /** Use ID to return only children. Use 0 to return only top-level items */
-  parent?: InputMaybe<Scalars["ID"]>;
-  /** Specify objects whose parent is in an array */
-  parentIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Specify posts whose parent is not in an array */
-  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Show posts with a specific password. */
-  password?: InputMaybe<Scalars["String"]>;
-  /** Show Posts based on a keyword search */
-  search?: InputMaybe<Scalars["String"]>;
-  /** Retrieve posts where post status is in an array. */
-  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
-  /** Show posts with a specific status. */
-  status?: InputMaybe<PostStatusEnum>;
-  /** Title of the object */
-  title?: InputMaybe<Scalars["String"]>;
-}
-
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
 export enum ProductCardIdType {
   /** Identify a resource by the Database ID. */
@@ -3260,128 +4356,6 @@ export enum ProductCardIdType {
   SLUG = "SLUG",
   /** Identify a resource by the URI. */
   URI = "URI",
-}
-
-/** The Type of Identifier used to fetch a single resource. Default is ID. */
-export enum ProductServiceIdType {
-  /** Identify a resource by the Database ID. */
-  DATABASE_ID = "DATABASE_ID",
-  /** Identify a resource by the (hashed) Global ID. */
-  ID = "ID",
-  /** Identify a resource by the slug. Available to non-hierarchcial Types where the slug is a unique identifier. */
-  SLUG = "SLUG",
-  /** Identify a resource by the URI. */
-  URI = "URI",
-}
-
-/** Set relationships between the productService to pros */
-export interface ProductServiceProsInput {
-  /** If true, this will append the pro to existing related pros. If false, this will replace existing relationships. Default true. */
-  append?: InputMaybe<Scalars["Boolean"]>;
-  /** The input list of items to set. */
-  nodes?: InputMaybe<Array<InputMaybe<ProductServiceProsNodeInput>>>;
-}
-
-/** List of pros to connect the productService to. If an ID is set, it will be used to create the connection. If not, it will look for a slug. If neither are valid existing terms, and the site is configured to allow terms to be created during post mutations, a term will be created using the Name if it exists in the input, then fallback to the slug if it exists. */
-export interface ProductServiceProsNodeInput {
-  /** The description of the pro. This field is used to set a description of the pro if a new one is created during the mutation. */
-  description?: InputMaybe<Scalars["String"]>;
-  /** The ID of the pro. If present, this will be used to connect to the productService. If no existing pro exists with this ID, no connection will be made. */
-  id?: InputMaybe<Scalars["ID"]>;
-  /** The name of the pro. This field is used to create a new term, if term creation is enabled in nested mutations, and if one does not already exist with the provided slug or ID or if a slug or ID is not provided. If no name is included and a term is created, the creation will fallback to the slug field. */
-  name?: InputMaybe<Scalars["String"]>;
-  /** The slug of the pro. If no ID is present, this field will be used to make a connection. If no existing term exists with this slug, this field will be used as a fallback to the Name field when creating a new term to connect to, if term creation is enabled as a nested mutation. */
-  slug?: InputMaybe<Scalars["String"]>;
-}
-
-/** Arguments for filtering the ProductServiceToProConnection connection */
-export interface ProductServiceToProConnectionWhereArgs {
-  /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
-  cacheDomain?: InputMaybe<Scalars["String"]>;
-  /** Term ID to retrieve child terms of. If multiple taxonomies are passed, $child_of is ignored. Default 0. */
-  childOf?: InputMaybe<Scalars["Int"]>;
-  /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
-  childless?: InputMaybe<Scalars["Boolean"]>;
-  /** Retrieve terms where the description is LIKE the input value. Default empty. */
-  descriptionLike?: InputMaybe<Scalars["String"]>;
-  /** Array of term ids to exclude. If $include is non-empty, $exclude is ignored. Default empty array. */
-  exclude?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Array of term ids to exclude along with all of their descendant terms. If $include is non-empty, $exclude_tree is ignored. Default empty array. */
-  excludeTree?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Whether to hide terms not assigned to any posts. Accepts true or false. Default false */
-  hideEmpty?: InputMaybe<Scalars["Boolean"]>;
-  /** Whether to include terms that have non-empty descendants (even if $hide_empty is set to true). Default true. */
-  hierarchical?: InputMaybe<Scalars["Boolean"]>;
-  /** Array of term ids to include. Default empty array. */
-  include?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Array of names to return term(s) for. Default empty. */
-  name?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Retrieve terms where the name is LIKE the input value. Default empty. */
-  nameLike?: InputMaybe<Scalars["String"]>;
-  /** Array of object IDs. Results will be limited to terms associated with these objects. */
-  objectIds?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Direction the connection should be ordered in */
-  order?: InputMaybe<OrderEnum>;
-  /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: InputMaybe<TermObjectsConnectionOrderbyEnum>;
-  /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
-  padCounts?: InputMaybe<Scalars["Boolean"]>;
-  /** Parent term ID to retrieve direct-child terms of. Default empty. */
-  parent?: InputMaybe<Scalars["Int"]>;
-  /** Search criteria to match terms. Will be SQL-formatted with wildcards before and after. Default empty. */
-  search?: InputMaybe<Scalars["String"]>;
-  /** Array of slugs to return term(s) for. Default empty. */
-  slug?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Array of term taxonomy IDs, to match when querying terms. */
-  termTaxonomId?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Whether to prime meta caches for matched terms. Default true. */
-  updateTermMetaCache?: InputMaybe<Scalars["Boolean"]>;
-}
-
-/** Arguments for filtering the ProductServiceToTermNodeConnection connection */
-export interface ProductServiceToTermNodeConnectionWhereArgs {
-  /** Unique cache key to be produced when this query is stored in an object cache. Default is 'core'. */
-  cacheDomain?: InputMaybe<Scalars["String"]>;
-  /** Term ID to retrieve child terms of. If multiple taxonomies are passed, $child_of is ignored. Default 0. */
-  childOf?: InputMaybe<Scalars["Int"]>;
-  /** True to limit results to terms that have no children. This parameter has no effect on non-hierarchical taxonomies. Default false. */
-  childless?: InputMaybe<Scalars["Boolean"]>;
-  /** Retrieve terms where the description is LIKE the input value. Default empty. */
-  descriptionLike?: InputMaybe<Scalars["String"]>;
-  /** Array of term ids to exclude. If $include is non-empty, $exclude is ignored. Default empty array. */
-  exclude?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Array of term ids to exclude along with all of their descendant terms. If $include is non-empty, $exclude_tree is ignored. Default empty array. */
-  excludeTree?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Whether to hide terms not assigned to any posts. Accepts true or false. Default false */
-  hideEmpty?: InputMaybe<Scalars["Boolean"]>;
-  /** Whether to include terms that have non-empty descendants (even if $hide_empty is set to true). Default true. */
-  hierarchical?: InputMaybe<Scalars["Boolean"]>;
-  /** Array of term ids to include. Default empty array. */
-  include?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Array of names to return term(s) for. Default empty. */
-  name?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Retrieve terms where the name is LIKE the input value. Default empty. */
-  nameLike?: InputMaybe<Scalars["String"]>;
-  /** Array of object IDs. Results will be limited to terms associated with these objects. */
-  objectIds?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Direction the connection should be ordered in */
-  order?: InputMaybe<OrderEnum>;
-  /** Field(s) to order terms by. Defaults to 'name'. */
-  orderby?: InputMaybe<TermObjectsConnectionOrderbyEnum>;
-  /** Whether to pad the quantity of a term's children in the quantity of each term's "count" object variable. Default false. */
-  padCounts?: InputMaybe<Scalars["Boolean"]>;
-  /** Parent term ID to retrieve direct-child terms of. Default empty. */
-  parent?: InputMaybe<Scalars["Int"]>;
-  /** Search criteria to match terms. Will be SQL-formatted with wildcards before and after. Default empty. */
-  search?: InputMaybe<Scalars["String"]>;
-  /** Array of slugs to return term(s) for. Default empty. */
-  slug?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** The Taxonomy to filter terms by */
-  taxonomies?: InputMaybe<Array<InputMaybe<TaxonomyEnum>>>;
-  /** Array of term taxonomy IDs, to match when querying terms. */
-  termTaxonomId?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Whether to prime meta caches for matched terms. Default true. */
-  updateTermMetaCache?: InputMaybe<Scalars["Boolean"]>;
 }
 
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
@@ -3804,6 +4778,50 @@ export interface RootQueryToContentRevisionUnionConnectionWhereArgs {
   status?: InputMaybe<PostStatusEnum>;
   /** Title of the object */
   title?: InputMaybe<Scalars["String"]>;
+}
+
+/** Arguments for filtering the RootQueryToGfEntryConnection connection */
+export interface RootQueryToGfEntryConnectionWhereArgs {
+  /** Date filters to apply. */
+  dateFilters?: InputMaybe<EntriesDateFiltersInput>;
+  /** Entry status. Default is `SUBMITTED`. Currently no other types are supported. */
+  entryType?: InputMaybe<EntryTypeEnum>;
+  /** Field-specific filters to apply. */
+  fieldFilters?: InputMaybe<Array<InputMaybe<EntriesFieldFiltersInput>>>;
+  /** Whether to filter by ALL or ANY of the field filters. Default is ALL. */
+  fieldFiltersMode?: InputMaybe<FieldFiltersModeEnum>;
+  /** Array of form IDs to limit the entries to. Exclude this argument to query all forms. */
+  formIds?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
+  /** How to sort the entries. */
+  orderby?: InputMaybe<EntriesConnectionOrderbyInput>;
+  /** Entry status. Default is "ACTIVE". */
+  status?: InputMaybe<EntryStatusEnum>;
+}
+
+/** Arguments for filtering the RootQueryToGfFormConnection connection */
+export interface RootQueryToGfFormConnectionWhereArgs {
+  /** Array of form IDs to return. Exclude this argument to query all forms. */
+  formIds?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
+  /** How to sort the entries. */
+  orderby?: InputMaybe<FormsConnectionOrderbyInput>;
+  /** Status of the forms to get. */
+  status?: InputMaybe<FormStatusEnum>;
+}
+
+/** Arguments for filtering the RootQueryToGfSubmittedEntryConnection connection */
+export interface RootQueryToGfSubmittedEntryConnectionWhereArgs {
+  /** Date filters to apply. */
+  dateFilters?: InputMaybe<EntriesDateFiltersInput>;
+  /** Field-specific filters to apply. */
+  fieldFilters?: InputMaybe<Array<InputMaybe<EntriesFieldFiltersInput>>>;
+  /** Whether to filter by ALL or ANY of the field filters. Default is ALL. */
+  fieldFiltersMode?: InputMaybe<FieldFiltersModeEnum>;
+  /** Array of form IDs to limit the entries to. Exclude this argument to query all forms. */
+  formIds?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
+  /** How to sort the entries. */
+  orderby?: InputMaybe<EntriesConnectionOrderbyInput>;
+  /** Entry status. Default is "ACTIVE". */
+  status?: InputMaybe<EntryStatusEnum>;
 }
 
 /** Arguments for filtering the RootQueryToMediaItemConnection connection */
@@ -4690,6 +5708,88 @@ export interface SendPasswordResetEmailInput {
   username: Scalars["String"];
 }
 
+/** Border style to be used around the signature area. */
+export enum SignatureFieldBorderStyleEnum {
+  /** A "dashed" border style. */
+  DASHED = "DASHED",
+  /** A "dotted" border style. */
+  DOTTED = "DOTTED",
+  /** A "double" border style. */
+  DOUBLE = "DOUBLE",
+  /** A "dashed" border style. */
+  GROOVE = "GROOVE",
+  /** An "inset" border style. */
+  INSET = "INSET",
+  /** An "outset" border style. */
+  OUTSET = "OUTSET",
+  /** A "ridge" border style. */
+  RIDGE = "RIDGE",
+  /** A "solid" border style. */
+  SOLID = "SOLID",
+}
+
+/** Width of the border around the signature area. */
+export enum SignatureFieldBorderWidthEnum {
+  /** A large border width. */
+  LARGE = "LARGE",
+  /** A medium border width. */
+  MEDIUM = "MEDIUM",
+  /** No border width. */
+  NONE = "NONE",
+  /** A small border width. */
+  SMALL = "SMALL",
+}
+
+/** Entry meta input fields for submitting Gravity Forms forms. */
+export interface SubmitFormMetaInput {
+  /** ID of the user that submitted of the form if a logged in user submitted the form. */
+  createdById?: InputMaybe<Scalars["Int"]>;
+  /** The UTC date the entry was created, in `Y-m-d H:i:s` format. */
+  dateCreatedGmt?: InputMaybe<Scalars["String"]>;
+  /** Client IP of user who submitted the form. */
+  ip?: InputMaybe<Scalars["String"]>;
+  /** Used to overwrite the sourceUrl the form was submitted from. */
+  sourceUrl?: InputMaybe<Scalars["String"]>;
+  /** The name and version of both the browser and operating system from which the entry was submitted. */
+  userAgent?: InputMaybe<Scalars["String"]>;
+}
+
+/** Input for the submitGfDraftEntry mutation */
+export interface SubmitGfDraftEntryInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** Either the global ID of the draft entry, or its resume token. */
+  id: Scalars["ID"];
+  /** The ID type for the draft entry. Defaults to `ID` . */
+  idType?: InputMaybe<DraftEntryIdTypeEnum>;
+}
+
+/** Input for the submitGfForm mutation */
+export interface SubmitGfFormInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** The entry meta associated with the submission. */
+  entryMeta?: InputMaybe<SubmitFormMetaInput>;
+  /** The field ids and their values. */
+  fieldValues: Array<InputMaybe<FormFieldValuesInput>>;
+  /** The form ID. Accepts either a global or Database ID. */
+  id: Scalars["ID"];
+  /** Set to `true` if submitting a draft entry. Defaults to `false`. */
+  saveAsDraft?: InputMaybe<Scalars["Boolean"]>;
+  /** Useful for multi-page forms to indicate which page of the form was just submitted. */
+  sourcePage?: InputMaybe<Scalars["Int"]>;
+  /** Useful for multi-page forms to indicate which page is to be loaded if the current page passes validation. */
+  targetPage?: InputMaybe<Scalars["Int"]>;
+}
+
+/** The Type of Identifier used to fetch a single resource. */
+export enum SubmittedEntryIdTypeEnum {
+  /** The database ID assigned by Gravity Forms. Used by submitted entries. */
+  DATABASE_ID = "DATABASE_ID",
+  /** Unique global ID for the object. */
+  ID = "ID",
+}
+
 /** The Type of Identifier used to fetch a single resource. Default is ID. */
 export enum TagIdType {
   /** The Database ID for the node */
@@ -4876,6 +5976,14 @@ export enum TermObjectsConnectionOrderbyEnum {
   TERM_ORDER = "TERM_ORDER",
 }
 
+/** How the time is displayed. */
+export enum TimeFieldFormatEnum {
+  /** 12-hour time format. */
+  H12 = "H12",
+  /** 24-hour time format. */
+  H24 = "H24",
+}
+
 /** Input for the UpdateCategory mutation */
 export interface UpdateCategoryInput {
   /** The slug that the category will be an alias of */
@@ -4918,6 +6026,70 @@ export interface UpdateCommentInput {
   parent?: InputMaybe<Scalars["ID"]>;
   /** Type of comment. */
   type?: InputMaybe<Scalars["String"]>;
+}
+
+/** Entry meta input fields for updating draft Gravity Forms entries. */
+export interface UpdateDraftEntryMetaInput {
+  /** ID of the user that submitted of the form if a logged in user submitted the form. */
+  createdById?: InputMaybe<Scalars["Int"]>;
+  /** The UTC date the entry was created, in `Y-m-d H:i:s` format. */
+  dateCreatedGmt?: InputMaybe<Scalars["String"]>;
+  /** Client IP of user who submitted the form. */
+  ip?: InputMaybe<Scalars["String"]>;
+  /** Used to overwrite the sourceUrl the form was submitted from. */
+  sourceUrl?: InputMaybe<Scalars["String"]>;
+  /** The name and version of both the browser and operating system from which the entry was submitted. */
+  userAgent?: InputMaybe<Scalars["String"]>;
+}
+
+/** Entry meta input fields for updating Gravity Forms entries. */
+export interface UpdateEntryMetaInput {
+  /** ID of the user that submitted of the form if a logged in user submitted the form. */
+  createdById?: InputMaybe<Scalars["Int"]>;
+  /** The UTC date the entry was created, in `Y-m-d H:i:s` format. */
+  dateCreatedGmt?: InputMaybe<Scalars["String"]>;
+  /** Client IP of user who submitted the form. */
+  ip?: InputMaybe<Scalars["String"]>;
+  /** Whether the entry has been read. */
+  isRead?: InputMaybe<Scalars["Boolean"]>;
+  /** Whether the entry has been starred (i.e marked with a star). */
+  isStarred?: InputMaybe<Scalars["Boolean"]>;
+  /** Used to overwrite the sourceUrl the form was submitted from. */
+  sourceUrl?: InputMaybe<Scalars["String"]>;
+  /** The current status of the entry. */
+  status?: InputMaybe<EntryStatusEnum>;
+  /** The name and version of both the browser and operating system from which the entry was submitted. */
+  userAgent?: InputMaybe<Scalars["String"]>;
+}
+
+/** Input for the updateGfDraftEntry mutation */
+export interface UpdateGfDraftEntryInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** The entry meta values to update. */
+  entryMeta?: InputMaybe<UpdateDraftEntryMetaInput>;
+  /** The field ids and their values. */
+  fieldValues?: InputMaybe<Array<InputMaybe<FormFieldValuesInput>>>;
+  /** Either the global ID of the draft entry, or its resume token. */
+  id: Scalars["ID"];
+  /** The ID type for the draft entry. Defaults to `ID` . */
+  idType?: InputMaybe<DraftEntryIdTypeEnum>;
+  /** Whether the field values should be validated on submission. Defaults to false. */
+  shouldValidate?: InputMaybe<Scalars["Boolean"]>;
+}
+
+/** Input for the updateGfEntry mutation */
+export interface UpdateGfEntryInput {
+  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
+  clientMutationId?: InputMaybe<Scalars["String"]>;
+  /** The entry meta values to update. */
+  entryMeta?: InputMaybe<UpdateEntryMetaInput>;
+  /** The field ids and their values to update. */
+  fieldValues?: InputMaybe<Array<InputMaybe<FormFieldValuesInput>>>;
+  /** ID of the entry to update, either a global or database ID. */
+  id: Scalars["ID"];
+  /** Whether the field values should be validated on submission. Defaults to false. */
+  shouldValidate?: InputMaybe<Scalars["Boolean"]>;
 }
 
 /** Input for the updateMediaItem mutation */
@@ -5228,30 +6400,6 @@ export interface UpdateProductCardInput {
   menuOrder?: InputMaybe<Scalars["Int"]>;
   /** The password used to protect the content of the object */
   password?: InputMaybe<Scalars["String"]>;
-  /** The slug of the object */
-  slug?: InputMaybe<Scalars["String"]>;
-  /** The status of the object */
-  status?: InputMaybe<PostStatusEnum>;
-  /** The title of the object */
-  title?: InputMaybe<Scalars["String"]>;
-}
-
-/** Input for the updateProductService mutation */
-export interface UpdateProductServiceInput {
-  /** The userId to assign as the author of the object */
-  authorId?: InputMaybe<Scalars["ID"]>;
-  /** This is an ID that can be passed to a mutation by the client to track the progress of mutations and catch possible duplicate mutation submissions. */
-  clientMutationId?: InputMaybe<Scalars["String"]>;
-  /** The date of the object. Preferable to enter as year/month/day (e.g. 01/31/2017) as it will rearrange date as fit if it is not specified. Incomplete dates may have unintended results for example, "2017" as the input will use current date with timestamp 20:17  */
-  date?: InputMaybe<Scalars["String"]>;
-  /** The ID of the productService object */
-  id: Scalars["ID"];
-  /** A field used for ordering posts. This is typically used with nav menu items or for special ordering of hierarchical content types. */
-  menuOrder?: InputMaybe<Scalars["Int"]>;
-  /** The password used to protect the content of the object */
-  password?: InputMaybe<Scalars["String"]>;
-  /** Set connections between the productService and pros */
-  pros?: InputMaybe<ProductServiceProsInput>;
   /** The slug of the object */
   slug?: InputMaybe<Scalars["String"]>;
   /** The status of the object */
@@ -5949,52 +7097,6 @@ export interface UserToProductCardConnectionWhereArgs {
   title?: InputMaybe<Scalars["String"]>;
 }
 
-/** Arguments for filtering the UserToProductServiceConnection connection */
-export interface UserToProductServiceConnectionWhereArgs {
-  /** The user that's connected as the author of the object. Use the userId for the author object. */
-  author?: InputMaybe<Scalars["Int"]>;
-  /** Find objects connected to author(s) in the array of author's userIds */
-  authorIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Find objects connected to the author by the author's nicename */
-  authorName?: InputMaybe<Scalars["String"]>;
-  /** Find objects NOT connected to author(s) in the array of author's userIds */
-  authorNotIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Filter the connection based on dates */
-  dateQuery?: InputMaybe<DateQueryInput>;
-  /** True for objects with passwords; False for objects without passwords; null for all objects with or without passwords */
-  hasPassword?: InputMaybe<Scalars["Boolean"]>;
-  /** Specific ID of the object */
-  id?: InputMaybe<Scalars["Int"]>;
-  /** Array of IDs for the objects to retrieve */
-  in?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Get objects with a specific mimeType property */
-  mimeType?: InputMaybe<MimeTypeEnum>;
-  /** Slug / post_name of the object */
-  name?: InputMaybe<Scalars["String"]>;
-  /** Specify objects to retrieve. Use slugs */
-  nameIn?: InputMaybe<Array<InputMaybe<Scalars["String"]>>>;
-  /** Specify IDs NOT to retrieve. If this is used in the same query as "in", it will be ignored */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** What paramater to use to order the objects by. */
-  orderby?: InputMaybe<Array<InputMaybe<PostObjectsConnectionOrderbyInput>>>;
-  /** Use ID to return only children. Use 0 to return only top-level items */
-  parent?: InputMaybe<Scalars["ID"]>;
-  /** Specify objects whose parent is in an array */
-  parentIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Specify posts whose parent is not in an array */
-  parentNotIn?: InputMaybe<Array<InputMaybe<Scalars["ID"]>>>;
-  /** Show posts with a specific password. */
-  password?: InputMaybe<Scalars["String"]>;
-  /** Show Posts based on a keyword search */
-  search?: InputMaybe<Scalars["String"]>;
-  /** Retrieve posts where post status is in an array. */
-  stati?: InputMaybe<Array<InputMaybe<PostStatusEnum>>>;
-  /** Show posts with a specific status. */
-  status?: InputMaybe<PostStatusEnum>;
-  /** Title of the object */
-  title?: InputMaybe<Scalars["String"]>;
-}
-
 /** Arguments for filtering the UserToProjectConnection connection */
 export interface UserToProjectConnectionWhereArgs {
   /** The user that's connected as the author of the object. Use the userId for the author object. */
@@ -6130,19 +7232,56 @@ export enum UsersConnectionSearchColumnEnum {
 }
 
 export const scalarsEnumsHash: import("gqty").ScalarsEnumsHash = {
+  AddressFieldCountryEnum: true,
+  AddressFieldTypeEnum: true,
+  AmPmEnum: true,
   AvatarRatingEnum: true,
   Boolean: true,
+  CaptchaFieldBadgePositionEnum: true,
+  CaptchaFieldThemeEnum: true,
+  CaptchaFieldTypeEnum: true,
   CategoryIdType: true,
   CommentsConnectionOrderbyEnum: true,
+  ConditionalLogicActionTypeEnum: true,
+  ConditionalLogicLogicTypeEnum: true,
   ContentNodeIdTypeEnum: true,
   ContentTypeEnum: true,
   ContentTypeIdTypeEnum: true,
   ContentTypesOfCategoryEnum: true,
   ContentTypesOfNewMediaCenterEnum: true,
   ContentTypesOfPostFormatEnum: true,
-  ContentTypesOfProEnum: true,
   ContentTypesOfTagEnum: true,
+  DateFieldFormatEnum: true,
+  DateFieldTypeEnum: true,
+  DraftEntryIdTypeEnum: true,
+  EntryIdTypeEnum: true,
+  EntryStatusEnum: true,
+  EntryTypeEnum: true,
+  FieldFiltersModeEnum: true,
+  FieldFiltersOperatorEnum: true,
   Float: true,
+  FormButtonTypeEnum: true,
+  FormConfirmationTypeEnum: true,
+  FormDescriptionPlacementEnum: true,
+  FormFieldCalendarIconTypeEnum: true,
+  FormFieldDescriptionPlacementEnum: true,
+  FormFieldLabelPlacementEnum: true,
+  FormFieldRequiredIndicatorEnum: true,
+  FormFieldSizeEnum: true,
+  FormFieldSubLabelPlacementEnum: true,
+  FormFieldTypeEnum: true,
+  FormFieldVisibilityEnum: true,
+  FormIdTypeEnum: true,
+  FormLabelPlacementEnum: true,
+  FormLimitEntriesPeriodEnum: true,
+  FormNotificationToTypeEnum: true,
+  FormPageProgressStyleEnum: true,
+  FormPageProgressTypeEnum: true,
+  FormRetentionPolicyEnum: true,
+  FormRuleOperatorEnum: true,
+  FormStatusEnum: true,
+  FormSubLabelPlacementEnum: true,
+  GfCurrencyEnum: true,
   ID: true,
   Int: true,
   MediaItemIdType: true,
@@ -6156,10 +7295,14 @@ export const scalarsEnumsHash: import("gqty").ScalarsEnumsHash = {
   NewMediaCenterIdType: true,
   NewPressCoverageIdType: true,
   NewPressReleaseIdType: true,
+  NumberFieldFormatEnum: true,
   OrderEnum: true,
   PageIdType: true,
   PartnerIdType: true,
+  PasswordFieldMinStrengthEnum: true,
+  PhoneFieldFormatEnum: true,
   PostFormatIdType: true,
+  PostFormatTypeEnum: true,
   PostIdType: true,
   PostObjectFieldFormatEnum: true,
   PostObjectsConnectionDateColumnEnum: true,
@@ -6169,17 +7312,21 @@ export const scalarsEnumsHash: import("gqty").ScalarsEnumsHash = {
   PressReleaseIdType: true,
   ProIdType: true,
   ProductCardIdType: true,
-  ProductServiceIdType: true,
   ProductsServiceIdType: true,
   ProjectIdType: true,
   RelationEnum: true,
+  SignatureFieldBorderStyleEnum: true,
+  SignatureFieldBorderWidthEnum: true,
   String: true,
+  SubmittedEntryIdTypeEnum: true,
   TagIdType: true,
   TaxonomyEnum: true,
   TaxonomyIdTypeEnum: true,
   TeamMemberIdType: true,
   TermNodeIdTypeEnum: true,
   TermObjectsConnectionOrderbyEnum: true,
+  TimeFieldFormatEnum: true,
+  Upload: true,
   UserNodeIdTypeEnum: true,
   UserRoleEnum: true,
   UsersConnectionOrderbyEnum: true,
@@ -6196,6 +7343,70 @@ export const generatedSchema = {
     target: { __type: "String" },
     title: { __type: "String" },
     url: { __type: "String" },
+  },
+  AddressField: {
+    __typename: { __type: "String!" },
+    addressType: { __type: "AddressFieldTypeEnum" },
+    addressValues: { __type: "AddressFieldValue" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    copyValuesOptionFieldId: { __type: "Int" },
+    copyValuesOptionLabel: { __type: "String" },
+    cssClass: { __type: "String" },
+    defaultCountry: { __type: "AddressFieldCountryEnum" },
+    defaultProvince: { __type: "String" },
+    defaultState: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[AddressInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldCopyValuesOption: { __type: "Boolean" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  AddressFieldInput: {
+    city: { __type: "String" },
+    country: { __type: "AddressFieldCountryEnum" },
+    lineTwo: { __type: "String" },
+    state: { __type: "String" },
+    street: { __type: "String" },
+    zip: { __type: "String" },
+  },
+  AddressFieldValue: {
+    __typename: { __type: "String!" },
+    city: { __type: "String" },
+    country: { __type: "AddressFieldCountryEnum" },
+    lineTwo: { __type: "String" },
+    state: { __type: "String" },
+    street: { __type: "String" },
+    zip: { __type: "String" },
+  },
+  AddressInputProperty: {
+    __typename: { __type: "String!" },
+    autocompleteAttribute: { __type: "String" },
+    customLabel: { __type: "String" },
+    defaultValue: { __type: "String" },
+    id: { __type: "Float" },
+    isHidden: { __type: "Boolean" },
+    key: { __type: "String" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+    placeholder: { __type: "String" },
   },
   AtlasContentModelerSettingsSettings: {
     __typename: { __type: "String!" },
@@ -6214,6 +7425,32 @@ export const generatedSchema = {
     size: { __type: "Int" },
     url: { __type: "String" },
     width: { __type: "Int" },
+  },
+  CaptchaField: {
+    __typename: { __type: "String!" },
+    captchaBadgePosition: { __type: "CaptchaFieldBadgePositionEnum" },
+    captchaLanguage: { __type: "String" },
+    captchaTheme: { __type: "CaptchaFieldThemeEnum" },
+    captchaType: { __type: "CaptchaFieldTypeEnum" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    simpleCaptchaBackgroundColor: { __type: "String" },
+    simpleCaptchaFontColor: { __type: "String" },
+    simpleCaptchaSize: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   Category: {
     __typename: { __type: "String!" },
@@ -6408,6 +7645,57 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     node: { __type: "Taxonomy" },
   },
+  CheckboxField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    checkboxValues: { __type: "[CheckboxFieldValue]" },
+    choices: { __type: "[CheckboxFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasSelectAll: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[CheckboxInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  CheckboxFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  CheckboxFieldInput: {
+    inputId: { __type: "Float" },
+    value: { __type: "String" },
+  },
+  CheckboxFieldValue: {
+    __typename: { __type: "String!" },
+    inputId: { __type: "Float" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  CheckboxInputProperty: {
+    __typename: { __type: "String!" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+  },
   Comment: {
     __typename: { __type: "String!" },
     agent: { __type: "String" },
@@ -6548,6 +7836,18 @@ export const generatedSchema = {
     url: { __type: "String" },
     $on: { __type: "$Commenter!" },
   },
+  ConditionalLogic: {
+    __typename: { __type: "String!" },
+    actionType: { __type: "ConditionalLogicActionTypeEnum" },
+    logicType: { __type: "ConditionalLogicLogicTypeEnum" },
+    rules: { __type: "[ConditionalLogicRule]" },
+  },
+  ConditionalLogicRule: {
+    __typename: { __type: "String!" },
+    fieldId: { __type: "Float" },
+    operator: { __type: "FormRuleOperatorEnum" },
+    value: { __type: "String" },
+  },
   ConditionalTags: {
     __typename: { __type: "String!" },
     isArchive: { __type: "Boolean" },
@@ -6572,6 +7872,30 @@ export const generatedSchema = {
     isTag: { __type: "Boolean" },
     isTax: { __type: "Boolean" },
     isYear: { __type: "Boolean" },
+  },
+  ConsentField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    checkboxLabel: { __type: "String" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    consentValue: { __type: "Boolean" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   ContentNode: {
     __typename: { __type: "String!" },
@@ -6987,22 +8311,6 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     productCard: { __type: "ProductCard" },
   },
-  CreateProductServiceInput: {
-    authorId: { __type: "ID" },
-    clientMutationId: { __type: "String" },
-    date: { __type: "String" },
-    menuOrder: { __type: "Int" },
-    password: { __type: "String" },
-    pros: { __type: "ProductServiceProsInput" },
-    slug: { __type: "String" },
-    status: { __type: "PostStatusEnum" },
-    title: { __type: "String" },
-  },
-  CreateProductServicePayload: {
-    __typename: { __type: "String!" },
-    clientMutationId: { __type: "String" },
-    productService: { __type: "ProductService" },
-  },
   CreateProductsServiceInput: {
     clientMutationId: { __type: "String" },
     content: { __type: "String" },
@@ -7092,10 +8400,52 @@ export const generatedSchema = {
     databaseId: { __type: "Int!" },
     $on: { __type: "$DatabaseIdentifier!" },
   },
+  DateField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    calendarIconType: { __type: "FormFieldCalendarIconTypeEnum" },
+    calendarIconUrl: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    dateFormat: { __type: "DateFieldFormatEnum" },
+    dateType: { __type: "DateFieldTypeEnum" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[DateInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
   DateInput: {
     day: { __type: "Int" },
     month: { __type: "Int" },
     year: { __type: "Int" },
+  },
+  DateInputProperty: {
+    __typename: { __type: "String!" },
+    autocompleteAttribute: { __type: "String" },
+    customLabel: { __type: "String" },
+    defaultValue: { __type: "String" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    placeholder: { __type: "String" },
   },
   DateQueryInput: {
     after: { __type: "DateInput" },
@@ -7136,6 +8486,28 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     comment: { __type: "Comment" },
     deletedId: { __type: "ID" },
+  },
+  DeleteGfDraftEntryInput: {
+    clientMutationId: { __type: "String" },
+    id: { __type: "ID!" },
+    idType: { __type: "DraftEntryIdTypeEnum" },
+  },
+  DeleteGfDraftEntryPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    deletedId: { __type: "ID" },
+    draftEntry: { __type: "GfDraftEntry" },
+  },
+  DeleteGfEntryInput: {
+    clientMutationId: { __type: "String" },
+    forceDelete: { __type: "Boolean" },
+    id: { __type: "ID!" },
+  },
+  DeleteGfEntryPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    deletedId: { __type: "ID" },
+    entry: { __type: "GfSubmittedEntry" },
   },
   DeleteMediaItemInput: {
     clientMutationId: { __type: "String" },
@@ -7277,17 +8649,6 @@ export const generatedSchema = {
     deletedId: { __type: "ID" },
     productCard: { __type: "ProductCard" },
   },
-  DeleteProductServiceInput: {
-    clientMutationId: { __type: "String" },
-    forceDelete: { __type: "Boolean" },
-    id: { __type: "ID!" },
-  },
-  DeleteProductServicePayload: {
-    __typename: { __type: "String!" },
-    clientMutationId: { __type: "String" },
-    deletedId: { __type: "ID" },
-    productService: { __type: "ProductService" },
-  },
   DeleteProductsServiceInput: {
     clientMutationId: { __type: "String" },
     forceDelete: { __type: "Boolean" },
@@ -7347,6 +8708,50 @@ export const generatedSchema = {
     defaultCommentStatus: { __type: "String" },
     defaultPingStatus: { __type: "String" },
   },
+  EmailField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasEmailConfirmation: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[EmailInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  EmailFieldInput: {
+    confirmationValue: { __type: "String" },
+    value: { __type: "String" },
+  },
+  EmailInputProperty: {
+    __typename: { __type: "String!" },
+    autocompleteAttribute: { __type: "String" },
+    customLabel: { __type: "String" },
+    defaultValue: { __type: "String" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+    placeholder: { __type: "String" },
+  },
   EnqueuedAsset: {
     __typename: { __type: "String!" },
     args: { __type: "Boolean" },
@@ -7378,6 +8783,218 @@ export const generatedSchema = {
     src: { __type: "String" },
     version: { __type: "String" },
   },
+  EntriesConnectionOrderbyInput: {
+    field: { __type: "String" },
+    isNumeric: { __type: "Boolean" },
+    order: { __type: "OrderEnum" },
+  },
+  EntriesDateFiltersInput: {
+    endDate: { __type: "String" },
+    startDate: { __type: "String" },
+  },
+  EntriesFieldFiltersInput: {
+    boolValues: { __type: "[Boolean]" },
+    floatValues: { __type: "[Float]" },
+    intValues: { __type: "[Int]" },
+    key: { __type: "String" },
+    operator: { __type: "FieldFiltersOperatorEnum" },
+    stringValues: { __type: "[String]" },
+  },
+  FieldError: {
+    __typename: { __type: "String!" },
+    id: { __type: "Float" },
+    message: { __type: "String" },
+  },
+  FileUploadField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    allowedExtensions: { __type: "[String]" },
+    canAcceptMultipleFiles: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxFileSize: { __type: "Int" },
+    maxFiles: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  FormButton: {
+    __typename: { __type: "String!" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    imageUrl: { __type: "String" },
+    text: { __type: "String" },
+    type: { __type: "FormButtonTypeEnum" },
+  },
+  FormConfirmation: {
+    __typename: { __type: "String!" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    id: { __type: "String" },
+    isActive: { __type: "Boolean" },
+    isDefault: { __type: "Boolean" },
+    message: { __type: "String" },
+    name: { __type: "String" },
+    pageId: { __type: "Int" },
+    queryString: { __type: "String" },
+    type: { __type: "FormConfirmationTypeEnum" },
+    url: { __type: "String" },
+  },
+  FormDataPolicies: {
+    __typename: { __type: "String!" },
+    canExportAndErase: { __type: "Boolean" },
+    entryData: { __type: "[FormEntryDataPolicy]" },
+    identificationFieldDatabaseId: { __type: "Int" },
+  },
+  FormEntryDataPolicy: {
+    __typename: { __type: "String!" },
+    key: { __type: "String" },
+    shouldErase: { __type: "Boolean" },
+    shouldExport: { __type: "Boolean" },
+  },
+  FormEntryLimits: {
+    __typename: { __type: "String!" },
+    hasLimit: { __type: "Boolean" },
+    limitReachedMessage: { __type: "String" },
+    limitationPeriod: { __type: "FormLimitEntriesPeriodEnum" },
+    maxEntries: { __type: "Int" },
+  },
+  FormField: {
+    __typename: { __type: "String!" },
+    displayOnly: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    type: { __type: "FormFieldTypeEnum" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+    $on: { __type: "$FormField!" },
+  },
+  FormFieldDataPolicy: {
+    __typename: { __type: "String!" },
+    isIdentificationField: { __type: "Boolean" },
+    shouldErase: { __type: "Boolean" },
+    shouldExport: { __type: "Boolean" },
+  },
+  FormFieldValuesInput: {
+    addressValues: { __type: "AddressFieldInput" },
+    checkboxValues: { __type: "[CheckboxFieldInput]" },
+    emailValues: { __type: "EmailFieldInput" },
+    fileUploadValues: { __type: "[Upload]" },
+    id: { __type: "Int!" },
+    imageValues: { __type: "ImageInput" },
+    listValues: { __type: "[ListFieldInput]" },
+    nameValues: { __type: "NameFieldInput" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+  },
+  FormLastPageButton: {
+    __typename: { __type: "String!" },
+    imageUrl: { __type: "String" },
+    text: { __type: "String" },
+    type: { __type: "FormButtonTypeEnum" },
+  },
+  FormLogin: {
+    __typename: { __type: "String!" },
+    isLoginRequired: { __type: "Boolean" },
+    loginRequiredMessage: { __type: "String" },
+  },
+  FormNotification: {
+    __typename: { __type: "String!" },
+    bcc: { __type: "String" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    event: { __type: "String" },
+    from: { __type: "String" },
+    fromName: { __type: "String" },
+    id: { __type: "String" },
+    isActive: { __type: "Boolean" },
+    isAutoformatted: { __type: "Boolean" },
+    message: { __type: "String" },
+    name: { __type: "String" },
+    replyTo: { __type: "String" },
+    routing: { __type: "[FormNotificationRouting]" },
+    service: { __type: "String" },
+    shouldSendAttachments: { __type: "Boolean" },
+    subject: { __type: "String" },
+    to: { __type: "String" },
+    toType: { __type: "FormNotificationToTypeEnum" },
+  },
+  FormNotificationRouting: {
+    __typename: { __type: "String!" },
+    email: { __type: "String" },
+    fieldId: { __type: "Int" },
+    operator: { __type: "FormRuleOperatorEnum" },
+    value: { __type: "String" },
+  },
+  FormPagination: {
+    __typename: { __type: "String!" },
+    backgroundColor: { __type: "String" },
+    color: { __type: "String" },
+    hasProgressbarOnConfirmation: { __type: "Boolean" },
+    pageNames: { __type: "[String]" },
+    progressbarCompletionText: { __type: "String" },
+    style: { __type: "FormPageProgressStyleEnum" },
+    type: { __type: "FormPageProgressTypeEnum" },
+  },
+  FormPersonalData: {
+    __typename: { __type: "String!" },
+    dataPolicies: { __type: "FormDataPolicies" },
+    daysToRetain: { __type: "Int" },
+    retentionPolicy: { __type: "FormRetentionPolicyEnum" },
+    shouldSaveIP: { __type: "Boolean" },
+  },
+  FormPostCreation: {
+    __typename: { __type: "String!" },
+    author: { __type: "User" },
+    authorDatabaseId: { __type: "Int" },
+    authorId: { __type: "ID" },
+    categoryDatabaseId: { __type: "Int" },
+    contentTemplate: { __type: "String" },
+    format: { __type: "PostFormatTypeEnum" },
+    hasContentTemplate: { __type: "Boolean" },
+    hasTitleTemplate: { __type: "Boolean" },
+    shouldUseCurrentUserAsAuthor: { __type: "Boolean" },
+    status: { __type: "String" },
+    titleTemplate: { __type: "String" },
+  },
+  FormSaveAndContinue: {
+    __typename: { __type: "String!" },
+    buttonText: { __type: "String" },
+    hasSaveAndContinue: { __type: "Boolean" },
+  },
+  FormSchedule: {
+    __typename: { __type: "String!" },
+    closedMessage: { __type: "String" },
+    endDetails: { __type: "FormScheduleDetails" },
+    hasSchedule: { __type: "Boolean" },
+    pendingMessage: { __type: "String" },
+    startDetails: { __type: "FormScheduleDetails" },
+  },
+  FormScheduleDetails: {
+    __typename: { __type: "String!" },
+    amPm: { __type: "AmPmEnum" },
+    date: { __type: "String" },
+    dateGmt: { __type: "String" },
+    hour: { __type: "Int" },
+    minute: { __type: "Int" },
+  },
+  FormsConnectionOrderbyInput: {
+    field: { __type: "String" },
+    order: { __type: "OrderEnum" },
+  },
   GeneralSettings: {
     __typename: { __type: "String!" },
     dateFormat: { __type: "String" },
@@ -7402,6 +9019,230 @@ export const generatedSchema = {
     code: { __type: "String" },
     error: { __type: "String" },
   },
+  GfDraftEntry: {
+    __typename: { __type: "String!" },
+    createdBy: { __type: "User" },
+    createdByDatabaseId: { __type: "Int" },
+    createdById: { __type: "ID" },
+    dateCreated: { __type: "String" },
+    dateCreatedGmt: { __type: "String" },
+    dateUpdated: { __type: "String" },
+    dateUpdatedGmt: { __type: "String" },
+    form: { __type: "GfForm" },
+    formDatabaseId: { __type: "Int" },
+    formFields: {
+      __type: "GfEntryToFormFieldConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "GfEntryToFormFieldConnectionWhereArgs",
+      },
+    },
+    formId: { __type: "ID" },
+    id: { __type: "ID!" },
+    ip: { __type: "String" },
+    isDraft: { __type: "Boolean" },
+    isSubmitted: { __type: "Boolean" },
+    resumeToken: { __type: "String" },
+    sourceUrl: { __type: "String" },
+    userAgent: { __type: "String" },
+  },
+  GfEntry: {
+    __typename: { __type: "String!" },
+    createdBy: { __type: "User" },
+    createdByDatabaseId: { __type: "Int" },
+    createdById: { __type: "ID" },
+    dateCreated: { __type: "String" },
+    dateCreatedGmt: { __type: "String" },
+    dateUpdated: { __type: "String" },
+    dateUpdatedGmt: { __type: "String" },
+    form: { __type: "GfForm" },
+    formDatabaseId: { __type: "Int" },
+    formFields: {
+      __type: "GfEntryToFormFieldConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "GfEntryToFormFieldConnectionWhereArgs",
+      },
+    },
+    formId: { __type: "ID" },
+    id: { __type: "ID!" },
+    ip: { __type: "String" },
+    isDraft: { __type: "Boolean" },
+    isSubmitted: { __type: "Boolean" },
+    sourceUrl: { __type: "String" },
+    userAgent: { __type: "String" },
+    $on: { __type: "$GfEntry!" },
+  },
+  GfEntryToFormFieldConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[GfEntryToFormFieldConnectionEdge]" },
+    nodes: { __type: "[FormField]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  GfEntryToFormFieldConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "FormField" },
+  },
+  GfEntryToFormFieldConnectionWhereArgs: {
+    adminLabels: { __type: "[String]" },
+    fieldTypes: { __type: "[FormFieldTypeEnum]" },
+    ids: { __type: "[ID]" },
+    pageNumber: { __type: "Int" },
+  },
+  GfForm: {
+    __typename: { __type: "String!" },
+    button: { __type: "FormButton" },
+    confirmations: { __type: "[FormConfirmation]" },
+    cssClass: { __type: "String" },
+    customRequiredIndicator: { __type: "String" },
+    databaseId: { __type: "Int!" },
+    dateCreated: { __type: "String" },
+    dateCreatedGmt: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormDescriptionPlacementEnum" },
+    entries: {
+      __type: "GfFormToGfEntryConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "GfFormToGfEntryConnectionWhereArgs",
+      },
+    },
+    entryLimits: { __type: "FormEntryLimits" },
+    firstPageCssClass: { __type: "String" },
+    formFields: {
+      __type: "GfFormToFormFieldConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "GfFormToFormFieldConnectionWhereArgs",
+      },
+    },
+    formId: { __type: "Int" },
+    hasConditionalLogicAnimation: { __type: "Boolean" },
+    hasHoneypot: { __type: "Boolean" },
+    hasValidationSummary: { __type: "Boolean" },
+    id: { __type: "ID!" },
+    isActive: { __type: "Boolean" },
+    isTrash: { __type: "Boolean" },
+    labelPlacement: { __type: "FormLabelPlacementEnum" },
+    lastPageButton: { __type: "FormLastPageButton" },
+    login: { __type: "FormLogin" },
+    markupVersion: { __type: "Int" },
+    nextFieldId: { __type: "Int" },
+    notifications: { __type: "[FormNotification]" },
+    pagination: { __type: "FormPagination" },
+    personalData: { __type: "FormPersonalData" },
+    postCreation: { __type: "FormPostCreation" },
+    requiredIndicator: { __type: "FormFieldRequiredIndicatorEnum" },
+    saveAndContinue: { __type: "FormSaveAndContinue" },
+    scheduling: { __type: "FormSchedule" },
+    subLabelPlacement: { __type: "FormSubLabelPlacementEnum" },
+    title: { __type: "String" },
+    version: { __type: "String" },
+  },
+  GfFormToFormFieldConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[GfFormToFormFieldConnectionEdge]" },
+    nodes: { __type: "[FormField]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  GfFormToFormFieldConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "FormField" },
+  },
+  GfFormToFormFieldConnectionWhereArgs: {
+    adminLabels: { __type: "[String]" },
+    fieldTypes: { __type: "[FormFieldTypeEnum]" },
+    ids: { __type: "[ID]" },
+    pageNumber: { __type: "Int" },
+  },
+  GfFormToGfEntryConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[GfFormToGfEntryConnectionEdge]" },
+    nodes: { __type: "[GfEntry]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  GfFormToGfEntryConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "GfEntry" },
+  },
+  GfFormToGfEntryConnectionWhereArgs: {
+    dateFilters: { __type: "EntriesDateFiltersInput" },
+    fieldFilters: { __type: "[EntriesFieldFiltersInput]" },
+    fieldFiltersMode: { __type: "FieldFiltersModeEnum" },
+    orderby: { __type: "EntriesConnectionOrderbyInput" },
+    status: { __type: "EntryStatusEnum" },
+  },
+  GfLogger: {
+    __typename: { __type: "String!" },
+    isEnabled: { __type: "Boolean" },
+    name: { __type: "String" },
+  },
+  GfSettings: {
+    __typename: { __type: "String!" },
+    currency: { __type: "GfCurrencyEnum" },
+    hasBackgroundUpdates: { __type: "Boolean" },
+    hasDefaultCss: { __type: "Boolean" },
+    hasToolbar: { __type: "Boolean" },
+    isHtml5Enabled: { __type: "Boolean" },
+    isNoConflictModeEnabled: { __type: "Boolean" },
+    logging: { __type: "GfSettingsLogging" },
+  },
+  GfSettingsLogging: {
+    __typename: { __type: "String!" },
+    isLoggingEnabled: { __type: "Boolean" },
+    loggers: { __type: "[GfLogger]" },
+  },
+  GfSubmittedEntry: {
+    __typename: { __type: "String!" },
+    createdBy: { __type: "User" },
+    createdByDatabaseId: { __type: "Int" },
+    createdById: { __type: "ID" },
+    databaseId: { __type: "Int!" },
+    dateCreated: { __type: "String" },
+    dateCreatedGmt: { __type: "String" },
+    dateUpdated: { __type: "String" },
+    dateUpdatedGmt: { __type: "String" },
+    entryId: { __type: "Int" },
+    form: { __type: "GfForm" },
+    formDatabaseId: { __type: "Int" },
+    formFields: {
+      __type: "GfEntryToFormFieldConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "GfEntryToFormFieldConnectionWhereArgs",
+      },
+    },
+    formId: { __type: "ID" },
+    id: { __type: "ID!" },
+    ip: { __type: "String" },
+    isDraft: { __type: "Boolean" },
+    isRead: { __type: "Boolean" },
+    isStarred: { __type: "Boolean" },
+    isSubmitted: { __type: "Boolean" },
+    post: { __type: "Post" },
+    postDatabaseId: { __type: "Int" },
+    sourceUrl: { __type: "String" },
+    status: { __type: "EntryStatusEnum" },
+    userAgent: { __type: "String" },
+  },
   HCMSFooter: {
     __typename: { __type: "String!" },
     copyrightText: { __type: "String" },
@@ -7420,6 +9261,23 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     iconName: { __type: "String" },
     iconUrl: { __type: "String" },
+  },
+  HiddenField: {
+    __typename: { __type: "String!" },
+    canPrepopulate: { __type: "Boolean" },
+    defaultValue: { __type: "String" },
+    displayOnly: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    label: { __type: "String" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   HierarchicalContentNode: {
     __typename: { __type: "String!" },
@@ -7527,6 +9385,77 @@ export const generatedSchema = {
     parentDatabaseId: { __type: "Int" },
     parentId: { __type: "ID" },
     $on: { __type: "$HierarchicalTermNode!" },
+  },
+  HtmlField: {
+    __typename: { __type: "String!" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    content: { __type: "String" },
+    cssClass: { __type: "String" },
+    displayOnly: { __type: "Boolean" },
+    hasMargins: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    label: { __type: "String" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    type: { __type: "FormFieldTypeEnum" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  ImageFieldValue: {
+    __typename: { __type: "String!" },
+    altText: { __type: "String" },
+    caption: { __type: "String" },
+    description: { __type: "String" },
+    title: { __type: "String" },
+    url: { __type: "String" },
+  },
+  ImageInput: {
+    altText: { __type: "String" },
+    caption: { __type: "String" },
+    description: { __type: "String" },
+    image: { __type: "Upload!" },
+    title: { __type: "String" },
+  },
+  ListField: {
+    __typename: { __type: "String!" },
+    addIconUrl: { __type: "String" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[ListFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    deleteIconUrl: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasColumns: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    listValues: { __type: "[ListFieldValue]" },
+    maxRows: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  ListFieldChoice: {
+    __typename: { __type: "String!" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  ListFieldInput: { rowValues: { __type: "[String]" } },
+  ListFieldValue: {
+    __typename: { __type: "String!" },
+    values: { __type: "[String]" },
   },
   MediaDetails: {
     __typename: { __type: "String!" },
@@ -7809,6 +9738,104 @@ export const generatedSchema = {
     location: { __type: "MenuLocationEnum" },
     parentDatabaseId: { __type: "Int" },
     parentId: { __type: "ID" },
+  },
+  MultiSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[MultiSelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  MultiSelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  NameField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[NameInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    nameValues: { __type: "NameFieldValue" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  NameFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  NameFieldInput: {
+    first: { __type: "String" },
+    last: { __type: "String" },
+    middle: { __type: "String" },
+    prefix: { __type: "String" },
+    suffix: { __type: "String" },
+  },
+  NameFieldValue: {
+    __typename: { __type: "String!" },
+    first: { __type: "String" },
+    last: { __type: "String" },
+    middle: { __type: "String" },
+    prefix: { __type: "String" },
+    suffix: { __type: "String" },
+  },
+  NameInputProperty: {
+    __typename: { __type: "String!" },
+    autocompleteAttribute: { __type: "String" },
+    choices: { __type: "[NameFieldChoice]" },
+    customLabel: { __type: "String" },
+    defaultValue: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    id: { __type: "Float" },
+    isHidden: { __type: "Boolean" },
+    key: { __type: "String" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+    placeholder: { __type: "String" },
   },
   NewEvent: {
     __typename: { __type: "String!" },
@@ -8612,6 +10639,13 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     node: { __type: "MediaItem" },
   },
+  NodeWithForm: {
+    __typename: { __type: "String!" },
+    form: { __type: "GfForm" },
+    formDatabaseId: { __type: "Int" },
+    formId: { __type: "ID" },
+    $on: { __type: "$NodeWithForm!" },
+  },
   NodeWithPageAttributes: {
     __typename: { __type: "String!" },
     menuOrder: { __type: "Int" },
@@ -8646,6 +10680,42 @@ export const generatedSchema = {
     pinged: { __type: "[String]" },
     toPing: { __type: "[String]" },
     $on: { __type: "$NodeWithTrackbacks!" },
+  },
+  NumberField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    calculationFormula: { __type: "String" },
+    calculationRounding: { __type: "Int" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isCalculation: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    numberFormat: { __type: "NumberFieldFormatEnum" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    rangeMax: { __type: "Float" },
+    rangeMin: { __type: "Float" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   Page: {
     __typename: { __type: "String!" },
@@ -8758,6 +10828,21 @@ export const generatedSchema = {
       __args: { format: "PostObjectFieldFormatEnum" },
     },
     uri: { __type: "String" },
+  },
+  PageField: {
+    __typename: { __type: "String!" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    displayOnly: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    nextButton: { __type: "FormButton" },
+    pageNumber: { __type: "Int" },
+    previousButton: { __type: "FormButton" },
+    type: { __type: "FormFieldTypeEnum" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   PageToCommentConnection: {
     __typename: { __type: "String!" },
@@ -8960,6 +11045,73 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     node: { __type: "Partner" },
   },
+  PasswordField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasPasswordStrengthIndicator: { __type: "Boolean" },
+    hasPasswordVisibilityToggle: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PasswordInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    minPasswordStrength: { __type: "PasswordFieldMinStrengthEnum" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    size: { __type: "FormFieldSizeEnum" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PasswordInputProperty: {
+    __typename: { __type: "String!" },
+    customLabel: { __type: "String" },
+    id: { __type: "Float" },
+    isHidden: { __type: "Boolean" },
+    label: { __type: "String" },
+    placeholder: { __type: "String" },
+  },
+  PhoneField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    phoneFormat: { __type: "PhoneFieldFormatEnum" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
   Plugin: {
     __typename: { __type: "String!" },
     author: { __type: "String" },
@@ -9108,6 +11260,785 @@ export const generatedSchema = {
     id: { __type: "ID" },
     name: { __type: "String" },
     slug: { __type: "String" },
+  },
+  PostCategoryCheckboxField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    checkboxValues: { __type: "[CheckboxFieldValue]" },
+    choices: { __type: "[PostCategoryFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    dropdownPlaceholder: { __type: "String" },
+    errorMessage: { __type: "String" },
+    hasAllCategories: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasSelectAll: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostCategoryInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCategoryField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCategoryFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    dropdownPlaceholder: { __type: "String" },
+    errorMessage: { __type: "String" },
+    hasAllCategories: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+    $on: { __type: "$PostCategoryField!" },
+  },
+  PostCategoryFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCategoryInputProperty: {
+    __typename: { __type: "String!" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+  },
+  PostCategoryMultiSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCategoryFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    dropdownPlaceholder: { __type: "String" },
+    errorMessage: { __type: "String" },
+    hasAllCategories: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCategoryRadioField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCategoryFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    dropdownPlaceholder: { __type: "String" },
+    errorMessage: { __type: "String" },
+    hasAllCategories: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasOtherChoice: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCategorySelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCategoryFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    dropdownPlaceholder: { __type: "String" },
+    errorMessage: { __type: "String" },
+    hasAllCategories: { __type: "Boolean" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostContentField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasRichTextEditor: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomCheckboxField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    checkboxValues: { __type: "[CheckboxFieldValue]" },
+    choices: { __type: "[PostCustomCheckboxFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasSelectAll: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostCustomInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomCheckboxFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCustomDateField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    calendarIconType: { __type: "FormFieldCalendarIconTypeEnum" },
+    calendarIconUrl: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    dateFormat: { __type: "DateFieldFormatEnum" },
+    dateType: { __type: "DateFieldTypeEnum" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostCustomInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomEmailField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasEmailConfirmation: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostCustomInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+    $on: { __type: "$PostCustomField!" },
+  },
+  PostCustomFileuploadField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    allowedExtensions: { __type: "[String]" },
+    canAcceptMultipleFiles: { __type: "Boolean" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxFileSize: { __type: "Int" },
+    maxFiles: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomHiddenField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomInputProperty: {
+    __typename: { __type: "String!" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+  },
+  PostCustomListField: {
+    __typename: { __type: "String!" },
+    addIconUrl: { __type: "String" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCustomListFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    deleteIconUrl: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasColumns: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    listValues: { __type: "[ListFieldValue]" },
+    maxRows: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomListFieldChoice: {
+    __typename: { __type: "String!" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCustomMultiSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCustomMultiSelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomMultiSelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCustomNumberField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    calculationFormula: { __type: "String" },
+    calculationRounding: { __type: "Int" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isCalculation: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    numberFormat: { __type: "NumberFieldFormatEnum" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    rangeMax: { __type: "Float" },
+    rangeMin: { __type: "Float" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomPhoneField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    phoneFormat: { __type: "PhoneFieldFormatEnum" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomRadioField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCustomRadioFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasOtherChoice: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomRadioFieldChoice: {
+    __typename: { __type: "String!" },
+    isOtherChoice: { __type: "Boolean" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCustomSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostCustomSelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomSelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostCustomTextAreaField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasRichTextEditor: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomTextField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasInputMask: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputMaskValue: { __type: "String" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isPasswordInput: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomTimeField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostCustomInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    timeFormat: { __type: "TimeFieldFormatEnum" },
+    timeValues: { __type: "TimeFieldValue" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostCustomWebsiteField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    postMetaFieldName: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostExcerptField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   PostFormat: {
     __typename: { __type: "String!" },
@@ -9277,6 +12208,36 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     node: { __type: "Taxonomy" },
   },
+  PostImageField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    allowedExtensions: { __type: "[String]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAlt: { __type: "Boolean" },
+    hasCaption: { __type: "Boolean" },
+    hasDescription: { __type: "Boolean" },
+    hasTitle: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    imageValues: { __type: "ImageFieldValue" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isFeaturedImage: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
   PostObjectsConnectionOrderbyInput: {
     field: { __type: "PostObjectsConnectionOrderbyEnum!" },
     order: { __type: "OrderEnum!" },
@@ -9291,15 +12252,262 @@ export const generatedSchema = {
     name: { __type: "String" },
     slug: { __type: "String" },
   },
+  PostTagsCheckboxField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    checkboxValues: { __type: "[CheckboxFieldValue]" },
+    choices: { __type: "[PostTagsCheckboxFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasSelectAll: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[PostTagsInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostTagsCheckboxFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostTagsField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+    $on: { __type: "$PostTagsField!" },
+  },
   PostTagsInput: {
     append: { __type: "Boolean" },
     nodes: { __type: "[PostTagsNodeInput]" },
+  },
+  PostTagsInputProperty: {
+    __typename: { __type: "String!" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    name: { __type: "String" },
+  },
+  PostTagsMultiSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostTagsMultiSelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    values: { __type: "[String]" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostTagsMultiSelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
   },
   PostTagsNodeInput: {
     description: { __type: "String" },
     id: { __type: "ID" },
     name: { __type: "String" },
     slug: { __type: "String" },
+  },
+  PostTagsRadioField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostTagsRadioFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasOtherChoice: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostTagsRadioFieldChoice: {
+    __typename: { __type: "String!" },
+    isOtherChoice: { __type: "Boolean" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostTagsSelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[PostTagsSelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostTagsSelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
+  PostTagsTextField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasInputMask: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputMaskValue: { __type: "String" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isPasswordInput: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  PostTitleField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
   },
   PostToCategoryConnection: {
     __typename: { __type: "String!" },
@@ -9765,16 +12973,6 @@ export const generatedSchema = {
       },
     },
     conditionalTags: { __type: "ConditionalTags" },
-    contentNodes: {
-      __type: "ProToContentNodeConnection",
-      __args: {
-        after: "String",
-        before: "String",
-        first: "Int",
-        last: "Int",
-        where: "ProToContentNodeConnectionWhereArgs",
-      },
-    },
     count: { __type: "Int" },
     databaseId: { __type: "Int!" },
     description: { __type: "String" },
@@ -9796,16 +12994,6 @@ export const generatedSchema = {
     parentDatabaseId: { __type: "Int" },
     parentId: { __type: "ID" },
     proId: { __type: "Int" },
-    productsServices: {
-      __type: "ProToProductServiceConnection",
-      __args: {
-        after: "String",
-        before: "String",
-        first: "Int",
-        last: "Int",
-        where: "ProToProductServiceConnectionWhereArgs",
-      },
-    },
     slug: { __type: "String" },
     taxonomy: { __type: "ProToTaxonomyConnectionEdge" },
     taxonomyName: { __type: "String" },
@@ -9824,37 +13012,6 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     cursor: { __type: "String" },
     node: { __type: "Pro" },
-  },
-  ProToContentNodeConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ProToContentNodeConnectionEdge]" },
-    nodes: { __type: "[ContentNode]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ProToContentNodeConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "ContentNode" },
-  },
-  ProToContentNodeConnectionWhereArgs: {
-    contentTypes: { __type: "[ContentTypesOfProEnum]" },
-    dateQuery: { __type: "DateQueryInput" },
-    hasPassword: { __type: "Boolean" },
-    id: { __type: "Int" },
-    in: { __type: "[ID]" },
-    mimeType: { __type: "MimeTypeEnum" },
-    name: { __type: "String" },
-    nameIn: { __type: "[String]" },
-    notIn: { __type: "[ID]" },
-    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
-    parent: { __type: "ID" },
-    parentIn: { __type: "[ID]" },
-    parentNotIn: { __type: "[ID]" },
-    password: { __type: "String" },
-    search: { __type: "String" },
-    stati: { __type: "[PostStatusEnum]" },
-    status: { __type: "PostStatusEnum" },
-    title: { __type: "String" },
   },
   ProToParentProConnectionEdge: {
     __typename: { __type: "String!" },
@@ -9892,40 +13049,6 @@ export const generatedSchema = {
     slug: { __type: "[String]" },
     termTaxonomId: { __type: "[ID]" },
     updateTermMetaCache: { __type: "Boolean" },
-  },
-  ProToProductServiceConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ProToProductServiceConnectionEdge]" },
-    nodes: { __type: "[ProductService]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ProToProductServiceConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "ProductService" },
-  },
-  ProToProductServiceConnectionWhereArgs: {
-    author: { __type: "Int" },
-    authorIn: { __type: "[ID]" },
-    authorName: { __type: "String" },
-    authorNotIn: { __type: "[ID]" },
-    dateQuery: { __type: "DateQueryInput" },
-    hasPassword: { __type: "Boolean" },
-    id: { __type: "Int" },
-    in: { __type: "[ID]" },
-    mimeType: { __type: "MimeTypeEnum" },
-    name: { __type: "String" },
-    nameIn: { __type: "[String]" },
-    notIn: { __type: "[ID]" },
-    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
-    parent: { __type: "ID" },
-    parentIn: { __type: "[ID]" },
-    parentNotIn: { __type: "[ID]" },
-    password: { __type: "String" },
-    search: { __type: "String" },
-    stati: { __type: "[PostStatusEnum]" },
-    status: { __type: "PostStatusEnum" },
-    title: { __type: "String" },
   },
   ProToTaxonomyConnectionEdge: {
     __typename: { __type: "String!" },
@@ -9984,179 +13107,6 @@ export const generatedSchema = {
   ProductCardToPreviewConnectionEdge: {
     __typename: { __type: "String!" },
     node: { __type: "ProductCard" },
-  },
-  ProductService: {
-    __typename: { __type: "String!" },
-    author: { __type: "NodeWithAuthorToUserConnectionEdge" },
-    authorDatabaseId: { __type: "Int" },
-    authorId: { __type: "ID" },
-    conditionalTags: { __type: "ConditionalTags" },
-    contentType: { __type: "ContentNodeToContentTypeConnectionEdge" },
-    contentTypeName: { __type: "String!" },
-    copyright: { __type: "String" },
-    databaseId: { __type: "Int!" },
-    date: { __type: "String" },
-    dateGmt: { __type: "String" },
-    desiredSlug: { __type: "String" },
-    editingLockedBy: { __type: "ContentNodeToEditLockConnectionEdge" },
-    enclosure: { __type: "String" },
-    enqueuedScripts: {
-      __type: "ContentNodeToEnqueuedScriptConnection",
-      __args: { after: "String", before: "String", first: "Int", last: "Int" },
-    },
-    enqueuedStylesheets: {
-      __type: "ContentNodeToEnqueuedStylesheetConnection",
-      __args: { after: "String", before: "String", first: "Int", last: "Int" },
-    },
-    faqOne: { __type: "String" },
-    featureList: { __type: "[String]" },
-    featureTitle: { __type: "String" },
-    featuredImage: { __type: "NodeWithFeaturedImageToMediaItemConnectionEdge" },
-    featuredImageDatabaseId: { __type: "Int" },
-    featuredImageId: { __type: "ID" },
-    guid: { __type: "String" },
-    heroBanner: { __type: "MediaItem" },
-    heroSubtitle: { __type: "String" },
-    heroTitle: { __type: "String" },
-    iconOne: { __type: "MediaItem" },
-    iconThree: { __type: "MediaItem" },
-    iconTwo: { __type: "MediaItem" },
-    id: { __type: "ID!" },
-    introductionDescription: { __type: "String" },
-    introductionTitle: { __type: "String" },
-    isContentNode: { __type: "Boolean!" },
-    isPreview: { __type: "Boolean" },
-    isRestricted: { __type: "Boolean" },
-    isTermNode: { __type: "Boolean!" },
-    lastEditedBy: { __type: "ContentNodeToEditLastConnectionEdge" },
-    link: { __type: "String" },
-    modified: { __type: "String" },
-    modifiedGmt: { __type: "String" },
-    preview: { __type: "ProductServiceToPreviewConnectionEdge" },
-    previewRevisionDatabaseId: { __type: "Int" },
-    previewRevisionId: { __type: "ID" },
-    productServiceId: { __type: "Int!" },
-    productTitle: { __type: "String" },
-    pros: {
-      __type: "ProductServiceToProConnection",
-      __args: {
-        after: "String",
-        before: "String",
-        first: "Int",
-        last: "Int",
-        where: "ProductServiceToProConnectionWhereArgs",
-      },
-    },
-    requirementList: { __type: "[String]" },
-    requirementTitle: { __type: "String" },
-    sectionEight: { __type: "String" },
-    sectionFive: { __type: "String" },
-    sectionFour: { __type: "String" },
-    sectionOne: { __type: "String" },
-    sectionSeven: { __type: "String" },
-    sectionSix: { __type: "String" },
-    sectionThree: { __type: "String" },
-    sectionTwo: { __type: "String" },
-    slug: { __type: "String" },
-    status: { __type: "String" },
-    template: { __type: "ContentTemplate" },
-    templates: { __type: "[String]" },
-    terms: {
-      __type: "ProductServiceToTermNodeConnection",
-      __args: {
-        after: "String",
-        before: "String",
-        first: "Int",
-        last: "Int",
-        where: "ProductServiceToTermNodeConnectionWhereArgs",
-      },
-    },
-    title: {
-      __type: "String",
-      __args: { format: "PostObjectFieldFormatEnum" },
-    },
-    uri: { __type: "String" },
-  },
-  ProductServiceProsInput: {
-    append: { __type: "Boolean" },
-    nodes: { __type: "[ProductServiceProsNodeInput]" },
-  },
-  ProductServiceProsNodeInput: {
-    description: { __type: "String" },
-    id: { __type: "ID" },
-    name: { __type: "String" },
-    slug: { __type: "String" },
-  },
-  ProductServiceToPreviewConnectionEdge: {
-    __typename: { __type: "String!" },
-    node: { __type: "ProductService" },
-  },
-  ProductServiceToProConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ProductServiceToProConnectionEdge]" },
-    nodes: { __type: "[Pro]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ProductServiceToProConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "Pro" },
-  },
-  ProductServiceToProConnectionWhereArgs: {
-    cacheDomain: { __type: "String" },
-    childOf: { __type: "Int" },
-    childless: { __type: "Boolean" },
-    descriptionLike: { __type: "String" },
-    exclude: { __type: "[ID]" },
-    excludeTree: { __type: "[ID]" },
-    hideEmpty: { __type: "Boolean" },
-    hierarchical: { __type: "Boolean" },
-    include: { __type: "[ID]" },
-    name: { __type: "[String]" },
-    nameLike: { __type: "String" },
-    objectIds: { __type: "[ID]" },
-    order: { __type: "OrderEnum" },
-    orderby: { __type: "TermObjectsConnectionOrderbyEnum" },
-    padCounts: { __type: "Boolean" },
-    parent: { __type: "Int" },
-    search: { __type: "String" },
-    slug: { __type: "[String]" },
-    termTaxonomId: { __type: "[ID]" },
-    updateTermMetaCache: { __type: "Boolean" },
-  },
-  ProductServiceToTermNodeConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[ProductServiceToTermNodeConnectionEdge]" },
-    nodes: { __type: "[TermNode]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  ProductServiceToTermNodeConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "TermNode" },
-  },
-  ProductServiceToTermNodeConnectionWhereArgs: {
-    cacheDomain: { __type: "String" },
-    childOf: { __type: "Int" },
-    childless: { __type: "Boolean" },
-    descriptionLike: { __type: "String" },
-    exclude: { __type: "[ID]" },
-    excludeTree: { __type: "[ID]" },
-    hideEmpty: { __type: "Boolean" },
-    hierarchical: { __type: "Boolean" },
-    include: { __type: "[ID]" },
-    name: { __type: "[String]" },
-    nameLike: { __type: "String" },
-    objectIds: { __type: "[ID]" },
-    order: { __type: "OrderEnum" },
-    orderby: { __type: "TermObjectsConnectionOrderbyEnum" },
-    padCounts: { __type: "Boolean" },
-    parent: { __type: "Int" },
-    search: { __type: "String" },
-    slug: { __type: "[String]" },
-    taxonomies: { __type: "[TaxonomyEnum]" },
-    termTaxonomId: { __type: "[ID]" },
-    updateTermMetaCache: { __type: "Boolean" },
   },
   ProductsService: {
     __typename: { __type: "String!" },
@@ -10249,6 +13199,7 @@ export const generatedSchema = {
       },
     },
     slug: { __type: "String" },
+    standardPage: { __type: "ProductsService_Standardpage" },
     status: { __type: "String" },
     template: { __type: "ContentTemplate" },
     templates: { __type: "[String]" },
@@ -10379,6 +13330,15 @@ export const generatedSchema = {
     termTaxonomId: { __type: "[ID]" },
     updateTermMetaCache: { __type: "Boolean" },
   },
+  ProductsService_Standardpage: {
+    __typename: { __type: "String!" },
+    buttonLink: { __type: "AcfLink" },
+    fieldGroupName: { __type: "String" },
+    heroBanner: { __type: "MediaItem" },
+    heroButton: { __type: "String" },
+    heroDescription: { __type: "String" },
+    heroTitle: { __type: "String" },
+  },
   Project: {
     __typename: { __type: "String!" },
     author: { __type: "NodeWithAuthorToUserConnectionEdge" },
@@ -10435,6 +13395,41 @@ export const generatedSchema = {
   ProjectToPreviewConnectionEdge: {
     __typename: { __type: "String!" },
     node: { __type: "Project" },
+  },
+  RadioField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[RadioFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasOtherChoice: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  RadioFieldChoice: {
+    __typename: { __type: "String!" },
+    isOtherChoice: { __type: "Boolean" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
   },
   ReadingSettings: {
     __typename: { __type: "String!" },
@@ -10654,6 +13649,61 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     cursor: { __type: "String" },
     node: { __type: "EnqueuedStylesheet" },
+  },
+  RootQueryToGfEntryConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[RootQueryToGfEntryConnectionEdge]" },
+    nodes: { __type: "[GfEntry]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  RootQueryToGfEntryConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "GfEntry" },
+  },
+  RootQueryToGfEntryConnectionWhereArgs: {
+    dateFilters: { __type: "EntriesDateFiltersInput" },
+    entryType: { __type: "EntryTypeEnum" },
+    fieldFilters: { __type: "[EntriesFieldFiltersInput]" },
+    fieldFiltersMode: { __type: "FieldFiltersModeEnum" },
+    formIds: { __type: "[ID]" },
+    orderby: { __type: "EntriesConnectionOrderbyInput" },
+    status: { __type: "EntryStatusEnum" },
+  },
+  RootQueryToGfFormConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[RootQueryToGfFormConnectionEdge]" },
+    nodes: { __type: "[GfForm]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  RootQueryToGfFormConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "GfForm" },
+  },
+  RootQueryToGfFormConnectionWhereArgs: {
+    formIds: { __type: "[ID]" },
+    orderby: { __type: "FormsConnectionOrderbyInput" },
+    status: { __type: "FormStatusEnum" },
+  },
+  RootQueryToGfSubmittedEntryConnection: {
+    __typename: { __type: "String!" },
+    edges: { __type: "[RootQueryToGfSubmittedEntryConnectionEdge]" },
+    nodes: { __type: "[GfSubmittedEntry]" },
+    pageInfo: { __type: "WPPageInfo" },
+  },
+  RootQueryToGfSubmittedEntryConnectionEdge: {
+    __typename: { __type: "String!" },
+    cursor: { __type: "String" },
+    node: { __type: "GfSubmittedEntry" },
+  },
+  RootQueryToGfSubmittedEntryConnectionWhereArgs: {
+    dateFilters: { __type: "EntriesDateFiltersInput" },
+    fieldFilters: { __type: "[EntriesFieldFiltersInput]" },
+    fieldFiltersMode: { __type: "FieldFiltersModeEnum" },
+    formIds: { __type: "[ID]" },
+    orderby: { __type: "EntriesConnectionOrderbyInput" },
+    status: { __type: "EntryStatusEnum" },
   },
   RootQueryToMediaItemConnection: {
     __typename: { __type: "String!" },
@@ -11367,6 +14417,60 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "UserRole" },
   },
+  SectionField: {
+    __typename: { __type: "String!" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    displayOnly: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    label: { __type: "String" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    type: { __type: "FormFieldTypeEnum" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  SelectField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    choices: { __type: "[SelectFieldChoice]" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasChoiceValue: { __type: "Boolean" },
+    hasEnhancedUI: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  SelectFieldChoice: {
+    __typename: { __type: "String!" },
+    isSelected: { __type: "Boolean" },
+    text: { __type: "String" },
+    value: { __type: "String" },
+  },
   SendPasswordResetEmailInput: {
     clientMutationId: { __type: "String" },
     username: { __type: "String!" },
@@ -11396,6 +14500,69 @@ export const generatedSchema = {
     writingSettingsDefaultCategory: { __type: "Int" },
     writingSettingsDefaultPostFormat: { __type: "String" },
     writingSettingsUseSmilies: { __type: "Boolean" },
+  },
+  SignatureField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    backgroundColor: { __type: "String" },
+    borderColor: { __type: "String" },
+    borderStyle: { __type: "SignatureFieldBorderStyleEnum" },
+    borderWidth: { __type: "SignatureFieldBorderWidthEnum" },
+    boxWidth: { __type: "Int" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    penColor: { __type: "String" },
+    penSize: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  SubmitFormMetaInput: {
+    createdById: { __type: "Int" },
+    dateCreatedGmt: { __type: "String" },
+    ip: { __type: "String" },
+    sourceUrl: { __type: "String" },
+    userAgent: { __type: "String" },
+  },
+  SubmitGfDraftEntryInput: {
+    clientMutationId: { __type: "String" },
+    id: { __type: "ID!" },
+    idType: { __type: "DraftEntryIdTypeEnum" },
+  },
+  SubmitGfDraftEntryPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    entry: { __type: "GfSubmittedEntry" },
+    errors: { __type: "[FieldError]" },
+  },
+  SubmitGfFormInput: {
+    clientMutationId: { __type: "String" },
+    entryMeta: { __type: "SubmitFormMetaInput" },
+    fieldValues: { __type: "[FormFieldValuesInput]!" },
+    id: { __type: "ID!" },
+    saveAsDraft: { __type: "Boolean" },
+    sourcePage: { __type: "Int" },
+    targetPage: { __type: "Int" },
+  },
+  SubmitGfFormPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    entry: { __type: "GfEntry" },
+    errors: { __type: "[FieldError]" },
+    resumeUrl: { __type: "String" },
   },
   Tag: {
     __typename: { __type: "String!" },
@@ -11668,6 +14835,70 @@ export const generatedSchema = {
     cursor: { __type: "String" },
     node: { __type: "EnqueuedStylesheet" },
   },
+  TextAreaField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasRichTextEditor: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  TextField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    autocompleteAttribute: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    hasAutocomplete: { __type: "Boolean" },
+    hasInputMask: { __type: "Boolean" },
+    id: { __type: "Int!" },
+    inputMaskValue: { __type: "String" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isPasswordInput: { __type: "Boolean" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    maxLength: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
   Theme: {
     __typename: { __type: "String!" },
     author: { __type: "String" },
@@ -11681,6 +14912,50 @@ export const generatedSchema = {
     tags: { __type: "[String]" },
     themeUri: { __type: "String" },
     version: { __type: "String" },
+  },
+  TimeField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    inputs: { __type: "[TimeInputProperty]" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    subLabelPlacement: { __type: "FormFieldSubLabelPlacementEnum" },
+    timeFormat: { __type: "TimeFieldFormatEnum" },
+    timeValues: { __type: "TimeFieldValue" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
+  TimeFieldValue: {
+    __typename: { __type: "String!" },
+    amPm: { __type: "AmPmEnum" },
+    displayValue: { __type: "String" },
+    hours: { __type: "String" },
+    minutes: { __type: "String" },
+  },
+  TimeInputProperty: {
+    __typename: { __type: "String!" },
+    autocompleteAttribute: { __type: "String" },
+    customLabel: { __type: "String" },
+    defaultValue: { __type: "String" },
+    id: { __type: "Float" },
+    label: { __type: "String" },
+    placeholder: { __type: "String" },
   },
   UniformResourceIdentifiable: {
     __typename: { __type: "String!" },
@@ -11724,6 +14999,51 @@ export const generatedSchema = {
     clientMutationId: { __type: "String" },
     comment: { __type: "Comment" },
     success: { __type: "Boolean" },
+  },
+  UpdateDraftEntryMetaInput: {
+    createdById: { __type: "Int" },
+    dateCreatedGmt: { __type: "String" },
+    ip: { __type: "String" },
+    sourceUrl: { __type: "String" },
+    userAgent: { __type: "String" },
+  },
+  UpdateEntryMetaInput: {
+    createdById: { __type: "Int" },
+    dateCreatedGmt: { __type: "String" },
+    ip: { __type: "String" },
+    isRead: { __type: "Boolean" },
+    isStarred: { __type: "Boolean" },
+    sourceUrl: { __type: "String" },
+    status: { __type: "EntryStatusEnum" },
+    userAgent: { __type: "String" },
+  },
+  UpdateGfDraftEntryInput: {
+    clientMutationId: { __type: "String" },
+    entryMeta: { __type: "UpdateDraftEntryMetaInput" },
+    fieldValues: { __type: "[FormFieldValuesInput]" },
+    id: { __type: "ID!" },
+    idType: { __type: "DraftEntryIdTypeEnum" },
+    shouldValidate: { __type: "Boolean" },
+  },
+  UpdateGfDraftEntryPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    draftEntry: { __type: "GfDraftEntry" },
+    errors: { __type: "[FieldError]" },
+    resumeUrl: { __type: "String" },
+  },
+  UpdateGfEntryInput: {
+    clientMutationId: { __type: "String" },
+    entryMeta: { __type: "UpdateEntryMetaInput" },
+    fieldValues: { __type: "[FormFieldValuesInput]" },
+    id: { __type: "ID!" },
+    shouldValidate: { __type: "Boolean" },
+  },
+  UpdateGfEntryPayload: {
+    __typename: { __type: "String!" },
+    clientMutationId: { __type: "String" },
+    entry: { __type: "GfSubmittedEntry" },
+    errors: { __type: "[FieldError]" },
   },
   UpdateMediaItemInput: {
     altText: { __type: "String" },
@@ -11947,23 +15267,6 @@ export const generatedSchema = {
     __typename: { __type: "String!" },
     clientMutationId: { __type: "String" },
     productCard: { __type: "ProductCard" },
-  },
-  UpdateProductServiceInput: {
-    authorId: { __type: "ID" },
-    clientMutationId: { __type: "String" },
-    date: { __type: "String" },
-    id: { __type: "ID!" },
-    menuOrder: { __type: "Int" },
-    password: { __type: "String" },
-    pros: { __type: "ProductServiceProsInput" },
-    slug: { __type: "String" },
-    status: { __type: "PostStatusEnum" },
-    title: { __type: "String" },
-  },
-  UpdateProductServicePayload: {
-    __typename: { __type: "String!" },
-    clientMutationId: { __type: "String" },
-    productService: { __type: "ProductService" },
   },
   UpdateProductsServiceInput: {
     clientMutationId: { __type: "String" },
@@ -12209,16 +15512,6 @@ export const generatedSchema = {
         first: "Int",
         last: "Int",
         where: "UserToProductCardConnectionWhereArgs",
-      },
-    },
-    productsServices: {
-      __type: "UserToProductServiceConnection",
-      __args: {
-        after: "String",
-        before: "String",
-        first: "Int",
-        last: "Int",
-        where: "UserToProductServiceConnectionWhereArgs",
       },
     },
     projects: {
@@ -12648,40 +15941,6 @@ export const generatedSchema = {
     status: { __type: "PostStatusEnum" },
     title: { __type: "String" },
   },
-  UserToProductServiceConnection: {
-    __typename: { __type: "String!" },
-    edges: { __type: "[UserToProductServiceConnectionEdge]" },
-    nodes: { __type: "[ProductService]" },
-    pageInfo: { __type: "WPPageInfo" },
-  },
-  UserToProductServiceConnectionEdge: {
-    __typename: { __type: "String!" },
-    cursor: { __type: "String" },
-    node: { __type: "ProductService" },
-  },
-  UserToProductServiceConnectionWhereArgs: {
-    author: { __type: "Int" },
-    authorIn: { __type: "[ID]" },
-    authorName: { __type: "String" },
-    authorNotIn: { __type: "[ID]" },
-    dateQuery: { __type: "DateQueryInput" },
-    hasPassword: { __type: "Boolean" },
-    id: { __type: "Int" },
-    in: { __type: "[ID]" },
-    mimeType: { __type: "MimeTypeEnum" },
-    name: { __type: "String" },
-    nameIn: { __type: "[String]" },
-    notIn: { __type: "[ID]" },
-    orderby: { __type: "[PostObjectsConnectionOrderbyInput]" },
-    parent: { __type: "ID" },
-    parentIn: { __type: "[ID]" },
-    parentNotIn: { __type: "[ID]" },
-    password: { __type: "String" },
-    search: { __type: "String" },
-    stati: { __type: "[PostStatusEnum]" },
-    status: { __type: "PostStatusEnum" },
-    title: { __type: "String" },
-  },
   UserToProjectConnection: {
     __typename: { __type: "String!" },
     edges: { __type: "[UserToProjectConnectionEdge]" },
@@ -12772,6 +16031,34 @@ export const generatedSchema = {
     hasPreviousPage: { __type: "Boolean!" },
     startCursor: { __type: "String" },
   },
+  WebsiteField: {
+    __typename: { __type: "String!" },
+    adminLabel: { __type: "String" },
+    canPrepopulate: { __type: "Boolean" },
+    conditionalLogic: { __type: "ConditionalLogic" },
+    cssClass: { __type: "String" },
+    defaultValue: { __type: "String" },
+    description: { __type: "String" },
+    descriptionPlacement: { __type: "FormFieldDescriptionPlacementEnum" },
+    displayOnly: { __type: "Boolean" },
+    errorMessage: { __type: "String" },
+    id: { __type: "Int!" },
+    inputName: { __type: "String" },
+    inputType: { __type: "FormFieldTypeEnum" },
+    isRequired: { __type: "Boolean" },
+    label: { __type: "String" },
+    labelPlacement: { __type: "FormFieldLabelPlacementEnum" },
+    layoutGridColumnSpan: { __type: "Int" },
+    layoutSpacerGridColumnSpan: { __type: "Int" },
+    pageNumber: { __type: "Int" },
+    personalData: { __type: "FormFieldDataPolicy" },
+    placeholder: { __type: "String" },
+    shouldAllowDuplicates: { __type: "Boolean" },
+    size: { __type: "FormFieldSizeEnum" },
+    type: { __type: "FormFieldTypeEnum" },
+    value: { __type: "String" },
+    visibility: { __type: "FormFieldVisibilityEnum" },
+  },
   WritingSettings: {
     __typename: { __type: "String!" },
     defaultCategory: { __type: "Int" },
@@ -12840,10 +16127,6 @@ export const generatedSchema = {
       __type: "CreateProductCardPayload",
       __args: { input: "CreateProductCardInput!" },
     },
-    createProductService: {
-      __type: "CreateProductServicePayload",
-      __args: { input: "CreateProductServiceInput!" },
-    },
     createProductsService: {
       __type: "CreateProductsServicePayload",
       __args: { input: "CreateProductsServiceInput!" },
@@ -12871,6 +16154,14 @@ export const generatedSchema = {
     deleteComment: {
       __type: "DeleteCommentPayload",
       __args: { input: "DeleteCommentInput!" },
+    },
+    deleteGfDraftEntry: {
+      __type: "DeleteGfDraftEntryPayload",
+      __args: { input: "DeleteGfDraftEntryInput!" },
+    },
+    deleteGfEntry: {
+      __type: "DeleteGfEntryPayload",
+      __args: { input: "DeleteGfEntryInput!" },
     },
     deleteMediaItem: {
       __type: "DeleteMediaItemPayload",
@@ -12924,10 +16215,6 @@ export const generatedSchema = {
       __type: "DeleteProductCardPayload",
       __args: { input: "DeleteProductCardInput!" },
     },
-    deleteProductService: {
-      __type: "DeleteProductServicePayload",
-      __args: { input: "DeleteProductServiceInput!" },
-    },
     deleteProductsService: {
       __type: "DeleteProductsServicePayload",
       __args: { input: "DeleteProductsServiceInput!" },
@@ -12969,6 +16256,14 @@ export const generatedSchema = {
       __type: "SendPasswordResetEmailPayload",
       __args: { input: "SendPasswordResetEmailInput!" },
     },
+    submitGfDraftEntry: {
+      __type: "SubmitGfDraftEntryPayload",
+      __args: { input: "SubmitGfDraftEntryInput!" },
+    },
+    submitGfForm: {
+      __type: "SubmitGfFormPayload",
+      __args: { input: "SubmitGfFormInput!" },
+    },
     updateCategory: {
       __type: "UpdateCategoryPayload",
       __args: { input: "UpdateCategoryInput!" },
@@ -12976,6 +16271,14 @@ export const generatedSchema = {
     updateComment: {
       __type: "UpdateCommentPayload",
       __args: { input: "UpdateCommentInput!" },
+    },
+    updateGfDraftEntry: {
+      __type: "UpdateGfDraftEntryPayload",
+      __args: { input: "UpdateGfDraftEntryInput!" },
+    },
+    updateGfEntry: {
+      __type: "UpdateGfEntryPayload",
+      __args: { input: "UpdateGfEntryInput!" },
     },
     updateMediaItem: {
       __type: "UpdateMediaItemPayload",
@@ -13028,10 +16331,6 @@ export const generatedSchema = {
     updateProductCard: {
       __type: "UpdateProductCardPayload",
       __args: { input: "UpdateProductCardInput!" },
-    },
-    updateProductService: {
-      __type: "UpdateProductServicePayload",
-      __args: { input: "UpdateProductServiceInput!" },
     },
     updateProductsService: {
       __type: "UpdateProductsServicePayload",
@@ -13120,6 +16419,53 @@ export const generatedSchema = {
     generalSettings: { __type: "GeneralSettings" },
     getFooter: { __type: "HCMSFooter" },
     getHeader: { __type: "HCMSHeader" },
+    gfDraftEntry: {
+      __type: "GfDraftEntry",
+      __args: { id: "ID!", idType: "DraftEntryIdTypeEnum" },
+    },
+    gfEntries: {
+      __type: "RootQueryToGfEntryConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "RootQueryToGfEntryConnectionWhereArgs",
+      },
+    },
+    gfEntry: {
+      __type: "GfEntry",
+      __args: { id: "ID!", idType: "EntryIdTypeEnum" },
+    },
+    gfForm: {
+      __type: "GfForm",
+      __args: { id: "ID!", idType: "FormIdTypeEnum" },
+    },
+    gfForms: {
+      __type: "RootQueryToGfFormConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "RootQueryToGfFormConnectionWhereArgs",
+      },
+    },
+    gfSettings: { __type: "GfSettings" },
+    gfSubmittedEntries: {
+      __type: "RootQueryToGfSubmittedEntryConnection",
+      __args: {
+        after: "String",
+        before: "String",
+        first: "Int",
+        last: "Int",
+        where: "RootQueryToGfSubmittedEntryConnectionWhereArgs",
+      },
+    },
+    gfSubmittedEntry: {
+      __type: "GfSubmittedEntry",
+      __args: { id: "ID!", idType: "SubmittedEntryIdTypeEnum" },
+    },
     mediaItem: {
       __type: "MediaItem",
       __args: { asPreview: "Boolean", id: "ID!", idType: "MediaItemIdType" },
@@ -13399,23 +16745,6 @@ export const generatedSchema = {
         where: "RootQueryToProductCardConnectionWhereArgs",
       },
     },
-    productService: {
-      __type: "ProductService",
-      __args: {
-        asPreview: "Boolean",
-        id: "ID!",
-        idType: "ProductServiceIdType",
-      },
-    },
-    productServiceBy: {
-      __type: "ProductService",
-      __args: {
-        id: "ID",
-        productServiceId: "Int",
-        slug: "String",
-        uri: "String",
-      },
-    },
     productsService: {
       __type: "ProductsService",
       __args: {
@@ -13569,9 +16898,65 @@ export const generatedSchema = {
   },
   subscription: {},
   [SchemaUnionsKey]: {
+    FormField: [
+      "AddressField",
+      "CaptchaField",
+      "CheckboxField",
+      "ConsentField",
+      "DateField",
+      "EmailField",
+      "FileUploadField",
+      "HiddenField",
+      "HtmlField",
+      "ListField",
+      "MultiSelectField",
+      "NameField",
+      "NumberField",
+      "PageField",
+      "PasswordField",
+      "PhoneField",
+      "PostCategoryCheckboxField",
+      "PostCategoryMultiSelectField",
+      "PostCategoryRadioField",
+      "PostCategorySelectField",
+      "PostContentField",
+      "PostCustomCheckboxField",
+      "PostCustomDateField",
+      "PostCustomEmailField",
+      "PostCustomFileuploadField",
+      "PostCustomHiddenField",
+      "PostCustomListField",
+      "PostCustomMultiSelectField",
+      "PostCustomNumberField",
+      "PostCustomPhoneField",
+      "PostCustomRadioField",
+      "PostCustomSelectField",
+      "PostCustomTextAreaField",
+      "PostCustomTextField",
+      "PostCustomTimeField",
+      "PostCustomWebsiteField",
+      "PostExcerptField",
+      "PostImageField",
+      "PostTagsCheckboxField",
+      "PostTagsMultiSelectField",
+      "PostTagsRadioField",
+      "PostTagsSelectField",
+      "PostTagsTextField",
+      "PostTitleField",
+      "RadioField",
+      "SectionField",
+      "SelectField",
+      "SignatureField",
+      "TextAreaField",
+      "TextField",
+      "TimeField",
+      "WebsiteField",
+    ],
     DatabaseIdentifier: [
       "Category",
       "Comment",
+      "GfForm",
+      "GfSubmittedEntry",
       "MediaItem",
       "Menu",
       "MenuItem",
@@ -13587,7 +16972,6 @@ export const generatedSchema = {
       "PressRelease",
       "Pro",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "Tag",
@@ -13613,6 +16997,9 @@ export const generatedSchema = {
       "ContentType",
       "EnqueuedScript",
       "EnqueuedStylesheet",
+      "GfDraftEntry",
+      "GfForm",
+      "GfSubmittedEntry",
       "MediaItem",
       "Menu",
       "MenuItem",
@@ -13629,7 +17016,6 @@ export const generatedSchema = {
       "PressRelease",
       "Pro",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "Tag",
@@ -13656,7 +17042,6 @@ export const generatedSchema = {
       "PressRelease",
       "Pro",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "Tag",
@@ -13667,6 +17052,8 @@ export const generatedSchema = {
     ContentRevisionUnion: ["Page", "Post", "ProductsService"],
     ContentTemplate: ["DefaultTemplate"],
     EnqueuedAsset: ["EnqueuedScript", "EnqueuedStylesheet"],
+    GfEntry: ["GfDraftEntry", "GfSubmittedEntry"],
+    NodeWithForm: ["GfDraftEntry", "GfSubmittedEntry"],
     ContentNode: [
       "MediaItem",
       "NewEvent",
@@ -13678,7 +17065,6 @@ export const generatedSchema = {
       "PressCoverage",
       "PressRelease",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "TeamMember",
@@ -13693,7 +17079,6 @@ export const generatedSchema = {
       "Partner",
       "Post",
       "ProductCard",
-      "ProductService",
       "Project",
       "TeamMember",
     ],
@@ -13709,7 +17094,6 @@ export const generatedSchema = {
       "PressCoverage",
       "PressRelease",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "TeamMember",
@@ -13725,7 +17109,6 @@ export const generatedSchema = {
       "PressCoverage",
       "PressRelease",
       "ProductCard",
-      "ProductService",
       "ProductsService",
       "Project",
       "TeamMember",
@@ -13754,7 +17137,6 @@ export const generatedSchema = {
       "Post",
       "PressCoverage",
       "PressRelease",
-      "ProductService",
       "ProductsService",
       "TeamMember",
     ],
@@ -13769,9 +17151,40 @@ export const generatedSchema = {
       "Page_Threecolumnstaticpage",
       "Page_Threecolumnstaticpage_Banner",
       "Page_Threecolumnstaticpage_cards",
+      "ProductsService_Standardpage",
     ],
     NodeWithExcerpt: ["Post"],
     NodeWithTrackbacks: ["Post"],
+    PostCategoryField: [
+      "PostCategoryCheckboxField",
+      "PostCategoryMultiSelectField",
+      "PostCategoryRadioField",
+      "PostCategorySelectField",
+    ],
+    PostCustomField: [
+      "PostCustomCheckboxField",
+      "PostCustomDateField",
+      "PostCustomEmailField",
+      "PostCustomFileuploadField",
+      "PostCustomHiddenField",
+      "PostCustomListField",
+      "PostCustomMultiSelectField",
+      "PostCustomNumberField",
+      "PostCustomPhoneField",
+      "PostCustomRadioField",
+      "PostCustomSelectField",
+      "PostCustomTextAreaField",
+      "PostCustomTextField",
+      "PostCustomTimeField",
+      "PostCustomWebsiteField",
+    ],
+    PostTagsField: [
+      "PostTagsCheckboxField",
+      "PostTagsMultiSelectField",
+      "PostTagsRadioField",
+      "PostTagsSelectField",
+      "PostTagsTextField",
+    ],
   },
 } as const;
 
@@ -13787,7 +17200,8 @@ export interface AcfFieldGroup {
     | "Page_Successstoriesacf_suggestedResources"
     | "Page_Threecolumnstaticpage"
     | "Page_Threecolumnstaticpage_Banner"
-    | "Page_Threecolumnstaticpage_cards";
+    | "Page_Threecolumnstaticpage_cards"
+    | "ProductsService_Standardpage";
   /**
    * The name of the ACF Field Group
    */
@@ -13812,6 +17226,217 @@ export interface AcfLink {
    * The url of the link
    */
   url?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface AddressField {
+  __typename?: "AddressField";
+  /**
+   * Determines the type of address to be displayed.
+   */
+  addressType?: Maybe<ScalarsEnums["AddressFieldTypeEnum"]>;
+  /**
+   * Address field value.
+   */
+  addressValues?: Maybe<AddressFieldValue>;
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * The field id of the field being used as the copy source.
+   */
+  copyValuesOptionFieldId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The label that appears next to the copy values option when the form is displayed. The default value is \“Same as previous\”.
+   */
+  copyValuesOptionLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the country that will be selected by default. Only applicable when &quot;addressType&quot; is set to &quot;INTERATIONAL&quot;.
+   */
+  defaultCountry?: Maybe<ScalarsEnums["AddressFieldCountryEnum"]>;
+  /**
+   * Contains the province that will be selected by default. Only applicable when &quot;addressType&quot; is set to &quot;CANADA&quot;.
+   */
+  defaultProvince?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the state that will be selected by default. Only applicable when &quot;addressType&quot; is set to &quot;US&quot;.
+   */
+  defaultState?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the address field.
+   */
+  inputs?: Maybe<Array<Maybe<AddressInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Indicates whether the copy values option can be used. This option allows users to skip filling out the field and use the same values as another. For example, if the mailing and billing address are the same.
+   */
+  shouldCopyValuesOption?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * The individual properties for each element of the address value field.
+ */
+export interface AddressFieldValue {
+  __typename?: "AddressFieldValue";
+  /**
+   * Address city.
+   */
+  city?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Address country.
+   */
+  country?: Maybe<ScalarsEnums["AddressFieldCountryEnum"]>;
+  /**
+   * Address line two.
+   */
+  lineTwo?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Address state/region/province name.
+   */
+  state?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Street address.
+   */
+  street?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Address zip code.
+   */
+  zip?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Address input values.
+ */
+export interface AddressInputProperty {
+  __typename?: "AddressInputProperty";
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Whether or not this field should be hidden.
+   */
+  isHidden?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Key used to identify this input.
+   */
+  key?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -13874,6 +17499,107 @@ export interface Avatar {
    * Width of the avatar image.
    */
   width?: Maybe<ScalarsEnums["Int"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface CaptchaField {
+  __typename?: "CaptchaField";
+  /**
+   * The language used when the captcha is displayed. This property is available when the captchaType is “captcha”, the default. The possible values are the language codes used by WordPress.
+   */
+  captchaBadgePosition?: Maybe<ScalarsEnums["CaptchaFieldBadgePositionEnum"]>;
+  /**
+   * The language used when the captcha is displayed. This property is available when the captchaType is “captcha”, the default. The possible values are the language codes used by WordPress.
+   */
+  captchaLanguage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the theme to be used for the reCAPTCHA field. Only applicable to the recaptcha captcha type.
+   */
+  captchaTheme?: Maybe<ScalarsEnums["CaptchaFieldThemeEnum"]>;
+  /**
+   * Determines the type of CAPTCHA field to be used.
+   */
+  captchaType?: Maybe<ScalarsEnums["CaptchaFieldTypeEnum"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Determines the image’s background color, in HEX format (i.e. #CCCCCC). Only applicable to simple_captcha and math captcha types.
+   */
+  simpleCaptchaBackgroundColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the image’s font color, in HEX format (i.e. #CCCCCC). Only applicable to simple_captcha and math captcha types.
+   */
+  simpleCaptchaFontColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the CAPTCHA image size. Only applicable to simple_captcha and math captcha types.
+   */
+  simpleCaptchaSize?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -14259,6 +17985,176 @@ export interface CategoryToTaxonomyConnectionEdge {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface CheckboxField {
+  __typename?: "CheckboxField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Checkbox field value.
+   */
+  checkboxValues?: Maybe<Array<Maybe<CheckboxFieldValue>>>;
+  /**
+   * The available choices for the checkbox field.
+   */
+  choices?: Maybe<Array<Maybe<CheckboxFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the \&quot;select all\&quot; choice should be displayed.
+   */
+  hasSelectAll?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the checkbox field.
+   */
+  inputs?: Maybe<Array<Maybe<CheckboxInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Checkbox choice values.
+ */
+export interface CheckboxFieldChoice {
+  __typename?: "CheckboxFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * The individual properties for each element of the Checkbox value field.
+ */
+export interface CheckboxFieldValue {
+  __typename?: "CheckboxFieldValue";
+  /**
+   * Input ID.
+   */
+  inputId?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Input text.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Input value.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Checkbox input values.
+ */
+export interface CheckboxInputProperty {
+  __typename?: "CheckboxInputProperty";
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * A Comment object
  */
 export interface Comment {
@@ -14500,6 +18396,44 @@ export interface Commenter {
 }
 
 /**
+ * Gravity Forms conditional logic.
+ */
+export interface ConditionalLogic {
+  __typename?: "ConditionalLogic";
+  /**
+   * The type of action the conditional logic will perform.
+   */
+  actionType?: Maybe<ScalarsEnums["ConditionalLogicActionTypeEnum"]>;
+  /**
+   * Determines how to the rules should be evaluated.
+   */
+  logicType?: Maybe<ScalarsEnums["ConditionalLogicLogicTypeEnum"]>;
+  /**
+   * Conditional logic rules.
+   */
+  rules?: Maybe<Array<Maybe<ConditionalLogicRule>>>;
+}
+
+/**
+ * Gravity Forms conditional logic rule.
+ */
+export interface ConditionalLogicRule {
+  __typename?: "ConditionalLogicRule";
+  /**
+   * Target field Id. Field that will have it’s value compared with the value property to determine if this rule is a match.
+   */
+  fieldId?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Operator to be used when evaluating this rule.
+   */
+  operator?: Maybe<ScalarsEnums["FormRuleOperatorEnum"]>;
+  /**
+   * The value to compare with field specified by fieldId.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * GraphQL representation of WordPress Conditional Tags.
  */
 export interface ConditionalTags {
@@ -14595,6 +18529,99 @@ export interface ConditionalTags {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface ConsentField {
+  __typename?: "ConsentField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Text of the consent checkbox.
+   */
+  checkboxLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * Consent field value. This is `true` when consent is given, `false` when it is not.
+   */
+  consentValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
  * Nodes used to manage content
  */
 export interface ContentNode {
@@ -14609,7 +18636,6 @@ export interface ContentNode {
     | "PressCoverage"
     | "PressRelease"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "TeamMember";
@@ -15354,21 +19380,6 @@ export interface CreateProductCardPayload {
 }
 
 /**
- * The payload for the createProductService mutation
- */
-export interface CreateProductServicePayload {
-  __typename?: "CreateProductServicePayload";
-  /**
-   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
-   */
-  clientMutationId?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The Post object mutation type.
-   */
-  productService?: Maybe<ProductService>;
-}
-
-/**
  * The payload for the createProductsService mutation
  */
 export interface CreateProductsServicePayload {
@@ -15450,6 +19461,8 @@ export interface DatabaseIdentifier {
   __typename?:
     | "Category"
     | "Comment"
+    | "GfForm"
+    | "GfSubmittedEntry"
     | "MediaItem"
     | "Menu"
     | "MenuItem"
@@ -15465,7 +19478,6 @@ export interface DatabaseIdentifier {
     | "PressRelease"
     | "Pro"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "Tag"
@@ -15476,6 +19488,166 @@ export interface DatabaseIdentifier {
    */
   databaseId: ScalarsEnums["Int"];
   $on: $DatabaseIdentifier;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface DateField {
+  __typename?: "DateField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines how the date field displays it’s calendar icon.
+   */
+  calendarIconType?: Maybe<ScalarsEnums["FormFieldCalendarIconTypeEnum"]>;
+  /**
+   * Contains the URL to the custom calendar icon. Only applicable when calendarIconType is set to custom.
+   */
+  calendarIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines how the date is displayed.
+   */
+  dateFormat?: Maybe<ScalarsEnums["DateFieldFormatEnum"]>;
+  /**
+   * The type of date field to display.
+   */
+  dateType?: Maybe<ScalarsEnums["DateFieldTypeEnum"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the date field.
+   */
+  inputs?: Maybe<Array<Maybe<DateInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Date input values.
+ */
+export interface DateInputProperty {
+  __typename?: "DateInputProperty";
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -15525,6 +19697,44 @@ export interface DeleteCommentPayload {
    * The deleted comment ID
    */
   deletedId?: Maybe<ScalarsEnums["ID"]>;
+}
+
+/**
+ * The payload for the deleteGfDraftEntry mutation
+ */
+export interface DeleteGfDraftEntryPayload {
+  __typename?: "DeleteGfDraftEntryPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The global ID of the draft entry that was deleted.
+   */
+  deletedId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The draft entry object before it was deleted.
+   */
+  draftEntry?: Maybe<GfDraftEntry>;
+}
+
+/**
+ * The payload for the deleteGfEntry mutation
+ */
+export interface DeleteGfEntryPayload {
+  __typename?: "DeleteGfEntryPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The global ID of the draft entry that was deleted.
+   */
+  deletedId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The entry object before it was deleted.
+   */
+  entry?: Maybe<GfSubmittedEntry>;
 }
 
 /**
@@ -15775,25 +19985,6 @@ export interface DeleteProductCardPayload {
 }
 
 /**
- * The payload for the deleteProductService mutation
- */
-export interface DeleteProductServicePayload {
-  __typename?: "DeleteProductServicePayload";
-  /**
-   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
-   */
-  clientMutationId?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The ID of the deleted object
-   */
-  deletedId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The object before it was deleted
-   */
-  productService?: Maybe<ProductService>;
-}
-
-/**
  * The payload for the deleteProductsService mutation
  */
 export interface DeleteProductsServicePayload {
@@ -15904,6 +20095,158 @@ export interface DiscussionSettings {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface EmailField {
+  __typename?: "EmailField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines whether the Confirm Email field is active.
+   */
+  hasEmailConfirmation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the email field.
+   */
+  inputs?: Maybe<Array<Maybe<EmailInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Email input values.
+ */
+export interface EmailInputProperty {
+  __typename?: "EmailInputProperty";
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * Asset enqueued by the CMS
  */
 export interface EnqueuedAsset {
@@ -16010,6 +20353,678 @@ export interface EnqueuedStylesheet {
 }
 
 /**
+ * Field error.
+ */
+export interface FieldError {
+  __typename?: "FieldError";
+  /**
+   * The field with the associated error message.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Error message.
+   */
+  message?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface FileUploadField {
+  __typename?: "FileUploadField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * A comma-delimited list of the file extensions which may be uploaded.
+   */
+  allowedExtensions?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Indicates whether multiple files may be uploaded.
+   */
+  canAcceptMultipleFiles?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The maximum size (in MB) an uploaded file may be .
+   */
+  maxFileSize?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * When the field is set to allow multiple files to be uploaded, this property is available to set a limit on how many may be uploaded.
+   */
+  maxFiles?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Gravity Forms button.
+ */
+export interface FormButton {
+  __typename?: "FormButton";
+  /**
+   * Controls when the form button should be visible based on values selected on the form.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * Contains the URL for the image button. Only applicable when type is set to image.
+   */
+  imageUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the button text. Only applicable when type is set to text.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Specifies the type of button to be displayed. Defaults to TEXT.
+   */
+  type?: Maybe<ScalarsEnums["FormButtonTypeEnum"]>;
+}
+
+/**
+ * Properties for all the email notifications which exist for a form.
+ */
+export interface FormConfirmation {
+  __typename?: "FormConfirmation";
+  /**
+   * Controls which form confirmation message should be displayed.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * ID.
+   */
+  id?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the confirmation is active or inactive. The default confirmation is always active.
+   */
+  isActive?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether this is the default confirmation.
+   */
+  isDefault?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the confirmation message that will be displayed. Only applicable when type is set to &quot;MESSAGE&quot;.
+   */
+  message?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The confirmation name.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the Id of the WordPress page that the browser will be redirected to. Only applicable when type is set to `PAGE`.
+   */
+  pageId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Contains the query string to be appended to the redirection url. Only applicable when type is set to `REDIRECT`.
+   */
+  queryString?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the type of confirmation to be used.
+   */
+  type?: Maybe<ScalarsEnums["FormConfirmationTypeEnum"]>;
+  /**
+   * Contains the URL that the browser will be redirected to. Only applicable when type is set to `REDIRECT`.
+   */
+  url?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * The policies governing which entry data to include when erasing and exporting personal data.
+ */
+export interface FormDataPolicies {
+  __typename?: "FormDataPolicies";
+  /**
+   * Whether entry data from this form is included when erasing and exporting personal data.
+   */
+  canExportAndErase?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The individual entry data exporting and erasing policies.
+   */
+  entryData?: Maybe<Array<Maybe<FormEntryDataPolicy>>>;
+  /**
+   * The database ID of the Gravity Forms field used to identify the user.
+   */
+  identificationFieldDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+}
+
+/**
+ * The individual entry data exporting and erasing policies.
+ */
+export interface FormEntryDataPolicy {
+  __typename?: "FormEntryDataPolicy";
+  /**
+   * The array key for the Gravity Forms Entry.
+   */
+  key?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether this field should be included when erasing personal data.
+   */
+  shouldErase?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether this field should be included when exporting personal data.
+   */
+  shouldExport?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * Gravity Forms form entry limititation details.
+ */
+export interface FormEntryLimits {
+  __typename?: "FormEntryLimits";
+  /**
+   * Whether the form has a limit on the number of submissions.
+   */
+  hasLimit?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Message that will be displayed when the maximum number of submissions have been reached.
+   */
+  limitReachedMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The time period during which submissions are allowed.
+   */
+  limitationPeriod?: Maybe<ScalarsEnums["FormLimitEntriesPeriodEnum"]>;
+  /**
+   * The number of submissions allowed.
+   */
+  maxEntries?: Maybe<ScalarsEnums["Int"]>;
+}
+
+/**
+ * Gravity Forms field.
+ */
+export interface FormField {
+  __typename?:
+    | "AddressField"
+    | "CaptchaField"
+    | "CheckboxField"
+    | "ConsentField"
+    | "DateField"
+    | "EmailField"
+    | "FileUploadField"
+    | "HiddenField"
+    | "HtmlField"
+    | "ListField"
+    | "MultiSelectField"
+    | "NameField"
+    | "NumberField"
+    | "PageField"
+    | "PasswordField"
+    | "PhoneField"
+    | "PostCategoryCheckboxField"
+    | "PostCategoryMultiSelectField"
+    | "PostCategoryRadioField"
+    | "PostCategorySelectField"
+    | "PostContentField"
+    | "PostCustomCheckboxField"
+    | "PostCustomDateField"
+    | "PostCustomEmailField"
+    | "PostCustomFileuploadField"
+    | "PostCustomHiddenField"
+    | "PostCustomListField"
+    | "PostCustomMultiSelectField"
+    | "PostCustomNumberField"
+    | "PostCustomPhoneField"
+    | "PostCustomRadioField"
+    | "PostCustomSelectField"
+    | "PostCustomTextAreaField"
+    | "PostCustomTextField"
+    | "PostCustomTimeField"
+    | "PostCustomWebsiteField"
+    | "PostExcerptField"
+    | "PostImageField"
+    | "PostTagsCheckboxField"
+    | "PostTagsMultiSelectField"
+    | "PostTagsRadioField"
+    | "PostTagsSelectField"
+    | "PostTagsTextField"
+    | "PostTitleField"
+    | "RadioField"
+    | "SectionField"
+    | "SelectField"
+    | "SignatureField"
+    | "TextAreaField"
+    | "TextField"
+    | "TimeField"
+    | "WebsiteField";
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+  $on: $FormField;
+}
+
+/**
+ * The form field-specifc policies for exporting and erasing personal data.
+ */
+export interface FormFieldDataPolicy {
+  __typename?: "FormFieldDataPolicy";
+  /**
+   * Whether this field is used to identify the user&#039;s personal data.
+   */
+  isIdentificationField?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether this field should be included when erasing personal data.
+   */
+  shouldErase?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether this field should be included when exporting personal data.
+   */
+  shouldExport?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * Gravity Forms button.
+ */
+export interface FormLastPageButton {
+  __typename?: "FormLastPageButton";
+  /**
+   * Contains the URL for the image button. Only applicable when type is set to image.
+   */
+  imageUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the button text. Only applicable when type is set to text.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Specifies the type of button to be displayed. Defaults to TEXT.
+   */
+  type?: Maybe<ScalarsEnums["FormButtonTypeEnum"]>;
+}
+
+/**
+ * Gravity Forms form login requirements data.
+ */
+export interface FormLogin {
+  __typename?: "FormLogin";
+  /**
+   * Whether the form is configured to be displayed only to logged in users.
+   */
+  isLoginRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When `isLoginRequired` is set to true, this controls the message displayed when non-logged in user tries to access the form.
+   */
+  loginRequiredMessage?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Properties for all the email notifications which exist for a form.
+ */
+export interface FormNotification {
+  __typename?: "FormNotification";
+  /**
+   * The email or merge tags to be used as the email bcc address.
+   */
+  bcc?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * An associative array containing the conditional logic rules. See the Conditional Logic Object for more details.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * The notification event. Default is form_submission.
+   */
+  event?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The email or merge tag to be used as the email from address.
+   */
+  from?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The text or merge tag to be used as the email from name.
+   */
+  fromName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The notification ID. A 13 character unique ID.
+   */
+  id?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Is the notification active or inactive. The default is true (active).
+   */
+  isActive?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the email message should be formatted so that paragraphs are automatically added for new lines.
+   */
+  isAutoformatted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The email body/content. Merge tags supported.
+   */
+  message?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The notification name.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The email or merge tags to be used as the email reply to address.
+   */
+  replyTo?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Routing rules.
+   */
+  routing?: Maybe<Array<Maybe<FormNotificationRouting>>>;
+  /**
+   * The name of the service to be used when sending this notification. Default is wordpress.
+   */
+  service?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if files uploaded on the form should be included when the notification is sent.
+   */
+  shouldSendAttachments?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The email subject line. Merge tags supported.
+   */
+  subject?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The ID of an email field, an email address or merge tag to be used as the email to address.
+   */
+  to?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Identifies what to use for the notification &quot;to&quot;.
+   */
+  toType?: Maybe<ScalarsEnums["FormNotificationToTypeEnum"]>;
+}
+
+/**
+ * Properties for all the email notifications which exist for a form.
+ */
+export interface FormNotificationRouting {
+  __typename?: "FormNotificationRouting";
+  /**
+   * The email or merge tag to be used as the email To address if this rule is a match.
+   */
+  email?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Target field ID. The field that will have it’s value compared with the value property to determine if this rule is a match.
+   */
+  fieldId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Operator to be used when evaluating this rule.
+   */
+  operator?: Maybe<ScalarsEnums["FormRuleOperatorEnum"]>;
+  /**
+   * The value to compare with the field specified by fieldId.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Gravity Forms form pagination data.
+ */
+export interface FormPagination {
+  __typename?: "FormPagination";
+  /**
+   * Progress bar background color. Can be any CSS color value. Only applies when `style` is set to &quot;CUSTOM&quot;.
+   */
+  backgroundColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Progress bar text color. Can be any CSS color value. Only applies when `style` is set to &quot;CUSTOM&quot;.
+   */
+  color?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the confirmation bar should be displayed with the confirmation text.
+   */
+  hasProgressbarOnConfirmation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Names of the form&#039;s pages.
+   */
+  pageNames?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * The confirmation text to display once the end of the progress bar has been reached. Only applies when `hasProgressbarOnConfirmation` is set to true.
+   */
+  progressbarCompletionText?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Style of progress bar.
+   */
+  style?: Maybe<ScalarsEnums["FormPageProgressStyleEnum"]>;
+  /**
+   * Type of progress indicator.
+   */
+  type?: Maybe<ScalarsEnums["FormPageProgressTypeEnum"]>;
+}
+
+/**
+ * Gravity Forms form Personal Data settings.
+ */
+export interface FormPersonalData {
+  __typename?: "FormPersonalData";
+  /**
+   * The policies governing which entry data to include when erasing and exporting personal data.
+   */
+  dataPolicies?: Maybe<FormDataPolicies>;
+  /**
+   * The number of days to retain entries. `null` if `retentionPolicy` is set to `RETAIN` entries indefinitely.
+   */
+  daysToRetain?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The policy for retaining old entry data.
+   */
+  retentionPolicy?: Maybe<ScalarsEnums["FormRetentionPolicyEnum"]>;
+  /**
+   * Whether the IP address should be saved to the form submission.
+   */
+  shouldSaveIP?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * Gravity Forms form entry limititation details.
+ */
+export interface FormPostCreation {
+  __typename?: "FormPostCreation";
+  /**
+   * When `useCurrentUserAsAuthor` is `false`, this contains the User object for the author.
+   */
+  author?: Maybe<User>;
+  /**
+   * When `useCurrentUserAsAuthor` is `false`, this property contains the user database that will be used as the Post author.
+   */
+  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * When `useCurrentUserAsAuthor` is `false`, this property contains the user ID that will be used as the Post author.
+   */
+  authorId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * Form forms with Post fields, but without a Post Category field, this property contains the default category database ID the post will be associated with when created.
+   */
+  categoryDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Template to be used when creating the post content. Field variables (i.e. {Name:3} ) can be added to the template to insert user submitted values into the post content. Only applicable when `hasContentTemplate` is `true`.
+   */
+  contentTemplate?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the format that the Post should be created with.
+   */
+  format?: Maybe<ScalarsEnums["PostFormatTypeEnum"]>;
+  /**
+   * Determines if the post template functionality is enabled. When enabled, the post content will be created based on the template specified by `contentTemplate`.
+   */
+  hasContentTemplate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the post title template functionality is enabled. When enabled, the post title will be created based on the template specified by `titleTemplate`.
+   */
+  hasTitleTemplate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * For forms with Post fields, this determines if the post should be created using the current logged in user as the author.
+   */
+  shouldUseCurrentUserAsAuthor?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * For forms with Post fields, determines the status that the Post should be created with.
+   */
+  status?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Template to be used when creating the post title. Field variables (i.e. {Name:3} ) can be added to the template to insert user submitted values into the post title. Only applicable when `hasTitleTemplate` is `true`.
+   */
+  titleTemplate?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Gravity Forms form Save and Continue data.
+ */
+export interface FormSaveAndContinue {
+  __typename?: "FormSaveAndContinue";
+  /**
+   * Contains the save button text.
+   */
+  buttonText?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the Save And Continue feature is enabled.
+   */
+  hasSaveAndContinue?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * Gravity Forms form scheduling data.
+ */
+export interface FormSchedule {
+  __typename?: "FormSchedule";
+  /**
+   * Message to be displayed when form is no longer available.
+   */
+  closedMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The Date/time details when the form will become inactive.
+   */
+  endDetails?: Maybe<FormScheduleDetails>;
+  /**
+   * Specifies if this form is scheduled to be displayed only during a certain configured date/time.
+   */
+  hasSchedule?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Message to be displayed when form is not yet available.
+   */
+  pendingMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The Date/time details when the form will become active/visible.
+   */
+  startDetails?: Maybe<FormScheduleDetails>;
+}
+
+/**
+ * Gravity Forms form scheduling data.
+ */
+export interface FormScheduleDetails {
+  __typename?: "FormScheduleDetails";
+  /**
+   * Whether the date is in the AM or PM of a 12-hour clock.
+   */
+  amPm?: Maybe<ScalarsEnums["AmPmEnum"]>;
+  /**
+   * The schedule date in local time.
+   */
+  date?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The schedule date in GMT.
+   */
+  dateGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The hour (1-12).
+   */
+  hour?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The minute.
+   */
+  minute?: Maybe<ScalarsEnums["Int"]>;
+}
+
+/**
  * The general setting type
  */
 export interface GeneralSettings {
@@ -16072,6 +21087,685 @@ export interface GenerateAuthorizationCodePayload {
 }
 
 /**
+ * A Gravity Forms draft entry.
+ */
+export interface GfDraftEntry {
+  __typename?: "GfDraftEntry";
+  /**
+   * The user who created the entry.
+   */
+  createdBy?: Maybe<User>;
+  /**
+   * Database ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdByDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Global ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdById?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateCreated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in GMT.
+   */
+  dateCreatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateUpdated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was updated in GMT.
+   */
+  dateUpdatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The form object of the node.
+   */
+  form?: Maybe<GfForm>;
+  /**
+   * The database identifier of the form of the node.
+   */
+  formDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Connection between the GfEntry type and the FormField type
+   */
+  formFields: (args?: {
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */
+    after?: Maybe<Scalars["String"]>;
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */
+    before?: Maybe<Scalars["String"]>;
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>;
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */
+    last?: Maybe<Scalars["Int"]>;
+    /**
+     * Arguments for filtering the connection
+     */
+    where?: Maybe<GfEntryToFormFieldConnectionWhereArgs>;
+  }) => Maybe<GfEntryToFormFieldConnection>;
+  /**
+   * The globally unique identifier of the form of the node.
+   */
+  formId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The globally unique ID for the object
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Client IP of user who submitted the form.
+   */
+  ip?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the entry is a draft.
+   */
+  isDraft?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the entry has been submitted.
+   */
+  isSubmitted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The resume token. Only applies to draft entries.
+   */
+  resumeToken?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Source URL of page that contained the form when it was submitted.
+   */
+  sourceUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Provides the name and version of both the browser and operating system from which the entry was submitted.
+   */
+  userAgent?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Gravity Forms entry interface.
+ */
+export interface GfEntry {
+  __typename?: "GfDraftEntry" | "GfSubmittedEntry";
+  /**
+   * The user who created the entry.
+   */
+  createdBy?: Maybe<User>;
+  /**
+   * Database ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdByDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Global ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdById?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateCreated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in GMT.
+   */
+  dateCreatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateUpdated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was updated in GMT.
+   */
+  dateUpdatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The form object of the node.
+   */
+  form?: Maybe<GfForm>;
+  /**
+   * The database identifier of the form of the node.
+   */
+  formDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Connection between the GfEntry type and the FormField type
+   */
+  formFields: (args?: {
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */
+    after?: Maybe<Scalars["String"]>;
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */
+    before?: Maybe<Scalars["String"]>;
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>;
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */
+    last?: Maybe<Scalars["Int"]>;
+    /**
+     * Arguments for filtering the connection
+     */
+    where?: Maybe<GfEntryToFormFieldConnectionWhereArgs>;
+  }) => Maybe<GfEntryToFormFieldConnection>;
+  /**
+   * The globally unique identifier of the form of the node.
+   */
+  formId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The globally unique ID for the object
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Client IP of user who submitted the form.
+   */
+  ip?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the entry is a draft.
+   */
+  isDraft?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the entry has been submitted.
+   */
+  isSubmitted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Source URL of page that contained the form when it was submitted.
+   */
+  sourceUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Provides the name and version of both the browser and operating system from which the entry was submitted.
+   */
+  userAgent?: Maybe<ScalarsEnums["String"]>;
+  $on: $GfEntry;
+}
+
+/**
+ * Connection between the GfEntry type and the FormField type
+ */
+export interface GfEntryToFormFieldConnection {
+  __typename?: "GfEntryToFormFieldConnection";
+  /**
+   * Edges for the GfEntryToFormFieldConnection connection
+   */
+  edges?: Maybe<Array<Maybe<GfEntryToFormFieldConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<FormField>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface GfEntryToFormFieldConnectionEdge {
+  __typename?: "GfEntryToFormFieldConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<FormField>;
+}
+
+/**
+ * Gravity Forms form.
+ */
+export interface GfForm {
+  __typename?: "GfForm";
+  /**
+   * Contains the form button settings such as the button text or image button source.
+   */
+  button?: Maybe<FormButton>;
+  /**
+   * Contains the form confirmation settings such as confirmation text or redirect URL.
+   */
+  confirmations?: Maybe<Array<Maybe<FormConfirmation>>>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;form&gt; tag.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The custom text to use to indicate a field is required.
+   */
+  customRequiredIndicator?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateCreated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in GMT.
+   */
+  dateCreatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Form description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field description is displayed above the field input (i.e. immediately after the field label) or below the field input.
+   */
+  descriptionPlacement?: Maybe<ScalarsEnums["FormDescriptionPlacementEnum"]>;
+  /**
+   * Connection between the GfForm type and the GfEntry type
+   */
+  entries: (args?: {
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */
+    after?: Maybe<Scalars["String"]>;
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */
+    before?: Maybe<Scalars["String"]>;
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>;
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */
+    last?: Maybe<Scalars["Int"]>;
+    /**
+     * Arguments for filtering the connection
+     */
+    where?: Maybe<GfFormToGfEntryConnectionWhereArgs>;
+  }) => Maybe<GfFormToGfEntryConnection>;
+  /**
+   * The entry limit settings.
+   */
+  entryLimits?: Maybe<FormEntryLimits>;
+  /**
+   * CSS class for the first page.
+   */
+  firstPageCssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Connection between the GfForm type and the FormField type
+   */
+  formFields: (args?: {
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */
+    after?: Maybe<Scalars["String"]>;
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */
+    before?: Maybe<Scalars["String"]>;
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>;
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */
+    last?: Maybe<Scalars["Int"]>;
+    /**
+     * Arguments for filtering the connection
+     */
+    where?: Maybe<GfFormToFormFieldConnectionWhereArgs>;
+  }) => Maybe<GfFormToFormFieldConnection>;
+  /**
+   * Form ID.
+   * @deprecated Deprecated in favor of the databaseId field.
+   */
+  formId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * When enabled, conditional logic hide/show operation will be performed with a jQuery slide animation. Only applicable to forms with conditional logic.
+   */
+  hasConditionalLogicAnimation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Specifies if the form has the Honeypot spam-protection feature.
+   */
+  hasHoneypot?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * If enabled, will show a summary that lists form validation errors at the top of the form when a user attempts a failed submission.
+   */
+  hasValidationSummary?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The globally unique ID for the object
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Determines whether the form is active.
+   */
+  isActive?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines whether the form is in the trash.
+   */
+  isTrash?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines where the field labels should be placed in relation to the field.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormLabelPlacementEnum"]>;
+  /**
+   * Last page button data.
+   */
+  lastPageButton?: Maybe<FormLastPageButton>;
+  /**
+   * Login requirements data.
+   */
+  login?: Maybe<FormLogin>;
+  /**
+   * The Gravity Forms markup version.
+   */
+  markupVersion?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The ID to assign to the next field that is added to the form.
+   */
+  nextFieldId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The properties for all the email notifications which exist for a form.
+   */
+  notifications?: Maybe<Array<Maybe<FormNotification>>>;
+  /**
+   * Pagination data.
+   */
+  pagination?: Maybe<FormPagination>;
+  /**
+   * Personal data settings.
+   */
+  personalData?: Maybe<FormPersonalData>;
+  /**
+   * Post creation data.
+   */
+  postCreation?: Maybe<FormPostCreation>;
+  /**
+   * Type of indicator to use when field is required.
+   */
+  requiredIndicator?: Maybe<ScalarsEnums["FormFieldRequiredIndicatorEnum"]>;
+  /**
+   * \&quot;Save and Continue\&quot; data.
+   */
+  saveAndContinue?: Maybe<FormSaveAndContinue>;
+  /**
+   * Form scheduling data.
+   */
+  scheduling?: Maybe<FormSchedule>;
+  /**
+   * How sub-labels are aligned.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormSubLabelPlacementEnum"]>;
+  /**
+   * Form title.
+   */
+  title?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The version of Gravity Forms used to create this form.
+   */
+  version?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Connection between the GfForm type and the FormField type
+ */
+export interface GfFormToFormFieldConnection {
+  __typename?: "GfFormToFormFieldConnection";
+  /**
+   * Edges for the GfFormToFormFieldConnection connection
+   */
+  edges?: Maybe<Array<Maybe<GfFormToFormFieldConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<FormField>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface GfFormToFormFieldConnectionEdge {
+  __typename?: "GfFormToFormFieldConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<FormField>;
+}
+
+/**
+ * Connection between the GfForm type and the GfEntry type
+ */
+export interface GfFormToGfEntryConnection {
+  __typename?: "GfFormToGfEntryConnection";
+  /**
+   * Edges for the GfFormToGfEntryConnection connection
+   */
+  edges?: Maybe<Array<Maybe<GfFormToGfEntryConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<GfEntry>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface GfFormToGfEntryConnectionEdge {
+  __typename?: "GfFormToGfEntryConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<GfEntry>;
+}
+
+/**
+ * Gravity Forms Logging Settings.
+ */
+export interface GfLogger {
+  __typename?: "GfLogger";
+  /**
+   * Whether the logger is enabled
+   */
+  isEnabled?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The name of the Gravity Forms logger.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Gravity Forms Settings.
+ */
+export interface GfSettings {
+  __typename?: "GfSettings";
+  /**
+   * The default currency for your forms. Used for product, credit card, and other fields.
+   */
+  currency?: Maybe<ScalarsEnums["GfCurrencyEnum"]>;
+  /**
+   * Whether Gravity Forms to download and install bug fixes and security updates automatically in the background. Requires a valid license key.
+   */
+  hasBackgroundUpdates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether to output Gravity Forms&#039; default CSS.
+   */
+  hasDefaultCss?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether to display the forms menu in the WordPress top toolbar. The forms menu will display the ten forms recently opened in the form editor.
+   */
+  hasToolbar?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the server-generated form markup uses HTML5.
+   */
+  isHtml5Enabled?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Enable to prevent extraneous scripts and styles from being printed on a Gravity Forms admin pages, reducing conflicts with other plugins and themes.
+   */
+  isNoConflictModeEnabled?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Logging settings.
+   */
+  logging?: Maybe<GfSettingsLogging>;
+}
+
+/**
+ * Gravity Forms Logging Settings.
+ */
+export interface GfSettingsLogging {
+  __typename?: "GfSettingsLogging";
+  /**
+   * Whether Gravity Forms internal logging is enabled. Logging allows you to easily debug the inner workings of Gravity Forms to solve any possible issues.
+   */
+  isLoggingEnabled?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * A list of registered Gravity Forms loggers and their configurations
+   */
+  loggers?: Maybe<Array<Maybe<GfLogger>>>;
+}
+
+/**
+ * A Gravity Forms submitted entry.
+ */
+export interface GfSubmittedEntry {
+  __typename?: "GfSubmittedEntry";
+  /**
+   * The user who created the entry.
+   */
+  createdBy?: Maybe<User>;
+  /**
+   * Database ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdByDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Global ID of the user that submitted of the form if a logged in user submitted the form.
+   */
+  createdById?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The unique identifier stored in the database
+   */
+  databaseId: ScalarsEnums["Int"];
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateCreated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in GMT.
+   */
+  dateCreatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was created in local time.
+   */
+  dateUpdated?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The date and time that the entry was updated in GMT.
+   */
+  dateUpdatedGmt?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The entry ID. Returns null for draft entries.
+   * @deprecated Deprecated in favor of the databaseId field.
+   */
+  entryId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form object of the node.
+   */
+  form?: Maybe<GfForm>;
+  /**
+   * The database identifier of the form of the node.
+   */
+  formDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Connection between the GfEntry type and the FormField type
+   */
+  formFields: (args?: {
+    /**
+     * Cursor used along with the "first" argument to reference where in the dataset to get data
+     */
+    after?: Maybe<Scalars["String"]>;
+    /**
+     * Cursor used along with the "last" argument to reference where in the dataset to get data
+     */
+    before?: Maybe<Scalars["String"]>;
+    /**
+     * The number of items to return after the referenced "after" cursor
+     */
+    first?: Maybe<Scalars["Int"]>;
+    /**
+     * The number of items to return before the referenced "before" cursor
+     */
+    last?: Maybe<Scalars["Int"]>;
+    /**
+     * Arguments for filtering the connection
+     */
+    where?: Maybe<GfEntryToFormFieldConnectionWhereArgs>;
+  }) => Maybe<GfEntryToFormFieldConnection>;
+  /**
+   * The globally unique identifier of the form of the node.
+   */
+  formId?: Maybe<ScalarsEnums["ID"]>;
+  /**
+   * The globally unique ID for the object
+   */
+  id: ScalarsEnums["ID"];
+  /**
+   * Client IP of user who submitted the form.
+   */
+  ip?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether the entry is a draft.
+   */
+  isDraft?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the entry has been read.
+   */
+  isRead?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates if the entry has been starred (i.e marked with a star).
+   */
+  isStarred?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the entry has been submitted.
+   */
+  isSubmitted?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * For forms with Post fields, this is the post object that was created.
+   */
+  post?: Maybe<Post>;
+  /**
+   * For forms with Post fields, this property contains the Id of the Post that was created.
+   */
+  postDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Source URL of page that contained the form when it was submitted.
+   */
+  sourceUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The current status of the entry.
+   */
+  status?: Maybe<ScalarsEnums["EntryStatusEnum"]>;
+  /**
+   * Provides the name and version of both the browser and operating system from which the entry was submitted.
+   */
+  userAgent?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * Header Type
  */
 export interface HCMSFooter {
@@ -16130,6 +21824,69 @@ export interface HCMSSocialLinks {
    * Icon url
    */
   iconUrl?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface HiddenField {
+  __typename?: "HiddenField";
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -16299,6 +22056,235 @@ export interface HierarchicalTermNode {
    */
   parentId?: Maybe<ScalarsEnums["ID"]>;
   $on: $HierarchicalTermNode;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface HtmlField {
+  __typename?: "HtmlField";
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * Content of an HTML block field to be displayed on the form.
+   */
+  content?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates whether the default margins are turned on to align the HTML content with other fields.
+   */
+  hasMargins?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * The individual properties for each element of the PostImage value field.
+ */
+export interface ImageFieldValue {
+  __typename?: "ImageFieldValue";
+  /**
+   * The image alt text.
+   */
+  altText?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The image caption.
+   */
+  caption?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The image description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The image title.
+   */
+  title?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The image url.
+   */
+  url?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface ListField {
+  __typename?: "ListField";
+  /**
+   * The URL of the image to be used for the add row button.
+   */
+  addIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the list field.
+   */
+  choices?: Maybe<Array<Maybe<ListFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The URL of the image to be used for the delete row button.
+   */
+  deleteIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field should use multiple columns. Default is false.
+   */
+  hasColumns?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * List field value.
+   */
+  listValues?: Maybe<Array<Maybe<ListFieldValue>>>;
+  /**
+   * The maximum number of rows the user can add to the field.
+   */
+  maxRows?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * List choice values.
+ */
+export interface ListFieldChoice {
+  __typename?: "ListFieldChoice";
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * The individual properties for each element of the List value field.
+ */
+export interface ListFieldValue {
+  __typename?: "ListFieldValue";
+  /**
+   * Input values.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
 }
 
 /**
@@ -17103,6 +23089,344 @@ export interface MenuToMenuItemConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<MenuItem>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface MultiSelectField {
+  __typename?: "MultiSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the multiselect field.
+   */
+  choices?: Maybe<Array<Maybe<MultiSelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Multiselect choice values.
+ */
+export interface MultiSelectFieldChoice {
+  __typename?: "MultiSelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface NameField {
+  __typename?: "NameField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the name field.
+   */
+  inputs?: Maybe<Array<Maybe<NameInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Name field value.
+   */
+  nameValues?: Maybe<NameFieldValue>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Name choice values.
+ */
+export interface NameFieldChoice {
+  __typename?: "NameFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * The individual properties for each element of the Name value field.
+ */
+export interface NameFieldValue {
+  __typename?: "NameFieldValue";
+  /**
+   * First name.
+   */
+  first?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Last name.
+   */
+  last?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Middle name.
+   */
+  middle?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Prefix, such as Mr., Mrs. etc.
+   */
+  prefix?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Suffix, such as Sr., Jr. etc.
+   */
+  suffix?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Name input values.
+ */
+export interface NameInputProperty {
+  __typename?: "NameInputProperty";
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The available choices for the name field.
+   */
+  choices?: Maybe<Array<Maybe<NameFieldChoice>>>;
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Whether or not this field should be hidden.
+   */
+  isHidden?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Key used to identify this input.
+   */
+  key?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -18549,6 +24873,9 @@ export interface Node {
     | "ContentType"
     | "EnqueuedScript"
     | "EnqueuedStylesheet"
+    | "GfDraftEntry"
+    | "GfForm"
+    | "GfSubmittedEntry"
     | "MediaItem"
     | "Menu"
     | "MenuItem"
@@ -18565,7 +24892,6 @@ export interface Node {
     | "PressRelease"
     | "Pro"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "Tag"
@@ -18594,7 +24920,6 @@ export interface NodeWithAuthor {
     | "Partner"
     | "Post"
     | "ProductCard"
-    | "ProductService"
     | "Project"
     | "TeamMember";
   /**
@@ -18688,7 +25013,6 @@ export interface NodeWithFeaturedImage {
     | "Post"
     | "PressCoverage"
     | "PressRelease"
-    | "ProductService"
     | "ProductsService"
     | "TeamMember";
   conditionalTags?: Maybe<ConditionalTags>;
@@ -18858,6 +25182,26 @@ export interface NodeWithFeaturedImageToMediaItemConnectionEdge {
 }
 
 /**
+ * A node that can have a Gravity Forms form assigned to it.
+ */
+export interface NodeWithForm {
+  __typename?: "GfDraftEntry" | "GfSubmittedEntry";
+  /**
+   * The form object of the node.
+   */
+  form?: Maybe<GfForm>;
+  /**
+   * The database identifier of the form of the node.
+   */
+  formDatabaseId?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The globally unique identifier of the form of the node.
+   */
+  formId?: Maybe<ScalarsEnums["ID"]>;
+  $on: $NodeWithForm;
+}
+
+/**
  * A node that can have page attributes
  */
 export interface NodeWithPageAttributes {
@@ -18911,7 +25255,6 @@ export interface NodeWithTemplate {
     | "PressCoverage"
     | "PressRelease"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "TeamMember";
@@ -18937,7 +25280,6 @@ export interface NodeWithTitle {
     | "PressCoverage"
     | "PressRelease"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "TeamMember";
@@ -18971,6 +25313,147 @@ export interface NodeWithTrackbacks {
    */
   toPing?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
   $on: $NodeWithTrackbacks;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface NumberField {
+  __typename?: "NumberField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The formula used for the number field.
+   */
+  calculationFormula?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Specifies to how many decimal places the number should be rounded. This is available when isCalculation is true, but is not available when the chosen format is “Currency”.
+   */
+  calculationRounding?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Indicates whether the number field is a calculation.
+   */
+  isCalculation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the format allowed for the number field.
+   */
+  numberFormat?: Maybe<ScalarsEnums["NumberFieldFormatEnum"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Maximum allowed value for a number field. Values higher than the number specified by this property will cause the field to fail validation.
+   */
+  rangeMax?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Minimum allowed value for a number field. Values lower than the number specified by this property will cause the field to fail validation.
+   */
+  rangeMin?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -19329,6 +25812,61 @@ export interface Page {
    * The unique resource identifier path
    */
   uri?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PageField {
+  __typename?: "PageField";
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * An array containing the the individual properties for the &quot;Next&quot; button.
+   */
+  nextButton?: Maybe<FormButton>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * An array containing the the individual properties for the &quot;Previous&quot; button.
+   */
+  previousButton?: Maybe<FormButton>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -19738,6 +26276,263 @@ export interface PartnerToPreviewConnectionEdge {
    * The node of the connection, without the edges
    */
   node?: Maybe<Partner>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PasswordField {
+  __typename?: "PasswordField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates whether the field displays the password strength indicator.
+   */
+  hasPasswordStrengthIndicator?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the Password visibility toggle should be enabled for this field.
+   */
+  hasPasswordVisibilityToggle?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the password field.
+   */
+  inputs?: Maybe<Array<Maybe<PasswordInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Indicates how strong the password should be.
+   */
+  minPasswordStrength?: Maybe<ScalarsEnums["PasswordFieldMinStrengthEnum"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Password input values.
+ */
+export interface PasswordInputProperty {
+  __typename?: "PasswordInputProperty";
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Whether or not this field should be hidden.
+   */
+  isHidden?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PhoneField {
+  __typename?: "PhoneField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines the allowed format for phones. If the phone value does not conform with the specified format, the field will fail validation.
+   */
+  phoneFormat?: Maybe<ScalarsEnums["PhoneFieldFormatEnum"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -20181,6 +26976,3026 @@ export interface Post {
 }
 
 /**
+ * A Gravity Forms  post_category field.
+ */
+export interface PostCategoryCheckboxField {
+  __typename?: "PostCategoryCheckboxField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Checkbox field value.
+   */
+  checkboxValues?: Maybe<Array<Maybe<CheckboxFieldValue>>>;
+  /**
+   * The available choices for the post_category field.
+   */
+  choices?: Maybe<Array<Maybe<PostCategoryFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The dropdown placeholder for the field.
+   */
+  dropdownPlaceholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if all categories should be displayed on the Post Category drop down. If this property is true (display all categories), the Post Category drop down will display the categories hierarchically.
+   */
+  hasAllCategories?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the \&quot;select all\&quot; choice should be displayed.
+   */
+  hasSelectAll?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_category field.
+   */
+  inputs?: Maybe<Array<Maybe<PostCategoryInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostCategoryField {
+  __typename?:
+    | "PostCategoryCheckboxField"
+    | "PostCategoryMultiSelectField"
+    | "PostCategoryRadioField"
+    | "PostCategorySelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_category field.
+   */
+  choices?: Maybe<Array<Maybe<PostCategoryFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The dropdown placeholder for the field.
+   */
+  dropdownPlaceholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if all categories should be displayed on the Post Category drop down. If this property is true (display all categories), the Post Category drop down will display the categories hierarchically.
+   */
+  hasAllCategories?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+  $on: $PostCategoryField;
+}
+
+/**
+ * Post_category choice values.
+ */
+export interface PostCategoryFieldChoice {
+  __typename?: "PostCategoryFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Post_category input values.
+ */
+export interface PostCategoryInputProperty {
+  __typename?: "PostCategoryInputProperty";
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_category field.
+ */
+export interface PostCategoryMultiSelectField {
+  __typename?: "PostCategoryMultiSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_category field.
+   */
+  choices?: Maybe<Array<Maybe<PostCategoryFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The dropdown placeholder for the field.
+   */
+  dropdownPlaceholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if all categories should be displayed on the Post Category drop down. If this property is true (display all categories), the Post Category drop down will display the categories hierarchically.
+   */
+  hasAllCategories?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_category field.
+ */
+export interface PostCategoryRadioField {
+  __typename?: "PostCategoryRadioField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_category field.
+   */
+  choices?: Maybe<Array<Maybe<PostCategoryFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The dropdown placeholder for the field.
+   */
+  dropdownPlaceholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if all categories should be displayed on the Post Category drop down. If this property is true (display all categories), the Post Category drop down will display the categories hierarchically.
+   */
+  hasAllCategories?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates whether the &#039;Enable &quot;other&quot; choice&#039; option is checked in the editor.
+   */
+  hasOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_category field.
+ */
+export interface PostCategorySelectField {
+  __typename?: "PostCategorySelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_category field.
+   */
+  choices?: Maybe<Array<Maybe<PostCategoryFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The dropdown placeholder for the field.
+   */
+  dropdownPlaceholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if all categories should be displayed on the Post Category drop down. If this property is true (display all categories), the Post Category drop down will display the categories hierarchically.
+   */
+  hasAllCategories?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostContentField {
+  __typename?: "PostContentField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates whether the field uses the rich text editor interface.
+   */
+  hasRichTextEditor?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomCheckboxField {
+  __typename?: "PostCustomCheckboxField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Checkbox field value.
+   */
+  checkboxValues?: Maybe<Array<Maybe<CheckboxFieldValue>>>;
+  /**
+   * The available choices for the post_custom_field field.
+   */
+  choices?: Maybe<Array<Maybe<PostCustomCheckboxFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the \&quot;select all\&quot; choice should be displayed.
+   */
+  hasSelectAll?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_custom_field field.
+   */
+  inputs?: Maybe<Array<Maybe<PostCustomInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field choice values.
+ */
+export interface PostCustomCheckboxFieldChoice {
+  __typename?: "PostCustomCheckboxFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomDateField {
+  __typename?: "PostCustomDateField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines how the date field displays it’s calendar icon.
+   */
+  calendarIconType?: Maybe<ScalarsEnums["FormFieldCalendarIconTypeEnum"]>;
+  /**
+   * Contains the URL to the custom calendar icon. Only applicable when calendarIconType is set to custom.
+   */
+  calendarIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines how the date is displayed.
+   */
+  dateFormat?: Maybe<ScalarsEnums["DateFieldFormatEnum"]>;
+  /**
+   * The type of date field to display.
+   */
+  dateType?: Maybe<ScalarsEnums["DateFieldTypeEnum"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_custom_field field.
+   */
+  inputs?: Maybe<Array<Maybe<PostCustomInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomEmailField {
+  __typename?: "PostCustomEmailField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines whether the Confirm Email field is active.
+   */
+  hasEmailConfirmation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_custom_field field.
+   */
+  inputs?: Maybe<Array<Maybe<PostCustomInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostCustomField {
+  __typename?:
+    | "PostCustomCheckboxField"
+    | "PostCustomDateField"
+    | "PostCustomEmailField"
+    | "PostCustomFileuploadField"
+    | "PostCustomHiddenField"
+    | "PostCustomListField"
+    | "PostCustomMultiSelectField"
+    | "PostCustomNumberField"
+    | "PostCustomPhoneField"
+    | "PostCustomRadioField"
+    | "PostCustomSelectField"
+    | "PostCustomTextAreaField"
+    | "PostCustomTextField"
+    | "PostCustomTimeField"
+    | "PostCustomWebsiteField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+  $on: $PostCustomField;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomFileuploadField {
+  __typename?: "PostCustomFileuploadField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * A comma-delimited list of the file extensions which may be uploaded.
+   */
+  allowedExtensions?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Indicates whether multiple files may be uploaded.
+   */
+  canAcceptMultipleFiles?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The maximum size (in MB) an uploaded file may be .
+   */
+  maxFileSize?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * When the field is set to allow multiple files to be uploaded, this property is available to set a limit on how many may be uploaded.
+   */
+  maxFiles?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomHiddenField {
+  __typename?: "PostCustomHiddenField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field input values.
+ */
+export interface PostCustomInputProperty {
+  __typename?: "PostCustomInputProperty";
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomListField {
+  __typename?: "PostCustomListField";
+  /**
+   * The URL of the image to be used for the add row button.
+   */
+  addIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_custom_field field.
+   */
+  choices?: Maybe<Array<Maybe<PostCustomListFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The URL of the image to be used for the delete row button.
+   */
+  deleteIconUrl?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field should use multiple columns. Default is false.
+   */
+  hasColumns?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * List field value.
+   */
+  listValues?: Maybe<Array<Maybe<ListFieldValue>>>;
+  /**
+   * The maximum number of rows the user can add to the field.
+   */
+  maxRows?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field choice values.
+ */
+export interface PostCustomListFieldChoice {
+  __typename?: "PostCustomListFieldChoice";
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomMultiSelectField {
+  __typename?: "PostCustomMultiSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_custom_field field.
+   */
+  choices?: Maybe<Array<Maybe<PostCustomMultiSelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field choice values.
+ */
+export interface PostCustomMultiSelectFieldChoice {
+  __typename?: "PostCustomMultiSelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomNumberField {
+  __typename?: "PostCustomNumberField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The formula used for the number field.
+   */
+  calculationFormula?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Specifies to how many decimal places the number should be rounded. This is available when isCalculation is true, but is not available when the chosen format is “Currency”.
+   */
+  calculationRounding?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Indicates whether the number field is a calculation.
+   */
+  isCalculation?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the format allowed for the number field.
+   */
+  numberFormat?: Maybe<ScalarsEnums["NumberFieldFormatEnum"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Maximum allowed value for a number field. Values higher than the number specified by this property will cause the field to fail validation.
+   */
+  rangeMax?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Minimum allowed value for a number field. Values lower than the number specified by this property will cause the field to fail validation.
+   */
+  rangeMin?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomPhoneField {
+  __typename?: "PostCustomPhoneField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines the allowed format for phones. If the phone value does not conform with the specified format, the field will fail validation.
+   */
+  phoneFormat?: Maybe<ScalarsEnums["PhoneFieldFormatEnum"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomRadioField {
+  __typename?: "PostCustomRadioField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_custom_field field.
+   */
+  choices?: Maybe<Array<Maybe<PostCustomRadioFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates whether the &#039;Enable &quot;other&quot; choice&#039; option is checked in the editor.
+   */
+  hasOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field choice values.
+ */
+export interface PostCustomRadioFieldChoice {
+  __typename?: "PostCustomRadioFieldChoice";
+  /**
+   * Indicates the radio button item is the “Other” choice.
+   */
+  isOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomSelectField {
+  __typename?: "PostCustomSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_custom_field field.
+   */
+  choices?: Maybe<Array<Maybe<PostCustomSelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_custom_field choice values.
+ */
+export interface PostCustomSelectFieldChoice {
+  __typename?: "PostCustomSelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomTextAreaField {
+  __typename?: "PostCustomTextAreaField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates whether the field uses the rich text editor interface.
+   */
+  hasRichTextEditor?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomTextField {
+  __typename?: "PostCustomTextField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the field has an input mask.
+   */
+  hasInputMask?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The pattern used for the input mask.
+   */
+  inputMaskValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if a text field input tag should be created with a &quot;password&quot; type.
+   */
+  isPasswordInput?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomTimeField {
+  __typename?: "PostCustomTimeField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_custom_field field.
+   */
+  inputs?: Maybe<Array<Maybe<PostCustomInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * Determines how the time is displayed.
+   */
+  timeFormat?: Maybe<ScalarsEnums["TimeFieldFormatEnum"]>;
+  /**
+   * Time field value.
+   */
+  timeValues?: Maybe<TimeFieldValue>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_custom_field field.
+ */
+export interface PostCustomWebsiteField {
+  __typename?: "PostCustomWebsiteField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The post meta key to which the value should be assigned.
+   */
+  postMetaFieldName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostExcerptField {
+  __typename?: "PostExcerptField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
  * The postFormat type
  */
 export interface PostFormat {
@@ -20482,6 +30297,1067 @@ export interface PostFormatToTaxonomyConnectionEdge {
    * The node of the connection, without the edges
    */
   node?: Maybe<Taxonomy>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostImageField {
+  __typename?: "PostImageField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * A comma-delimited list of the file extensions which may be uploaded.
+   */
+  allowedExtensions?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Controls the visibility of the alt metadata for Post Image fields.
+   */
+  hasAlt?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the caption metadata for Post Image fields.
+   */
+  hasCaption?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the description metadata for Post Image fields.
+   */
+  hasDescription?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the title metadata for Post Image fields.
+   */
+  hasTitle?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Name field value.
+   */
+  imageValues?: Maybe<ImageFieldValue>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Whether the image field should be used to set the post&#039;s Featured Image
+   */
+  isFeaturedImage?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms  post_tags field.
+ */
+export interface PostTagsCheckboxField {
+  __typename?: "PostTagsCheckboxField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Checkbox field value.
+   */
+  checkboxValues?: Maybe<Array<Maybe<CheckboxFieldValue>>>;
+  /**
+   * The available choices for the post_tags field.
+   */
+  choices?: Maybe<Array<Maybe<PostTagsCheckboxFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the \&quot;select all\&quot; choice should be displayed.
+   */
+  hasSelectAll?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the post_tags field.
+   */
+  inputs?: Maybe<Array<Maybe<PostTagsInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_tags choice values.
+ */
+export interface PostTagsCheckboxFieldChoice {
+  __typename?: "PostTagsCheckboxFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostTagsField {
+  __typename?:
+    | "PostTagsCheckboxField"
+    | "PostTagsMultiSelectField"
+    | "PostTagsRadioField"
+    | "PostTagsSelectField"
+    | "PostTagsTextField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+  $on: $PostTagsField;
+}
+
+/**
+ * Post_tags input values.
+ */
+export interface PostTagsInputProperty {
+  __typename?: "PostTagsInputProperty";
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  name?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_tags field.
+ */
+export interface PostTagsMultiSelectField {
+  __typename?: "PostTagsMultiSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_tags field.
+   */
+  choices?: Maybe<Array<Maybe<PostTagsMultiSelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Checkbox field value.
+   */
+  values?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_tags choice values.
+ */
+export interface PostTagsMultiSelectFieldChoice {
+  __typename?: "PostTagsMultiSelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_tags field.
+ */
+export interface PostTagsRadioField {
+  __typename?: "PostTagsRadioField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_tags field.
+   */
+  choices?: Maybe<Array<Maybe<PostTagsRadioFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates whether the &#039;Enable &quot;other&quot; choice&#039; option is checked in the editor.
+   */
+  hasOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_tags choice values.
+ */
+export interface PostTagsRadioFieldChoice {
+  __typename?: "PostTagsRadioFieldChoice";
+  /**
+   * Indicates the radio button item is the “Other” choice.
+   */
+  isOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_tags field.
+ */
+export interface PostTagsSelectField {
+  __typename?: "PostTagsSelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the post_tags field.
+   */
+  choices?: Maybe<Array<Maybe<PostTagsSelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Post_tags choice values.
+ */
+export interface PostTagsSelectFieldChoice {
+  __typename?: "PostTagsSelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * A Gravity Forms  post_tags field.
+ */
+export interface PostTagsTextField {
+  __typename?: "PostTagsTextField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the field has an input mask.
+   */
+  hasInputMask?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The pattern used for the input mask.
+   */
+  inputMaskValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if a text field input tag should be created with a &quot;password&quot; type.
+   */
+  isPasswordInput?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface PostTitleField {
+  __typename?: "PostTitleField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
 }
 
 /**
@@ -21371,31 +32247,6 @@ export interface Pro {
   }) => Maybe<ProToProConnection>;
   conditionalTags?: Maybe<ConditionalTags>;
   /**
-   * Connection between the pro type and the ContentNode type
-   */
-  contentNodes: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-    /**
-     * Arguments for filtering the connection
-     */
-    where?: Maybe<ProToContentNodeConnectionWhereArgs>;
-  }) => Maybe<ProToContentNodeConnection>;
-  /**
    * The number of objects connected to the object
    */
   count?: Maybe<ScalarsEnums["Int"]>;
@@ -21491,31 +32342,6 @@ export interface Pro {
    */
   proId?: Maybe<ScalarsEnums["Int"]>;
   /**
-   * Connection between the pro type and the productService type
-   */
-  productsServices: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-    /**
-     * Arguments for filtering the connection
-     */
-    where?: Maybe<ProToProductServiceConnectionWhereArgs>;
-  }) => Maybe<ProToProductServiceConnection>;
-  /**
    * An alphanumeric identifier for the object unique to its type.
    */
   slug?: Maybe<ScalarsEnums["String"]>;
@@ -21577,40 +32403,6 @@ export interface ProToAncestorsProConnectionEdge {
 }
 
 /**
- * Connection between the pro type and the ContentNode type
- */
-export interface ProToContentNodeConnection {
-  __typename?: "ProToContentNodeConnection";
-  /**
-   * Edges for the ProToContentNodeConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ProToContentNodeConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<ContentNode>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ProToContentNodeConnectionEdge {
-  __typename?: "ProToContentNodeConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<ContentNode>;
-}
-
-/**
  * Connection between the pro type and the pro type
  */
 export interface ProToParentProConnectionEdge {
@@ -21653,40 +32445,6 @@ export interface ProToProConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<Pro>;
-}
-
-/**
- * Connection between the pro type and the productService type
- */
-export interface ProToProductServiceConnection {
-  __typename?: "ProToProductServiceConnection";
-  /**
-   * Edges for the ProToProductServiceConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ProToProductServiceConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<ProductService>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ProToProductServiceConnectionEdge {
-  __typename?: "ProToProductServiceConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<ProductService>;
 }
 
 /**
@@ -21895,347 +32653,6 @@ export interface ProductCardToPreviewConnectionEdge {
    * The node of the connection, without the edges
    */
   node?: Maybe<ProductCard>;
-}
-
-/**
- * The productService type
- */
-export interface ProductService {
-  __typename?: "ProductService";
-  /**
-   * Connection between the NodeWithAuthor type and the User type
-   */
-  author?: Maybe<NodeWithAuthorToUserConnectionEdge>;
-  /**
-   * The database identifier of the author of the node
-   */
-  authorDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * The globally unique identifier of the author of the node
-   */
-  authorId?: Maybe<ScalarsEnums["ID"]>;
-  conditionalTags?: Maybe<ConditionalTags>;
-  /**
-   * Connection between the ContentNode type and the ContentType type
-   */
-  contentType?: Maybe<ContentNodeToContentTypeConnectionEdge>;
-  /**
-   * The name of the Content Type the node belongs to
-   */
-  contentTypeName: ScalarsEnums["String"];
-  copyright?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The unique identifier stored in the database
-   */
-  databaseId: ScalarsEnums["Int"];
-  /**
-   * Post publishing date.
-   */
-  date?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The publishing date set in GMT.
-   */
-  dateGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The desired slug of the post
-   */
-  desiredSlug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds
-   */
-  editingLockedBy?: Maybe<ContentNodeToEditLockConnectionEdge>;
-  /**
-   * The RSS enclosure for the object
-   */
-  enclosure?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedScript type
-   */
-  enqueuedScripts: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-  }) => Maybe<ContentNodeToEnqueuedScriptConnection>;
-  /**
-   * Connection between the ContentNode type and the EnqueuedStylesheet type
-   */
-  enqueuedStylesheets: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-  }) => Maybe<ContentNodeToEnqueuedStylesheetConnection>;
-  faqOne?: Maybe<ScalarsEnums["String"]>;
-  featureList?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  featureTitle?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the NodeWithFeaturedImage type and the MediaItem type
-   */
-  featuredImage?: Maybe<NodeWithFeaturedImageToMediaItemConnectionEdge>;
-  /**
-   * The database identifier for the featured image node assigned to the content node
-   */
-  featuredImageDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Globally unique ID of the featured image assigned to the node
-   */
-  featuredImageId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table.
-   */
-  guid?: Maybe<ScalarsEnums["String"]>;
-  heroBanner?: Maybe<MediaItem>;
-  heroSubtitle?: Maybe<ScalarsEnums["String"]>;
-  heroTitle?: Maybe<ScalarsEnums["String"]>;
-  iconOne?: Maybe<MediaItem>;
-  iconThree?: Maybe<MediaItem>;
-  iconTwo?: Maybe<MediaItem>;
-  /**
-   * The globally unique identifier of the products-services object.
-   */
-  id: ScalarsEnums["ID"];
-  introductionDescription?: Maybe<ScalarsEnums["String"]>;
-  introductionTitle?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Whether the node is a Content Node
-   */
-  isContentNode: ScalarsEnums["Boolean"];
-  /**
-   * Whether the object is a node in the preview state
-   */
-  isPreview?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the object is restricted from the current viewer
-   */
-  isRestricted?: Maybe<ScalarsEnums["Boolean"]>;
-  /**
-   * Whether the node is a Term
-   */
-  isTermNode: ScalarsEnums["Boolean"];
-  /**
-   * The user that most recently edited the node
-   */
-  lastEditedBy?: Maybe<ContentNodeToEditLastConnectionEdge>;
-  /**
-   * The permalink of the post
-   */
-  link?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The local modified time for a post. If a post was recently updated the modified field will change to match the corresponding time.
-   */
-  modified?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT.
-   */
-  modifiedGmt?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the productService type and the productService type
-   */
-  preview?: Maybe<ProductServiceToPreviewConnectionEdge>;
-  /**
-   * The database id of the preview node
-   */
-  previewRevisionDatabaseId?: Maybe<ScalarsEnums["Int"]>;
-  /**
-   * Whether the object is a node in the preview state
-   */
-  previewRevisionId?: Maybe<ScalarsEnums["ID"]>;
-  /**
-   * The id field matches the WP_Post-&gt;ID field.
-   * @deprecated Deprecated in favor of the databaseId field
-   */
-  productServiceId: ScalarsEnums["Int"];
-  productTitle?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * Connection between the productService type and the pro type
-   */
-  pros: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-    /**
-     * Arguments for filtering the connection
-     */
-    where?: Maybe<ProductServiceToProConnectionWhereArgs>;
-  }) => Maybe<ProductServiceToProConnection>;
-  requirementList?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  requirementTitle?: Maybe<ScalarsEnums["String"]>;
-  sectionEight?: Maybe<ScalarsEnums["String"]>;
-  sectionFive?: Maybe<ScalarsEnums["String"]>;
-  sectionFour?: Maybe<ScalarsEnums["String"]>;
-  sectionOne?: Maybe<ScalarsEnums["String"]>;
-  sectionSeven?: Maybe<ScalarsEnums["String"]>;
-  sectionSix?: Maybe<ScalarsEnums["String"]>;
-  sectionThree?: Maybe<ScalarsEnums["String"]>;
-  sectionTwo?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
-   */
-  slug?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The current status of the object
-   */
-  status?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The template assigned to a node of content
-   */
-  template?: Maybe<ContentTemplate>;
-  templates?: Maybe<Array<Maybe<ScalarsEnums["String"]>>>;
-  /**
-   * Connection between the productService type and the TermNode type
-   */
-  terms: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-    /**
-     * Arguments for filtering the connection
-     */
-    where?: Maybe<ProductServiceToTermNodeConnectionWhereArgs>;
-  }) => Maybe<ProductServiceToTermNodeConnection>;
-  /**
-   * The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made.
-   */
-  title: (args?: {
-    /**
-     * Format of the field output
-     */
-    format?: Maybe<PostObjectFieldFormatEnum>;
-  }) => Maybe<ScalarsEnums["String"]>;
-  /**
-   * The unique resource identifier path
-   */
-  uri?: Maybe<ScalarsEnums["String"]>;
-}
-
-/**
- * Connection between the productService type and the productService type
- */
-export interface ProductServiceToPreviewConnectionEdge {
-  __typename?: "ProductServiceToPreviewConnectionEdge";
-  /**
-   * The node of the connection, without the edges
-   */
-  node?: Maybe<ProductService>;
-}
-
-/**
- * Connection between the productService type and the pro type
- */
-export interface ProductServiceToProConnection {
-  __typename?: "ProductServiceToProConnection";
-  /**
-   * Edges for the ProductServiceToProConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ProductServiceToProConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<Pro>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ProductServiceToProConnectionEdge {
-  __typename?: "ProductServiceToProConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<Pro>;
-}
-
-/**
- * Connection between the productService type and the TermNode type
- */
-export interface ProductServiceToTermNodeConnection {
-  __typename?: "ProductServiceToTermNodeConnection";
-  /**
-   * Edges for the ProductServiceToTermNodeConnection connection
-   */
-  edges?: Maybe<Array<Maybe<ProductServiceToTermNodeConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<TermNode>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface ProductServiceToTermNodeConnectionEdge {
-  __typename?: "ProductServiceToTermNodeConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<TermNode>;
 }
 
 /**
@@ -22525,6 +32942,10 @@ export interface ProductsService {
    */
   slug?: Maybe<ScalarsEnums["String"]>;
   /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Products&quot; was set to Show in GraphQL.
+   */
+  standardPage?: Maybe<ProductsService_Standardpage>;
+  /**
    * The current status of the object
    */
   status?: Maybe<ScalarsEnums["String"]>;
@@ -22684,6 +33105,22 @@ export interface ProductsServiceToTermNodeConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<TermNode>;
+}
+
+/**
+ * Field Group
+ */
+export interface ProductsService_Standardpage {
+  __typename?: "ProductsService_Standardpage";
+  buttonLink?: Maybe<AcfLink>;
+  /**
+   * The name of the ACF Field Group
+   */
+  fieldGroupName?: Maybe<ScalarsEnums["String"]>;
+  heroBanner?: Maybe<MediaItem>;
+  heroButton?: Maybe<ScalarsEnums["String"]>;
+  heroDescription?: Maybe<ScalarsEnums["String"]>;
+  heroTitle?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -22879,6 +33316,138 @@ export interface ProjectToPreviewConnectionEdge {
    * The node of the connection, without the edges
    */
   node?: Maybe<Project>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface RadioField {
+  __typename?: "RadioField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the radio field.
+   */
+  choices?: Maybe<Array<Maybe<RadioFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Indicates whether the &#039;Enable &quot;other&quot; choice&#039; option is checked in the editor.
+   */
+  hasOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Radio choice values.
+ */
+export interface RadioFieldChoice {
+  __typename?: "RadioFieldChoice";
+  /**
+   * Indicates the radio button item is the “Other” choice.
+   */
+  isOtherChoice?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -23177,6 +33746,108 @@ export interface RootQueryToEnqueuedStylesheetConnectionEdge {
    * The item at the end of the edge
    */
   node?: Maybe<EnqueuedStylesheet>;
+}
+
+/**
+ * Connection between the RootQuery type and the GfEntry type
+ */
+export interface RootQueryToGfEntryConnection {
+  __typename?: "RootQueryToGfEntryConnection";
+  /**
+   * Edges for the RootQueryToGfEntryConnection connection
+   */
+  edges?: Maybe<Array<Maybe<RootQueryToGfEntryConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<GfEntry>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface RootQueryToGfEntryConnectionEdge {
+  __typename?: "RootQueryToGfEntryConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<GfEntry>;
+}
+
+/**
+ * Connection between the RootQuery type and the GfForm type
+ */
+export interface RootQueryToGfFormConnection {
+  __typename?: "RootQueryToGfFormConnection";
+  /**
+   * Edges for the RootQueryToGfFormConnection connection
+   */
+  edges?: Maybe<Array<Maybe<RootQueryToGfFormConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<GfForm>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface RootQueryToGfFormConnectionEdge {
+  __typename?: "RootQueryToGfFormConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<GfForm>;
+}
+
+/**
+ * Connection between the RootQuery type and the GfSubmittedEntry type
+ */
+export interface RootQueryToGfSubmittedEntryConnection {
+  __typename?: "RootQueryToGfSubmittedEntryConnection";
+  /**
+   * Edges for the RootQueryToGfSubmittedEntryConnection connection
+   */
+  edges?: Maybe<Array<Maybe<RootQueryToGfSubmittedEntryConnectionEdge>>>;
+  /**
+   * The nodes of the connection, without the edges
+   */
+  nodes?: Maybe<Array<Maybe<GfSubmittedEntry>>>;
+  /**
+   * Information about pagination in a connection.
+   */
+  pageInfo?: Maybe<WPPageInfo>;
+}
+
+/**
+ * An edge in a connection
+ */
+export interface RootQueryToGfSubmittedEntryConnectionEdge {
+  __typename?: "RootQueryToGfSubmittedEntryConnectionEdge";
+  /**
+   * A cursor for use in pagination
+   */
+  cursor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The item at the end of the edge
+   */
+  node?: Maybe<GfSubmittedEntry>;
 }
 
 /**
@@ -24030,6 +34701,209 @@ export interface RootQueryToUserRoleConnectionEdge {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface SectionField {
+  __typename?: "SectionField";
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface SelectField {
+  __typename?: "SelectField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The available choices for the select field.
+   */
+  choices?: Maybe<Array<Maybe<SelectFieldChoice>>>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field (checkbox, select or radio) have choice values enabled, which allows the field to have choice values different from the labels that are displayed to the user.
+   */
+  hasChoiceValue?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * When set to true, the &quot;Chosen&quot; jQuery script will be applied to this field, enabling search capabilities to Drop Down fields and a more user-friendly interface for Multi Select fields.
+   */
+  hasEnhancedUI?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * Select choice values.
+ */
+export interface SelectFieldChoice {
+  __typename?: "SelectFieldChoice";
+  /**
+   * Determines if this choice should be selected by default when displayed. The value true will select the choice, whereas false will display it unselected.
+   */
+  isSelected?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The text to be displayed to the user when displaying this choice.
+   */
+  text?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The value to be stored in the database when this choice is selected. Note: This property is only supported by the Drop Down and Post Category fields. Checkboxes and Radio fields will store the text property in the database regardless of the value property.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * The payload for the sendPasswordResetEmail mutation
  */
 export interface SendPasswordResetEmailPayload {
@@ -24115,6 +34989,161 @@ export interface Settings {
    * Settings of the the boolean Settings Group
    */
   writingSettingsUseSmilies?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface SignatureField {
+  __typename?: "SignatureField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Color to be used for the background of the signature area. Can be any valid CSS color value.
+   */
+  backgroundColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Color to be used for the border around the signature area. Can be any valid CSS color value.
+   */
+  borderColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Border style to be used around the signature area.
+   */
+  borderStyle?: Maybe<ScalarsEnums["SignatureFieldBorderStyleEnum"]>;
+  /**
+   * Width of the border around the signature area.
+   */
+  borderWidth?: Maybe<ScalarsEnums["SignatureFieldBorderWidthEnum"]>;
+  /**
+   * Width of the signature field in pixels.
+   */
+  boxWidth?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Color of the pen to be used for the signature. Can be any valid CSS color value.
+   */
+  penColor?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Size of the pen cursor.
+   */
+  penSize?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * The payload for the submitGfDraftEntry mutation
+ */
+export interface SubmitGfDraftEntryPayload {
+  __typename?: "SubmitGfDraftEntryPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The entry that was created.
+   */
+  entry?: Maybe<GfSubmittedEntry>;
+  /**
+   * Field errors.
+   */
+  errors?: Maybe<Array<Maybe<FieldError>>>;
+}
+
+/**
+ * The payload for the submitGfForm mutation
+ */
+export interface SubmitGfFormPayload {
+  __typename?: "SubmitGfFormPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The entry that was created.
+   */
+  entry?: Maybe<GfEntry>;
+  /**
+   * Field errors.
+   */
+  errors?: Maybe<Array<Maybe<FieldError>>>;
+  /**
+   * Draft resume URL. Null if submitting an entry. If the &quot;Referer&quot; header is not included in the request, this will be an empty string.
+   */
+  resumeUrl?: Maybe<ScalarsEnums["String"]>;
 }
 
 /**
@@ -24889,6 +35918,256 @@ export interface TermNodeToEnqueuedStylesheetConnectionEdge {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface TextAreaField {
+  __typename?: "TextAreaField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Indicates whether the field uses the rich text editor interface.
+   */
+  hasRichTextEditor?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * A Gravity Forms   field.
+ */
+export interface TextField {
+  __typename?: "TextField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Whether autocomplete should be enabled for this field.
+   */
+  hasAutocomplete?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Whether the field has an input mask.
+   */
+  hasInputMask?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The pattern used for the input mask.
+   */
+  inputMaskValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if a text field input tag should be created with a &quot;password&quot; type.
+   */
+  isPasswordInput?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * Specifies the maximum number of characters allowed in a text or textarea (paragraph) field.
+   */
+  maxLength?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
  * A theme object
  */
 export interface Theme {
@@ -24940,6 +36219,169 @@ export interface Theme {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface TimeField {
+  __typename?: "TimeField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * An array of the available properties for each input of the time field.
+   */
+  inputs?: Maybe<Array<Maybe<TimeInputProperty>>>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * The placement of the labels for the subfields within the group. This setting controls all of the subfields, they cannot be set individually. They may be aligned above or below the inputs. If this property is not set, the “Sub-Label Placement” setting on the Form Settings-&gt;Form Layout page is used. If no setting is specified, the default is above inputs.
+   */
+  subLabelPlacement?: Maybe<ScalarsEnums["FormFieldSubLabelPlacementEnum"]>;
+  /**
+   * Determines how the time is displayed.
+   */
+  timeFormat?: Maybe<ScalarsEnums["TimeFieldFormatEnum"]>;
+  /**
+   * Time field value.
+   */
+  timeValues?: Maybe<TimeFieldValue>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
+ * The individual properties for each element of the Time value field.
+ */
+export interface TimeFieldValue {
+  __typename?: "TimeFieldValue";
+  /**
+   * AM or PM.
+   */
+  amPm?: Maybe<ScalarsEnums["AmPmEnum"]>;
+  /**
+   * The full display value in 12-hour format. Example: &quot;08:25 am&quot;.
+   */
+  displayValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The hours, in this format: hh.
+   */
+  hours?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The minutes, in this format: mm.
+   */
+  minutes?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * Time input values.
+ */
+export interface TimeInputProperty {
+  __typename?: "TimeInputProperty";
+  /**
+   * The autocomplete attribute for the field.
+   */
+  autocompleteAttribute?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The custom label for the input. When set, this is used in place of the label.
+   */
+  customLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The input ID. Input IDs follow the following naming convention: FIELDID.INPUTID (i.e. 5.1), where FIELDID is the id of the containing field and INPUTID specifies the input field.
+   */
+  id?: Maybe<ScalarsEnums["Float"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
  * Any node that has a URI
  */
 export interface UniformResourceIdentifiable {
@@ -24959,7 +36401,6 @@ export interface UniformResourceIdentifiable {
     | "PressRelease"
     | "Pro"
     | "ProductCard"
-    | "ProductService"
     | "ProductsService"
     | "Project"
     | "Tag"
@@ -25018,6 +36459,48 @@ export interface UpdateCommentPayload {
    * Whether the mutation succeeded. If the comment is not approved, the server will not return the comment to a non authenticated user, but a success message can be returned if the create succeeded, and the client can optimistically add the comment to the client cache
    */
   success?: Maybe<ScalarsEnums["Boolean"]>;
+}
+
+/**
+ * The payload for the updateGfDraftEntry mutation
+ */
+export interface UpdateGfDraftEntryPayload {
+  __typename?: "UpdateGfDraftEntryPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The draft entry after the update mutation has been applied. If a validation error occurred, the draft entry will NOT have been updated with the invalid value provided.
+   */
+  draftEntry?: Maybe<GfDraftEntry>;
+  /**
+   * Field validation errors.
+   */
+  errors?: Maybe<Array<Maybe<FieldError>>>;
+  /**
+   * Draft resume URL. If the &quot;Referer&quot; header is not included in the request, this will be an empty string.
+   */
+  resumeUrl?: Maybe<ScalarsEnums["String"]>;
+}
+
+/**
+ * The payload for the updateGfEntry mutation
+ */
+export interface UpdateGfEntryPayload {
+  __typename?: "UpdateGfEntryPayload";
+  /**
+   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
+   */
+  clientMutationId?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The entry that was created.
+   */
+  entry?: Maybe<GfSubmittedEntry>;
+  /**
+   * Field errors.
+   */
+  errors?: Maybe<Array<Maybe<FieldError>>>;
 }
 
 /**
@@ -25213,21 +36696,6 @@ export interface UpdateProductCardPayload {
    * The Post object mutation type.
    */
   productCard?: Maybe<ProductCard>;
-}
-
-/**
- * The payload for the updateProductService mutation
- */
-export interface UpdateProductServicePayload {
-  __typename?: "UpdateProductServicePayload";
-  /**
-   * If a &#039;clientMutationId&#039; input is provided to the mutation, it will be returned as output on the mutation. This ID can be used by the client to track the progress of mutations and catch possible duplicate mutation submissions.
-   */
-  clientMutationId?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The Post object mutation type.
-   */
-  productService?: Maybe<ProductService>;
 }
 
 /**
@@ -25695,31 +37163,6 @@ export interface User {
      */
     where?: Maybe<UserToProductCardConnectionWhereArgs>;
   }) => Maybe<UserToProductCardConnection>;
-  /**
-   * Connection between the User type and the productService type
-   */
-  productsServices: (args?: {
-    /**
-     * Cursor used along with the "first" argument to reference where in the dataset to get data
-     */
-    after?: Maybe<Scalars["String"]>;
-    /**
-     * Cursor used along with the "last" argument to reference where in the dataset to get data
-     */
-    before?: Maybe<Scalars["String"]>;
-    /**
-     * The number of items to return after the referenced "after" cursor
-     */
-    first?: Maybe<Scalars["Int"]>;
-    /**
-     * The number of items to return before the referenced "before" cursor
-     */
-    last?: Maybe<Scalars["Int"]>;
-    /**
-     * Arguments for filtering the connection
-     */
-    where?: Maybe<UserToProductServiceConnectionWhereArgs>;
-  }) => Maybe<UserToProductServiceConnection>;
   /**
    * Connection between the User type and the project type
    */
@@ -26280,40 +37723,6 @@ export interface UserToProductCardConnectionEdge {
 }
 
 /**
- * Connection between the User type and the productService type
- */
-export interface UserToProductServiceConnection {
-  __typename?: "UserToProductServiceConnection";
-  /**
-   * Edges for the UserToProductServiceConnection connection
-   */
-  edges?: Maybe<Array<Maybe<UserToProductServiceConnectionEdge>>>;
-  /**
-   * The nodes of the connection, without the edges
-   */
-  nodes?: Maybe<Array<Maybe<ProductService>>>;
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo?: Maybe<WPPageInfo>;
-}
-
-/**
- * An edge in a connection
- */
-export interface UserToProductServiceConnectionEdge {
-  __typename?: "UserToProductServiceConnectionEdge";
-  /**
-   * A cursor for use in pagination
-   */
-  cursor?: Maybe<ScalarsEnums["String"]>;
-  /**
-   * The item at the end of the edge
-   */
-  node?: Maybe<ProductService>;
-}
-
-/**
  * Connection between the User type and the project type
  */
 export interface UserToProjectConnection {
@@ -26439,6 +37848,115 @@ export interface WPPageInfo {
 }
 
 /**
+ * A Gravity Forms   field.
+ */
+export interface WebsiteField {
+  __typename?: "WebsiteField";
+  /**
+   * When specified, the value of this property will be used on the admin pages instead of the label. It is useful for fields with long labels.
+   */
+  adminLabel?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field’s value can be pre-populated dynamically.
+   */
+  canPrepopulate?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Controls the visibility of the field based on values selected by the user.
+   */
+  conditionalLogic?: Maybe<ConditionalLogic>;
+  /**
+   * String containing the custom CSS classes to be added to the &lt;li&gt; tag that contains the field. Useful for applying custom formatting to specific fields.
+   */
+  cssClass?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Contains the default value for the field. When specified, the field&#039;s value will be populated with the contents of this property when the form is displayed.
+   */
+  defaultValue?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field description.
+   */
+  description?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The placement of the field description.
+   */
+  descriptionPlacement?: Maybe<
+    ScalarsEnums["FormFieldDescriptionPlacementEnum"]
+  >;
+  /**
+   * Indicates the field is only displayed and its contents are not submitted with the form/saved with the entry. This is set to true.
+   */
+  displayOnly?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Contains the message that is displayed for fields that fail validation.
+   */
+  errorMessage?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field ID.
+   */
+  id: ScalarsEnums["Int"];
+  /**
+   * Assigns a name to this field so that it can be populated dynamically via this input name. Only applicable when canPrepopulate is `true`.
+   */
+  inputName?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The base form field type used to display the input. A good example is the Post Custom Field that can be displayed as various different types of fields.
+   */
+  inputType?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * Determines if the field requires the user to enter a value. Fields marked as required will prevent the form from being submitted if the user has not entered a value in it.
+   */
+  isRequired?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Field label that will be displayed on the form and on the admin pages.
+   */
+  label?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * The field label position.
+   */
+  labelPlacement?: Maybe<ScalarsEnums["FormFieldLabelPlacementEnum"]>;
+  /**
+   * The number of CSS grid columns the field should span.
+   */
+  layoutGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The number of CSS grid columns the spacer field following this one should span.
+   */
+  layoutSpacerGridColumnSpan?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form page this field is located on. Default is 1.
+   */
+  pageNumber?: Maybe<ScalarsEnums["Int"]>;
+  /**
+   * The form field-specifc policies for exporting and erasing personal data.
+   */
+  personalData?: Maybe<FormFieldDataPolicy>;
+  /**
+   * Placeholder text to give the user a hint on how to fill out the field. This is not submitted with the form.
+   */
+  placeholder?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Determines if the field allows duplicate submissions.
+   */
+  shouldAllowDuplicates?: Maybe<ScalarsEnums["Boolean"]>;
+  /**
+   * Determines the size of the field when displayed on the page.
+   */
+  size?: Maybe<ScalarsEnums["FormFieldSizeEnum"]>;
+  /**
+   * The type of field to be displayed.
+   */
+  type?: Maybe<ScalarsEnums["FormFieldTypeEnum"]>;
+  /**
+   * The string-formatted entry value for the `formField`. For complex fields this might be a JSON-encoded or serialized array.
+   */
+  value?: Maybe<ScalarsEnums["String"]>;
+  /**
+   * Field visibility.
+   */
+  visibility?: Maybe<ScalarsEnums["FormFieldVisibilityEnum"]>;
+}
+
+/**
  * The writing setting type
  */
 export interface WritingSettings {
@@ -26498,9 +38016,6 @@ export interface Mutation {
   createProductCard: (args: {
     input: CreateProductCardInput;
   }) => Maybe<CreateProductCardPayload>;
-  createProductService: (args: {
-    input: CreateProductServiceInput;
-  }) => Maybe<CreateProductServicePayload>;
   createProductsService: (args: {
     input: CreateProductsServiceInput;
   }) => Maybe<CreateProductsServicePayload>;
@@ -26518,6 +38033,12 @@ export interface Mutation {
   deleteComment: (args: {
     input: DeleteCommentInput;
   }) => Maybe<DeleteCommentPayload>;
+  deleteGfDraftEntry: (args: {
+    input: DeleteGfDraftEntryInput;
+  }) => Maybe<DeleteGfDraftEntryPayload>;
+  deleteGfEntry: (args: {
+    input: DeleteGfEntryInput;
+  }) => Maybe<DeleteGfEntryPayload>;
   deleteMediaItem: (args: {
     input: DeleteMediaItemInput;
   }) => Maybe<DeleteMediaItemPayload>;
@@ -26551,9 +38072,6 @@ export interface Mutation {
   deleteProductCard: (args: {
     input: DeleteProductCardInput;
   }) => Maybe<DeleteProductCardPayload>;
-  deleteProductService: (args: {
-    input: DeleteProductServiceInput;
-  }) => Maybe<DeleteProductServicePayload>;
   deleteProductsService: (args: {
     input: DeleteProductsServiceInput;
   }) => Maybe<DeleteProductsServicePayload>;
@@ -26583,12 +38101,24 @@ export interface Mutation {
   sendPasswordResetEmail: (args: {
     input: SendPasswordResetEmailInput;
   }) => Maybe<SendPasswordResetEmailPayload>;
+  submitGfDraftEntry: (args: {
+    input: SubmitGfDraftEntryInput;
+  }) => Maybe<SubmitGfDraftEntryPayload>;
+  submitGfForm: (args: {
+    input: SubmitGfFormInput;
+  }) => Maybe<SubmitGfFormPayload>;
   updateCategory: (args: {
     input: UpdateCategoryInput;
   }) => Maybe<UpdateCategoryPayload>;
   updateComment: (args: {
     input: UpdateCommentInput;
   }) => Maybe<UpdateCommentPayload>;
+  updateGfDraftEntry: (args: {
+    input: UpdateGfDraftEntryInput;
+  }) => Maybe<UpdateGfDraftEntryPayload>;
+  updateGfEntry: (args: {
+    input: UpdateGfEntryInput;
+  }) => Maybe<UpdateGfEntryPayload>;
   updateMediaItem: (args: {
     input: UpdateMediaItemInput;
   }) => Maybe<UpdateMediaItemPayload>;
@@ -26622,9 +38152,6 @@ export interface Mutation {
   updateProductCard: (args: {
     input: UpdateProductCardInput;
   }) => Maybe<UpdateProductCardPayload>;
-  updateProductService: (args: {
-    input: UpdateProductServiceInput;
-  }) => Maybe<UpdateProductServicePayload>;
   updateProductsService: (args: {
     input: UpdateProductsServiceInput;
   }) => Maybe<UpdateProductsServicePayload>;
@@ -26691,6 +38218,44 @@ export interface Query {
   generalSettings?: Maybe<GeneralSettings>;
   getFooter?: Maybe<HCMSFooter>;
   getHeader?: Maybe<HCMSHeader>;
+  gfDraftEntry: (args: {
+    id: Scalars["ID"];
+    idType?: Maybe<DraftEntryIdTypeEnum>;
+  }) => Maybe<GfDraftEntry>;
+  gfEntries: (args?: {
+    after?: Maybe<Scalars["String"]>;
+    before?: Maybe<Scalars["String"]>;
+    first?: Maybe<Scalars["Int"]>;
+    last?: Maybe<Scalars["Int"]>;
+    where?: Maybe<RootQueryToGfEntryConnectionWhereArgs>;
+  }) => Maybe<RootQueryToGfEntryConnection>;
+  gfEntry: (args: {
+    id: Scalars["ID"];
+    idType?: Maybe<EntryIdTypeEnum>;
+  }) => Maybe<GfEntry>;
+  gfForm: (args: {
+    id: Scalars["ID"];
+    idType?: Maybe<FormIdTypeEnum>;
+  }) => Maybe<GfForm>;
+  gfForms: (args?: {
+    after?: Maybe<Scalars["String"]>;
+    before?: Maybe<Scalars["String"]>;
+    first?: Maybe<Scalars["Int"]>;
+    last?: Maybe<Scalars["Int"]>;
+    where?: Maybe<RootQueryToGfFormConnectionWhereArgs>;
+  }) => Maybe<RootQueryToGfFormConnection>;
+  gfSettings?: Maybe<GfSettings>;
+  gfSubmittedEntries: (args?: {
+    after?: Maybe<Scalars["String"]>;
+    before?: Maybe<Scalars["String"]>;
+    first?: Maybe<Scalars["Int"]>;
+    last?: Maybe<Scalars["Int"]>;
+    where?: Maybe<RootQueryToGfSubmittedEntryConnectionWhereArgs>;
+  }) => Maybe<RootQueryToGfSubmittedEntryConnection>;
+  gfSubmittedEntry: (args: {
+    id: Scalars["ID"];
+    idType?: Maybe<SubmittedEntryIdTypeEnum>;
+  }) => Maybe<GfSubmittedEntry>;
   mediaItem: (args: {
     asPreview?: Maybe<Scalars["Boolean"]>;
     id: Scalars["ID"];
@@ -26926,17 +38491,6 @@ export interface Query {
     last?: Maybe<Scalars["Int"]>;
     where?: Maybe<RootQueryToProductCardConnectionWhereArgs>;
   }) => Maybe<RootQueryToProductCardConnection>;
-  productService: (args: {
-    asPreview?: Maybe<Scalars["Boolean"]>;
-    id: Scalars["ID"];
-    idType?: Maybe<ProductServiceIdType>;
-  }) => Maybe<ProductService>;
-  productServiceBy: (args?: {
-    id?: Maybe<Scalars["ID"]>;
-    productServiceId?: Maybe<Scalars["Int"]>;
-    slug?: Maybe<Scalars["String"]>;
-    uri?: Maybe<Scalars["String"]>;
-  }) => Maybe<ProductService>;
   productsService: (args: {
     asPreview?: Maybe<Scalars["Boolean"]>;
     id: Scalars["ID"];
@@ -27082,8 +38636,12 @@ export interface Subscription {
 
 export interface SchemaObjectTypes {
   AcfLink: AcfLink;
+  AddressField: AddressField;
+  AddressFieldValue: AddressFieldValue;
+  AddressInputProperty: AddressInputProperty;
   AtlasContentModelerSettingsSettings: AtlasContentModelerSettingsSettings;
   Avatar: Avatar;
+  CaptchaField: CaptchaField;
   Category: Category;
   CategoryToAncestorsCategoryConnection: CategoryToAncestorsCategoryConnection;
   CategoryToAncestorsCategoryConnectionEdge: CategoryToAncestorsCategoryConnectionEdge;
@@ -27095,6 +38653,10 @@ export interface SchemaObjectTypes {
   CategoryToPostConnection: CategoryToPostConnection;
   CategoryToPostConnectionEdge: CategoryToPostConnectionEdge;
   CategoryToTaxonomyConnectionEdge: CategoryToTaxonomyConnectionEdge;
+  CheckboxField: CheckboxField;
+  CheckboxFieldChoice: CheckboxFieldChoice;
+  CheckboxFieldValue: CheckboxFieldValue;
+  CheckboxInputProperty: CheckboxInputProperty;
   Comment: Comment;
   CommentAuthor: CommentAuthor;
   CommentToCommentConnection: CommentToCommentConnection;
@@ -27102,7 +38664,10 @@ export interface SchemaObjectTypes {
   CommentToCommenterConnectionEdge: CommentToCommenterConnectionEdge;
   CommentToContentNodeConnectionEdge: CommentToContentNodeConnectionEdge;
   CommentToParentCommentConnectionEdge: CommentToParentCommentConnectionEdge;
+  ConditionalLogic: ConditionalLogic;
+  ConditionalLogicRule: ConditionalLogicRule;
   ConditionalTags: ConditionalTags;
+  ConsentField: ConsentField;
   ContentNodeToContentTypeConnectionEdge: ContentNodeToContentTypeConnectionEdge;
   ContentNodeToEditLastConnectionEdge: ContentNodeToEditLastConnectionEdge;
   ContentNodeToEditLockConnectionEdge: ContentNodeToEditLockConnectionEdge;
@@ -27130,15 +38695,18 @@ export interface SchemaObjectTypes {
   CreatePressReleasePayload: CreatePressReleasePayload;
   CreateProPayload: CreateProPayload;
   CreateProductCardPayload: CreateProductCardPayload;
-  CreateProductServicePayload: CreateProductServicePayload;
   CreateProductsServicePayload: CreateProductsServicePayload;
   CreateProjectPayload: CreateProjectPayload;
   CreateTagPayload: CreateTagPayload;
   CreateTeamMemberPayload: CreateTeamMemberPayload;
   CreateUserPayload: CreateUserPayload;
+  DateField: DateField;
+  DateInputProperty: DateInputProperty;
   DefaultTemplate: DefaultTemplate;
   DeleteCategoryPayload: DeleteCategoryPayload;
   DeleteCommentPayload: DeleteCommentPayload;
+  DeleteGfDraftEntryPayload: DeleteGfDraftEntryPayload;
+  DeleteGfEntryPayload: DeleteGfEntryPayload;
   DeleteMediaItemPayload: DeleteMediaItemPayload;
   DeleteNewEventPayload: DeleteNewEventPayload;
   DeleteNewMediaCenterPayload: DeleteNewMediaCenterPayload;
@@ -27152,25 +38720,62 @@ export interface SchemaObjectTypes {
   DeletePressReleasePayload: DeletePressReleasePayload;
   DeleteProPayload: DeleteProPayload;
   DeleteProductCardPayload: DeleteProductCardPayload;
-  DeleteProductServicePayload: DeleteProductServicePayload;
   DeleteProductsServicePayload: DeleteProductsServicePayload;
   DeleteProjectPayload: DeleteProjectPayload;
   DeleteTagPayload: DeleteTagPayload;
   DeleteTeamMemberPayload: DeleteTeamMemberPayload;
   DeleteUserPayload: DeleteUserPayload;
   DiscussionSettings: DiscussionSettings;
+  EmailField: EmailField;
+  EmailInputProperty: EmailInputProperty;
   EnqueuedScript: EnqueuedScript;
   EnqueuedStylesheet: EnqueuedStylesheet;
+  FieldError: FieldError;
+  FileUploadField: FileUploadField;
+  FormButton: FormButton;
+  FormConfirmation: FormConfirmation;
+  FormDataPolicies: FormDataPolicies;
+  FormEntryDataPolicy: FormEntryDataPolicy;
+  FormEntryLimits: FormEntryLimits;
+  FormFieldDataPolicy: FormFieldDataPolicy;
+  FormLastPageButton: FormLastPageButton;
+  FormLogin: FormLogin;
+  FormNotification: FormNotification;
+  FormNotificationRouting: FormNotificationRouting;
+  FormPagination: FormPagination;
+  FormPersonalData: FormPersonalData;
+  FormPostCreation: FormPostCreation;
+  FormSaveAndContinue: FormSaveAndContinue;
+  FormSchedule: FormSchedule;
+  FormScheduleDetails: FormScheduleDetails;
   GeneralSettings: GeneralSettings;
   GenerateAuthorizationCodePayload: GenerateAuthorizationCodePayload;
+  GfDraftEntry: GfDraftEntry;
+  GfEntryToFormFieldConnection: GfEntryToFormFieldConnection;
+  GfEntryToFormFieldConnectionEdge: GfEntryToFormFieldConnectionEdge;
+  GfForm: GfForm;
+  GfFormToFormFieldConnection: GfFormToFormFieldConnection;
+  GfFormToFormFieldConnectionEdge: GfFormToFormFieldConnectionEdge;
+  GfFormToGfEntryConnection: GfFormToGfEntryConnection;
+  GfFormToGfEntryConnectionEdge: GfFormToGfEntryConnectionEdge;
+  GfLogger: GfLogger;
+  GfSettings: GfSettings;
+  GfSettingsLogging: GfSettingsLogging;
+  GfSubmittedEntry: GfSubmittedEntry;
   HCMSFooter: HCMSFooter;
   HCMSHeader: HCMSHeader;
   HCMSSocialLinks: HCMSSocialLinks;
+  HiddenField: HiddenField;
   HierarchicalContentNodeToContentNodeAncestorsConnection: HierarchicalContentNodeToContentNodeAncestorsConnection;
   HierarchicalContentNodeToContentNodeAncestorsConnectionEdge: HierarchicalContentNodeToContentNodeAncestorsConnectionEdge;
   HierarchicalContentNodeToContentNodeChildrenConnection: HierarchicalContentNodeToContentNodeChildrenConnection;
   HierarchicalContentNodeToContentNodeChildrenConnectionEdge: HierarchicalContentNodeToContentNodeChildrenConnectionEdge;
   HierarchicalContentNodeToParentContentNodeConnectionEdge: HierarchicalContentNodeToParentContentNodeConnectionEdge;
+  HtmlField: HtmlField;
+  ImageFieldValue: ImageFieldValue;
+  ListField: ListField;
+  ListFieldChoice: ListFieldChoice;
+  ListFieldValue: ListFieldValue;
   MediaDetails: MediaDetails;
   MediaItem: MediaItem;
   MediaItemMeta: MediaItemMeta;
@@ -27185,7 +38790,13 @@ export interface SchemaObjectTypes {
   MenuItemToMenuItemLinkableConnectionEdge: MenuItemToMenuItemLinkableConnectionEdge;
   MenuToMenuItemConnection: MenuToMenuItemConnection;
   MenuToMenuItemConnectionEdge: MenuToMenuItemConnectionEdge;
+  MultiSelectField: MultiSelectField;
+  MultiSelectFieldChoice: MultiSelectFieldChoice;
   Mutation: Mutation;
+  NameField: NameField;
+  NameFieldChoice: NameFieldChoice;
+  NameFieldValue: NameFieldValue;
+  NameInputProperty: NameInputProperty;
   NewEvent: NewEvent;
   NewEventToNewMediaCenterConnection: NewEventToNewMediaCenterConnection;
   NewEventToNewMediaCenterConnectionEdge: NewEventToNewMediaCenterConnectionEdge;
@@ -27222,7 +38833,9 @@ export interface SchemaObjectTypes {
   NodeWithAuthorToUserConnectionEdge: NodeWithAuthorToUserConnectionEdge;
   NodeWithFeaturedImageToMediaItemConnectionEdge: NodeWithFeaturedImageToMediaItemConnectionEdge;
   NodeWithRevisionsToContentNodeConnectionEdge: NodeWithRevisionsToContentNodeConnectionEdge;
+  NumberField: NumberField;
   Page: Page;
+  PageField: PageField;
   PageToCommentConnection: PageToCommentConnection;
   PageToCommentConnectionEdge: PageToCommentConnectionEdge;
   PageToPreviewConnectionEdge: PageToPreviewConnectionEdge;
@@ -27238,8 +38851,40 @@ export interface SchemaObjectTypes {
   Page_Threecolumnstaticpage_cards: Page_Threecolumnstaticpage_cards;
   Partner: Partner;
   PartnerToPreviewConnectionEdge: PartnerToPreviewConnectionEdge;
+  PasswordField: PasswordField;
+  PasswordInputProperty: PasswordInputProperty;
+  PhoneField: PhoneField;
   Plugin: Plugin;
   Post: Post;
+  PostCategoryCheckboxField: PostCategoryCheckboxField;
+  PostCategoryFieldChoice: PostCategoryFieldChoice;
+  PostCategoryInputProperty: PostCategoryInputProperty;
+  PostCategoryMultiSelectField: PostCategoryMultiSelectField;
+  PostCategoryRadioField: PostCategoryRadioField;
+  PostCategorySelectField: PostCategorySelectField;
+  PostContentField: PostContentField;
+  PostCustomCheckboxField: PostCustomCheckboxField;
+  PostCustomCheckboxFieldChoice: PostCustomCheckboxFieldChoice;
+  PostCustomDateField: PostCustomDateField;
+  PostCustomEmailField: PostCustomEmailField;
+  PostCustomFileuploadField: PostCustomFileuploadField;
+  PostCustomHiddenField: PostCustomHiddenField;
+  PostCustomInputProperty: PostCustomInputProperty;
+  PostCustomListField: PostCustomListField;
+  PostCustomListFieldChoice: PostCustomListFieldChoice;
+  PostCustomMultiSelectField: PostCustomMultiSelectField;
+  PostCustomMultiSelectFieldChoice: PostCustomMultiSelectFieldChoice;
+  PostCustomNumberField: PostCustomNumberField;
+  PostCustomPhoneField: PostCustomPhoneField;
+  PostCustomRadioField: PostCustomRadioField;
+  PostCustomRadioFieldChoice: PostCustomRadioFieldChoice;
+  PostCustomSelectField: PostCustomSelectField;
+  PostCustomSelectFieldChoice: PostCustomSelectFieldChoice;
+  PostCustomTextAreaField: PostCustomTextAreaField;
+  PostCustomTextField: PostCustomTextField;
+  PostCustomTimeField: PostCustomTimeField;
+  PostCustomWebsiteField: PostCustomWebsiteField;
+  PostExcerptField: PostExcerptField;
   PostFormat: PostFormat;
   PostFormatToContentNodeConnection: PostFormatToContentNodeConnection;
   PostFormatToContentNodeConnectionEdge: PostFormatToContentNodeConnectionEdge;
@@ -27248,6 +38893,18 @@ export interface SchemaObjectTypes {
   PostFormatToProductsServiceConnection: PostFormatToProductsServiceConnection;
   PostFormatToProductsServiceConnectionEdge: PostFormatToProductsServiceConnectionEdge;
   PostFormatToTaxonomyConnectionEdge: PostFormatToTaxonomyConnectionEdge;
+  PostImageField: PostImageField;
+  PostTagsCheckboxField: PostTagsCheckboxField;
+  PostTagsCheckboxFieldChoice: PostTagsCheckboxFieldChoice;
+  PostTagsInputProperty: PostTagsInputProperty;
+  PostTagsMultiSelectField: PostTagsMultiSelectField;
+  PostTagsMultiSelectFieldChoice: PostTagsMultiSelectFieldChoice;
+  PostTagsRadioField: PostTagsRadioField;
+  PostTagsRadioFieldChoice: PostTagsRadioFieldChoice;
+  PostTagsSelectField: PostTagsSelectField;
+  PostTagsSelectFieldChoice: PostTagsSelectFieldChoice;
+  PostTagsTextField: PostTagsTextField;
+  PostTitleField: PostTitleField;
   PostToCategoryConnection: PostToCategoryConnection;
   PostToCategoryConnectionEdge: PostToCategoryConnectionEdge;
   PostToCommentConnection: PostToCommentConnection;
@@ -27273,22 +38930,12 @@ export interface SchemaObjectTypes {
   Pro: Pro;
   ProToAncestorsProConnection: ProToAncestorsProConnection;
   ProToAncestorsProConnectionEdge: ProToAncestorsProConnectionEdge;
-  ProToContentNodeConnection: ProToContentNodeConnection;
-  ProToContentNodeConnectionEdge: ProToContentNodeConnectionEdge;
   ProToParentProConnectionEdge: ProToParentProConnectionEdge;
   ProToProConnection: ProToProConnection;
   ProToProConnectionEdge: ProToProConnectionEdge;
-  ProToProductServiceConnection: ProToProductServiceConnection;
-  ProToProductServiceConnectionEdge: ProToProductServiceConnectionEdge;
   ProToTaxonomyConnectionEdge: ProToTaxonomyConnectionEdge;
   ProductCard: ProductCard;
   ProductCardToPreviewConnectionEdge: ProductCardToPreviewConnectionEdge;
-  ProductService: ProductService;
-  ProductServiceToPreviewConnectionEdge: ProductServiceToPreviewConnectionEdge;
-  ProductServiceToProConnection: ProductServiceToProConnection;
-  ProductServiceToProConnectionEdge: ProductServiceToProConnectionEdge;
-  ProductServiceToTermNodeConnection: ProductServiceToTermNodeConnection;
-  ProductServiceToTermNodeConnectionEdge: ProductServiceToTermNodeConnectionEdge;
   ProductsService: ProductsService;
   ProductsServiceToPostFormatConnection: ProductsServiceToPostFormatConnection;
   ProductsServiceToPostFormatConnectionEdge: ProductsServiceToPostFormatConnectionEdge;
@@ -27297,9 +38944,12 @@ export interface SchemaObjectTypes {
   ProductsServiceToRevisionConnectionEdge: ProductsServiceToRevisionConnectionEdge;
   ProductsServiceToTermNodeConnection: ProductsServiceToTermNodeConnection;
   ProductsServiceToTermNodeConnectionEdge: ProductsServiceToTermNodeConnectionEdge;
+  ProductsService_Standardpage: ProductsService_Standardpage;
   Project: Project;
   ProjectToPreviewConnectionEdge: ProjectToPreviewConnectionEdge;
   Query: Query;
+  RadioField: RadioField;
+  RadioFieldChoice: RadioFieldChoice;
   ReadingSettings: ReadingSettings;
   RegisterUserPayload: RegisterUserPayload;
   ResetUserPasswordPayload: ResetUserPasswordPayload;
@@ -27318,6 +38968,12 @@ export interface SchemaObjectTypes {
   RootQueryToEnqueuedScriptConnectionEdge: RootQueryToEnqueuedScriptConnectionEdge;
   RootQueryToEnqueuedStylesheetConnection: RootQueryToEnqueuedStylesheetConnection;
   RootQueryToEnqueuedStylesheetConnectionEdge: RootQueryToEnqueuedStylesheetConnectionEdge;
+  RootQueryToGfEntryConnection: RootQueryToGfEntryConnection;
+  RootQueryToGfEntryConnectionEdge: RootQueryToGfEntryConnectionEdge;
+  RootQueryToGfFormConnection: RootQueryToGfFormConnection;
+  RootQueryToGfFormConnectionEdge: RootQueryToGfFormConnectionEdge;
+  RootQueryToGfSubmittedEntryConnection: RootQueryToGfSubmittedEntryConnection;
+  RootQueryToGfSubmittedEntryConnectionEdge: RootQueryToGfSubmittedEntryConnectionEdge;
   RootQueryToMediaItemConnection: RootQueryToMediaItemConnection;
   RootQueryToMediaItemConnectionEdge: RootQueryToMediaItemConnectionEdge;
   RootQueryToMenuConnection: RootQueryToMenuConnection;
@@ -27368,8 +39024,14 @@ export interface SchemaObjectTypes {
   RootQueryToUserConnectionEdge: RootQueryToUserConnectionEdge;
   RootQueryToUserRoleConnection: RootQueryToUserRoleConnection;
   RootQueryToUserRoleConnectionEdge: RootQueryToUserRoleConnectionEdge;
+  SectionField: SectionField;
+  SelectField: SelectField;
+  SelectFieldChoice: SelectFieldChoice;
   SendPasswordResetEmailPayload: SendPasswordResetEmailPayload;
   Settings: Settings;
+  SignatureField: SignatureField;
+  SubmitGfDraftEntryPayload: SubmitGfDraftEntryPayload;
+  SubmitGfFormPayload: SubmitGfFormPayload;
   Subscription: Subscription;
   Tag: Tag;
   TagToContentNodeConnection: TagToContentNodeConnection;
@@ -27386,9 +39048,16 @@ export interface SchemaObjectTypes {
   TermNodeToEnqueuedScriptConnectionEdge: TermNodeToEnqueuedScriptConnectionEdge;
   TermNodeToEnqueuedStylesheetConnection: TermNodeToEnqueuedStylesheetConnection;
   TermNodeToEnqueuedStylesheetConnectionEdge: TermNodeToEnqueuedStylesheetConnectionEdge;
+  TextAreaField: TextAreaField;
+  TextField: TextField;
   Theme: Theme;
+  TimeField: TimeField;
+  TimeFieldValue: TimeFieldValue;
+  TimeInputProperty: TimeInputProperty;
   UpdateCategoryPayload: UpdateCategoryPayload;
   UpdateCommentPayload: UpdateCommentPayload;
+  UpdateGfDraftEntryPayload: UpdateGfDraftEntryPayload;
+  UpdateGfEntryPayload: UpdateGfEntryPayload;
   UpdateMediaItemPayload: UpdateMediaItemPayload;
   UpdateNewEventPayload: UpdateNewEventPayload;
   UpdateNewMediaCenterPayload: UpdateNewMediaCenterPayload;
@@ -27402,7 +39071,6 @@ export interface SchemaObjectTypes {
   UpdatePressReleasePayload: UpdatePressReleasePayload;
   UpdateProPayload: UpdateProPayload;
   UpdateProductCardPayload: UpdateProductCardPayload;
-  UpdateProductServicePayload: UpdateProductServicePayload;
   UpdateProductsServicePayload: UpdateProductsServicePayload;
   UpdateProjectPayload: UpdateProjectPayload;
   UpdateSettingsPayload: UpdateSettingsPayload;
@@ -27435,8 +39103,6 @@ export interface SchemaObjectTypes {
   UserToPostConnectionEdge: UserToPostConnectionEdge;
   UserToProductCardConnection: UserToProductCardConnection;
   UserToProductCardConnectionEdge: UserToProductCardConnectionEdge;
-  UserToProductServiceConnection: UserToProductServiceConnection;
-  UserToProductServiceConnectionEdge: UserToProductServiceConnectionEdge;
   UserToProjectConnection: UserToProjectConnection;
   UserToProjectConnectionEdge: UserToProjectConnectionEdge;
   UserToTeamMemberConnection: UserToTeamMemberConnection;
@@ -27444,12 +39110,17 @@ export interface SchemaObjectTypes {
   UserToUserRoleConnection: UserToUserRoleConnection;
   UserToUserRoleConnectionEdge: UserToUserRoleConnectionEdge;
   WPPageInfo: WPPageInfo;
+  WebsiteField: WebsiteField;
   WritingSettings: WritingSettings;
 }
 export type SchemaObjectTypesNames =
   | "AcfLink"
+  | "AddressField"
+  | "AddressFieldValue"
+  | "AddressInputProperty"
   | "AtlasContentModelerSettingsSettings"
   | "Avatar"
+  | "CaptchaField"
   | "Category"
   | "CategoryToAncestorsCategoryConnection"
   | "CategoryToAncestorsCategoryConnectionEdge"
@@ -27461,6 +39132,10 @@ export type SchemaObjectTypesNames =
   | "CategoryToPostConnection"
   | "CategoryToPostConnectionEdge"
   | "CategoryToTaxonomyConnectionEdge"
+  | "CheckboxField"
+  | "CheckboxFieldChoice"
+  | "CheckboxFieldValue"
+  | "CheckboxInputProperty"
   | "Comment"
   | "CommentAuthor"
   | "CommentToCommentConnection"
@@ -27468,7 +39143,10 @@ export type SchemaObjectTypesNames =
   | "CommentToCommenterConnectionEdge"
   | "CommentToContentNodeConnectionEdge"
   | "CommentToParentCommentConnectionEdge"
+  | "ConditionalLogic"
+  | "ConditionalLogicRule"
   | "ConditionalTags"
+  | "ConsentField"
   | "ContentNodeToContentTypeConnectionEdge"
   | "ContentNodeToEditLastConnectionEdge"
   | "ContentNodeToEditLockConnectionEdge"
@@ -27496,15 +39174,18 @@ export type SchemaObjectTypesNames =
   | "CreatePressReleasePayload"
   | "CreateProPayload"
   | "CreateProductCardPayload"
-  | "CreateProductServicePayload"
   | "CreateProductsServicePayload"
   | "CreateProjectPayload"
   | "CreateTagPayload"
   | "CreateTeamMemberPayload"
   | "CreateUserPayload"
+  | "DateField"
+  | "DateInputProperty"
   | "DefaultTemplate"
   | "DeleteCategoryPayload"
   | "DeleteCommentPayload"
+  | "DeleteGfDraftEntryPayload"
+  | "DeleteGfEntryPayload"
   | "DeleteMediaItemPayload"
   | "DeleteNewEventPayload"
   | "DeleteNewMediaCenterPayload"
@@ -27518,25 +39199,62 @@ export type SchemaObjectTypesNames =
   | "DeletePressReleasePayload"
   | "DeleteProPayload"
   | "DeleteProductCardPayload"
-  | "DeleteProductServicePayload"
   | "DeleteProductsServicePayload"
   | "DeleteProjectPayload"
   | "DeleteTagPayload"
   | "DeleteTeamMemberPayload"
   | "DeleteUserPayload"
   | "DiscussionSettings"
+  | "EmailField"
+  | "EmailInputProperty"
   | "EnqueuedScript"
   | "EnqueuedStylesheet"
+  | "FieldError"
+  | "FileUploadField"
+  | "FormButton"
+  | "FormConfirmation"
+  | "FormDataPolicies"
+  | "FormEntryDataPolicy"
+  | "FormEntryLimits"
+  | "FormFieldDataPolicy"
+  | "FormLastPageButton"
+  | "FormLogin"
+  | "FormNotification"
+  | "FormNotificationRouting"
+  | "FormPagination"
+  | "FormPersonalData"
+  | "FormPostCreation"
+  | "FormSaveAndContinue"
+  | "FormSchedule"
+  | "FormScheduleDetails"
   | "GeneralSettings"
   | "GenerateAuthorizationCodePayload"
+  | "GfDraftEntry"
+  | "GfEntryToFormFieldConnection"
+  | "GfEntryToFormFieldConnectionEdge"
+  | "GfForm"
+  | "GfFormToFormFieldConnection"
+  | "GfFormToFormFieldConnectionEdge"
+  | "GfFormToGfEntryConnection"
+  | "GfFormToGfEntryConnectionEdge"
+  | "GfLogger"
+  | "GfSettings"
+  | "GfSettingsLogging"
+  | "GfSubmittedEntry"
   | "HCMSFooter"
   | "HCMSHeader"
   | "HCMSSocialLinks"
+  | "HiddenField"
   | "HierarchicalContentNodeToContentNodeAncestorsConnection"
   | "HierarchicalContentNodeToContentNodeAncestorsConnectionEdge"
   | "HierarchicalContentNodeToContentNodeChildrenConnection"
   | "HierarchicalContentNodeToContentNodeChildrenConnectionEdge"
   | "HierarchicalContentNodeToParentContentNodeConnectionEdge"
+  | "HtmlField"
+  | "ImageFieldValue"
+  | "ListField"
+  | "ListFieldChoice"
+  | "ListFieldValue"
   | "MediaDetails"
   | "MediaItem"
   | "MediaItemMeta"
@@ -27551,7 +39269,13 @@ export type SchemaObjectTypesNames =
   | "MenuItemToMenuItemLinkableConnectionEdge"
   | "MenuToMenuItemConnection"
   | "MenuToMenuItemConnectionEdge"
+  | "MultiSelectField"
+  | "MultiSelectFieldChoice"
   | "Mutation"
+  | "NameField"
+  | "NameFieldChoice"
+  | "NameFieldValue"
+  | "NameInputProperty"
   | "NewEvent"
   | "NewEventToNewMediaCenterConnection"
   | "NewEventToNewMediaCenterConnectionEdge"
@@ -27588,7 +39312,9 @@ export type SchemaObjectTypesNames =
   | "NodeWithAuthorToUserConnectionEdge"
   | "NodeWithFeaturedImageToMediaItemConnectionEdge"
   | "NodeWithRevisionsToContentNodeConnectionEdge"
+  | "NumberField"
   | "Page"
+  | "PageField"
   | "PageToCommentConnection"
   | "PageToCommentConnectionEdge"
   | "PageToPreviewConnectionEdge"
@@ -27604,8 +39330,40 @@ export type SchemaObjectTypesNames =
   | "Page_Threecolumnstaticpage_cards"
   | "Partner"
   | "PartnerToPreviewConnectionEdge"
+  | "PasswordField"
+  | "PasswordInputProperty"
+  | "PhoneField"
   | "Plugin"
   | "Post"
+  | "PostCategoryCheckboxField"
+  | "PostCategoryFieldChoice"
+  | "PostCategoryInputProperty"
+  | "PostCategoryMultiSelectField"
+  | "PostCategoryRadioField"
+  | "PostCategorySelectField"
+  | "PostContentField"
+  | "PostCustomCheckboxField"
+  | "PostCustomCheckboxFieldChoice"
+  | "PostCustomDateField"
+  | "PostCustomEmailField"
+  | "PostCustomFileuploadField"
+  | "PostCustomHiddenField"
+  | "PostCustomInputProperty"
+  | "PostCustomListField"
+  | "PostCustomListFieldChoice"
+  | "PostCustomMultiSelectField"
+  | "PostCustomMultiSelectFieldChoice"
+  | "PostCustomNumberField"
+  | "PostCustomPhoneField"
+  | "PostCustomRadioField"
+  | "PostCustomRadioFieldChoice"
+  | "PostCustomSelectField"
+  | "PostCustomSelectFieldChoice"
+  | "PostCustomTextAreaField"
+  | "PostCustomTextField"
+  | "PostCustomTimeField"
+  | "PostCustomWebsiteField"
+  | "PostExcerptField"
   | "PostFormat"
   | "PostFormatToContentNodeConnection"
   | "PostFormatToContentNodeConnectionEdge"
@@ -27614,6 +39372,18 @@ export type SchemaObjectTypesNames =
   | "PostFormatToProductsServiceConnection"
   | "PostFormatToProductsServiceConnectionEdge"
   | "PostFormatToTaxonomyConnectionEdge"
+  | "PostImageField"
+  | "PostTagsCheckboxField"
+  | "PostTagsCheckboxFieldChoice"
+  | "PostTagsInputProperty"
+  | "PostTagsMultiSelectField"
+  | "PostTagsMultiSelectFieldChoice"
+  | "PostTagsRadioField"
+  | "PostTagsRadioFieldChoice"
+  | "PostTagsSelectField"
+  | "PostTagsSelectFieldChoice"
+  | "PostTagsTextField"
+  | "PostTitleField"
   | "PostToCategoryConnection"
   | "PostToCategoryConnectionEdge"
   | "PostToCommentConnection"
@@ -27639,22 +39409,12 @@ export type SchemaObjectTypesNames =
   | "Pro"
   | "ProToAncestorsProConnection"
   | "ProToAncestorsProConnectionEdge"
-  | "ProToContentNodeConnection"
-  | "ProToContentNodeConnectionEdge"
   | "ProToParentProConnectionEdge"
   | "ProToProConnection"
   | "ProToProConnectionEdge"
-  | "ProToProductServiceConnection"
-  | "ProToProductServiceConnectionEdge"
   | "ProToTaxonomyConnectionEdge"
   | "ProductCard"
   | "ProductCardToPreviewConnectionEdge"
-  | "ProductService"
-  | "ProductServiceToPreviewConnectionEdge"
-  | "ProductServiceToProConnection"
-  | "ProductServiceToProConnectionEdge"
-  | "ProductServiceToTermNodeConnection"
-  | "ProductServiceToTermNodeConnectionEdge"
   | "ProductsService"
   | "ProductsServiceToPostFormatConnection"
   | "ProductsServiceToPostFormatConnectionEdge"
@@ -27663,9 +39423,12 @@ export type SchemaObjectTypesNames =
   | "ProductsServiceToRevisionConnectionEdge"
   | "ProductsServiceToTermNodeConnection"
   | "ProductsServiceToTermNodeConnectionEdge"
+  | "ProductsService_Standardpage"
   | "Project"
   | "ProjectToPreviewConnectionEdge"
   | "Query"
+  | "RadioField"
+  | "RadioFieldChoice"
   | "ReadingSettings"
   | "RegisterUserPayload"
   | "ResetUserPasswordPayload"
@@ -27684,6 +39447,12 @@ export type SchemaObjectTypesNames =
   | "RootQueryToEnqueuedScriptConnectionEdge"
   | "RootQueryToEnqueuedStylesheetConnection"
   | "RootQueryToEnqueuedStylesheetConnectionEdge"
+  | "RootQueryToGfEntryConnection"
+  | "RootQueryToGfEntryConnectionEdge"
+  | "RootQueryToGfFormConnection"
+  | "RootQueryToGfFormConnectionEdge"
+  | "RootQueryToGfSubmittedEntryConnection"
+  | "RootQueryToGfSubmittedEntryConnectionEdge"
   | "RootQueryToMediaItemConnection"
   | "RootQueryToMediaItemConnectionEdge"
   | "RootQueryToMenuConnection"
@@ -27734,8 +39503,14 @@ export type SchemaObjectTypesNames =
   | "RootQueryToUserConnectionEdge"
   | "RootQueryToUserRoleConnection"
   | "RootQueryToUserRoleConnectionEdge"
+  | "SectionField"
+  | "SelectField"
+  | "SelectFieldChoice"
   | "SendPasswordResetEmailPayload"
   | "Settings"
+  | "SignatureField"
+  | "SubmitGfDraftEntryPayload"
+  | "SubmitGfFormPayload"
   | "Subscription"
   | "Tag"
   | "TagToContentNodeConnection"
@@ -27752,9 +39527,16 @@ export type SchemaObjectTypesNames =
   | "TermNodeToEnqueuedScriptConnectionEdge"
   | "TermNodeToEnqueuedStylesheetConnection"
   | "TermNodeToEnqueuedStylesheetConnectionEdge"
+  | "TextAreaField"
+  | "TextField"
   | "Theme"
+  | "TimeField"
+  | "TimeFieldValue"
+  | "TimeInputProperty"
   | "UpdateCategoryPayload"
   | "UpdateCommentPayload"
+  | "UpdateGfDraftEntryPayload"
+  | "UpdateGfEntryPayload"
   | "UpdateMediaItemPayload"
   | "UpdateNewEventPayload"
   | "UpdateNewMediaCenterPayload"
@@ -27768,7 +39550,6 @@ export type SchemaObjectTypesNames =
   | "UpdatePressReleasePayload"
   | "UpdateProPayload"
   | "UpdateProductCardPayload"
-  | "UpdateProductServicePayload"
   | "UpdateProductsServicePayload"
   | "UpdateProjectPayload"
   | "UpdateSettingsPayload"
@@ -27801,8 +39582,6 @@ export type SchemaObjectTypesNames =
   | "UserToPostConnectionEdge"
   | "UserToProductCardConnection"
   | "UserToProductCardConnectionEdge"
-  | "UserToProductServiceConnection"
-  | "UserToProductServiceConnectionEdge"
   | "UserToProjectConnection"
   | "UserToProjectConnectionEdge"
   | "UserToTeamMemberConnection"
@@ -27810,6 +39589,7 @@ export type SchemaObjectTypesNames =
   | "UserToUserRoleConnection"
   | "UserToUserRoleConnectionEdge"
   | "WPPageInfo"
+  | "WebsiteField"
   | "WritingSettings";
 
 export interface $AcfFieldGroup {
@@ -27821,6 +39601,7 @@ export interface $AcfFieldGroup {
   Page_Threecolumnstaticpage?: Page_Threecolumnstaticpage;
   Page_Threecolumnstaticpage_Banner?: Page_Threecolumnstaticpage_Banner;
   Page_Threecolumnstaticpage_cards?: Page_Threecolumnstaticpage_cards;
+  ProductsService_Standardpage?: ProductsService_Standardpage;
 }
 
 export interface $Commenter {
@@ -27839,7 +39620,6 @@ export interface $ContentNode {
   PressCoverage?: PressCoverage;
   PressRelease?: PressRelease;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   TeamMember?: TeamMember;
@@ -27858,6 +39638,8 @@ export interface $ContentTemplate {
 export interface $DatabaseIdentifier {
   Category?: Category;
   Comment?: Comment;
+  GfForm?: GfForm;
+  GfSubmittedEntry?: GfSubmittedEntry;
   MediaItem?: MediaItem;
   Menu?: Menu;
   MenuItem?: MenuItem;
@@ -27873,7 +39655,6 @@ export interface $DatabaseIdentifier {
   PressRelease?: PressRelease;
   Pro?: Pro;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   Tag?: Tag;
@@ -27884,6 +39665,66 @@ export interface $DatabaseIdentifier {
 export interface $EnqueuedAsset {
   EnqueuedScript?: EnqueuedScript;
   EnqueuedStylesheet?: EnqueuedStylesheet;
+}
+
+export interface $FormField {
+  AddressField?: AddressField;
+  CaptchaField?: CaptchaField;
+  CheckboxField?: CheckboxField;
+  ConsentField?: ConsentField;
+  DateField?: DateField;
+  EmailField?: EmailField;
+  FileUploadField?: FileUploadField;
+  HiddenField?: HiddenField;
+  HtmlField?: HtmlField;
+  ListField?: ListField;
+  MultiSelectField?: MultiSelectField;
+  NameField?: NameField;
+  NumberField?: NumberField;
+  PageField?: PageField;
+  PasswordField?: PasswordField;
+  PhoneField?: PhoneField;
+  PostCategoryCheckboxField?: PostCategoryCheckboxField;
+  PostCategoryMultiSelectField?: PostCategoryMultiSelectField;
+  PostCategoryRadioField?: PostCategoryRadioField;
+  PostCategorySelectField?: PostCategorySelectField;
+  PostContentField?: PostContentField;
+  PostCustomCheckboxField?: PostCustomCheckboxField;
+  PostCustomDateField?: PostCustomDateField;
+  PostCustomEmailField?: PostCustomEmailField;
+  PostCustomFileuploadField?: PostCustomFileuploadField;
+  PostCustomHiddenField?: PostCustomHiddenField;
+  PostCustomListField?: PostCustomListField;
+  PostCustomMultiSelectField?: PostCustomMultiSelectField;
+  PostCustomNumberField?: PostCustomNumberField;
+  PostCustomPhoneField?: PostCustomPhoneField;
+  PostCustomRadioField?: PostCustomRadioField;
+  PostCustomSelectField?: PostCustomSelectField;
+  PostCustomTextAreaField?: PostCustomTextAreaField;
+  PostCustomTextField?: PostCustomTextField;
+  PostCustomTimeField?: PostCustomTimeField;
+  PostCustomWebsiteField?: PostCustomWebsiteField;
+  PostExcerptField?: PostExcerptField;
+  PostImageField?: PostImageField;
+  PostTagsCheckboxField?: PostTagsCheckboxField;
+  PostTagsMultiSelectField?: PostTagsMultiSelectField;
+  PostTagsRadioField?: PostTagsRadioField;
+  PostTagsSelectField?: PostTagsSelectField;
+  PostTagsTextField?: PostTagsTextField;
+  PostTitleField?: PostTitleField;
+  RadioField?: RadioField;
+  SectionField?: SectionField;
+  SelectField?: SelectField;
+  SignatureField?: SignatureField;
+  TextAreaField?: TextAreaField;
+  TextField?: TextField;
+  TimeField?: TimeField;
+  WebsiteField?: WebsiteField;
+}
+
+export interface $GfEntry {
+  GfDraftEntry?: GfDraftEntry;
+  GfSubmittedEntry?: GfSubmittedEntry;
 }
 
 export interface $HierarchicalContentNode {
@@ -27929,6 +39770,9 @@ export interface $Node {
   ContentType?: ContentType;
   EnqueuedScript?: EnqueuedScript;
   EnqueuedStylesheet?: EnqueuedStylesheet;
+  GfDraftEntry?: GfDraftEntry;
+  GfForm?: GfForm;
+  GfSubmittedEntry?: GfSubmittedEntry;
   MediaItem?: MediaItem;
   Menu?: Menu;
   MenuItem?: MenuItem;
@@ -27945,7 +39789,6 @@ export interface $Node {
   PressRelease?: PressRelease;
   Pro?: Pro;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   Tag?: Tag;
@@ -27965,7 +39808,6 @@ export interface $NodeWithAuthor {
   Partner?: Partner;
   Post?: Post;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   Project?: Project;
   TeamMember?: TeamMember;
 }
@@ -27994,9 +39836,13 @@ export interface $NodeWithFeaturedImage {
   Post?: Post;
   PressCoverage?: PressCoverage;
   PressRelease?: PressRelease;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   TeamMember?: TeamMember;
+}
+
+export interface $NodeWithForm {
+  GfDraftEntry?: GfDraftEntry;
+  GfSubmittedEntry?: GfSubmittedEntry;
 }
 
 export interface $NodeWithPageAttributes {
@@ -28021,7 +39867,6 @@ export interface $NodeWithTemplate {
   PressCoverage?: PressCoverage;
   PressRelease?: PressRelease;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   TeamMember?: TeamMember;
@@ -28038,7 +39883,6 @@ export interface $NodeWithTitle {
   PressCoverage?: PressCoverage;
   PressRelease?: PressRelease;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   TeamMember?: TeamMember;
@@ -28046,6 +39890,39 @@ export interface $NodeWithTitle {
 
 export interface $NodeWithTrackbacks {
   Post?: Post;
+}
+
+export interface $PostCategoryField {
+  PostCategoryCheckboxField?: PostCategoryCheckboxField;
+  PostCategoryMultiSelectField?: PostCategoryMultiSelectField;
+  PostCategoryRadioField?: PostCategoryRadioField;
+  PostCategorySelectField?: PostCategorySelectField;
+}
+
+export interface $PostCustomField {
+  PostCustomCheckboxField?: PostCustomCheckboxField;
+  PostCustomDateField?: PostCustomDateField;
+  PostCustomEmailField?: PostCustomEmailField;
+  PostCustomFileuploadField?: PostCustomFileuploadField;
+  PostCustomHiddenField?: PostCustomHiddenField;
+  PostCustomListField?: PostCustomListField;
+  PostCustomMultiSelectField?: PostCustomMultiSelectField;
+  PostCustomNumberField?: PostCustomNumberField;
+  PostCustomPhoneField?: PostCustomPhoneField;
+  PostCustomRadioField?: PostCustomRadioField;
+  PostCustomSelectField?: PostCustomSelectField;
+  PostCustomTextAreaField?: PostCustomTextAreaField;
+  PostCustomTextField?: PostCustomTextField;
+  PostCustomTimeField?: PostCustomTimeField;
+  PostCustomWebsiteField?: PostCustomWebsiteField;
+}
+
+export interface $PostTagsField {
+  PostTagsCheckboxField?: PostTagsCheckboxField;
+  PostTagsMultiSelectField?: PostTagsMultiSelectField;
+  PostTagsRadioField?: PostTagsRadioField;
+  PostTagsSelectField?: PostTagsSelectField;
+  PostTagsTextField?: PostTagsTextField;
 }
 
 export interface $TermNode {
@@ -28072,7 +39949,6 @@ export interface $UniformResourceIdentifiable {
   PressRelease?: PressRelease;
   Pro?: Pro;
   ProductCard?: ProductCard;
-  ProductService?: ProductService;
   ProductsService?: ProductsService;
   Project?: Project;
   Tag?: Tag;
@@ -28091,9 +39967,17 @@ export type MakeNullable<T> = {
 };
 
 export interface ScalarsEnums extends MakeNullable<Scalars> {
+  AddressFieldCountryEnum: AddressFieldCountryEnum | undefined;
+  AddressFieldTypeEnum: AddressFieldTypeEnum | undefined;
+  AmPmEnum: AmPmEnum | undefined;
   AvatarRatingEnum: AvatarRatingEnum | undefined;
+  CaptchaFieldBadgePositionEnum: CaptchaFieldBadgePositionEnum | undefined;
+  CaptchaFieldThemeEnum: CaptchaFieldThemeEnum | undefined;
+  CaptchaFieldTypeEnum: CaptchaFieldTypeEnum | undefined;
   CategoryIdType: CategoryIdType | undefined;
   CommentsConnectionOrderbyEnum: CommentsConnectionOrderbyEnum | undefined;
+  ConditionalLogicActionTypeEnum: ConditionalLogicActionTypeEnum | undefined;
+  ConditionalLogicLogicTypeEnum: ConditionalLogicLogicTypeEnum | undefined;
   ContentNodeIdTypeEnum: ContentNodeIdTypeEnum | undefined;
   ContentTypeEnum: ContentTypeEnum | undefined;
   ContentTypeIdTypeEnum: ContentTypeIdTypeEnum | undefined;
@@ -28102,8 +39986,39 @@ export interface ScalarsEnums extends MakeNullable<Scalars> {
     | ContentTypesOfNewMediaCenterEnum
     | undefined;
   ContentTypesOfPostFormatEnum: ContentTypesOfPostFormatEnum | undefined;
-  ContentTypesOfProEnum: ContentTypesOfProEnum | undefined;
   ContentTypesOfTagEnum: ContentTypesOfTagEnum | undefined;
+  DateFieldFormatEnum: DateFieldFormatEnum | undefined;
+  DateFieldTypeEnum: DateFieldTypeEnum | undefined;
+  DraftEntryIdTypeEnum: DraftEntryIdTypeEnum | undefined;
+  EntryIdTypeEnum: EntryIdTypeEnum | undefined;
+  EntryStatusEnum: EntryStatusEnum | undefined;
+  EntryTypeEnum: EntryTypeEnum | undefined;
+  FieldFiltersModeEnum: FieldFiltersModeEnum | undefined;
+  FieldFiltersOperatorEnum: FieldFiltersOperatorEnum | undefined;
+  FormButtonTypeEnum: FormButtonTypeEnum | undefined;
+  FormConfirmationTypeEnum: FormConfirmationTypeEnum | undefined;
+  FormDescriptionPlacementEnum: FormDescriptionPlacementEnum | undefined;
+  FormFieldCalendarIconTypeEnum: FormFieldCalendarIconTypeEnum | undefined;
+  FormFieldDescriptionPlacementEnum:
+    | FormFieldDescriptionPlacementEnum
+    | undefined;
+  FormFieldLabelPlacementEnum: FormFieldLabelPlacementEnum | undefined;
+  FormFieldRequiredIndicatorEnum: FormFieldRequiredIndicatorEnum | undefined;
+  FormFieldSizeEnum: FormFieldSizeEnum | undefined;
+  FormFieldSubLabelPlacementEnum: FormFieldSubLabelPlacementEnum | undefined;
+  FormFieldTypeEnum: FormFieldTypeEnum | undefined;
+  FormFieldVisibilityEnum: FormFieldVisibilityEnum | undefined;
+  FormIdTypeEnum: FormIdTypeEnum | undefined;
+  FormLabelPlacementEnum: FormLabelPlacementEnum | undefined;
+  FormLimitEntriesPeriodEnum: FormLimitEntriesPeriodEnum | undefined;
+  FormNotificationToTypeEnum: FormNotificationToTypeEnum | undefined;
+  FormPageProgressStyleEnum: FormPageProgressStyleEnum | undefined;
+  FormPageProgressTypeEnum: FormPageProgressTypeEnum | undefined;
+  FormRetentionPolicyEnum: FormRetentionPolicyEnum | undefined;
+  FormRuleOperatorEnum: FormRuleOperatorEnum | undefined;
+  FormStatusEnum: FormStatusEnum | undefined;
+  FormSubLabelPlacementEnum: FormSubLabelPlacementEnum | undefined;
+  GfCurrencyEnum: GfCurrencyEnum | undefined;
   MediaItemIdType: MediaItemIdType | undefined;
   MediaItemSizeEnum: MediaItemSizeEnum | undefined;
   MediaItemStatusEnum: MediaItemStatusEnum | undefined;
@@ -28115,10 +40030,14 @@ export interface ScalarsEnums extends MakeNullable<Scalars> {
   NewMediaCenterIdType: NewMediaCenterIdType | undefined;
   NewPressCoverageIdType: NewPressCoverageIdType | undefined;
   NewPressReleaseIdType: NewPressReleaseIdType | undefined;
+  NumberFieldFormatEnum: NumberFieldFormatEnum | undefined;
   OrderEnum: OrderEnum | undefined;
   PageIdType: PageIdType | undefined;
   PartnerIdType: PartnerIdType | undefined;
+  PasswordFieldMinStrengthEnum: PasswordFieldMinStrengthEnum | undefined;
+  PhoneFieldFormatEnum: PhoneFieldFormatEnum | undefined;
   PostFormatIdType: PostFormatIdType | undefined;
+  PostFormatTypeEnum: PostFormatTypeEnum | undefined;
   PostIdType: PostIdType | undefined;
   PostObjectFieldFormatEnum: PostObjectFieldFormatEnum | undefined;
   PostObjectsConnectionDateColumnEnum:
@@ -28132,10 +40051,12 @@ export interface ScalarsEnums extends MakeNullable<Scalars> {
   PressReleaseIdType: PressReleaseIdType | undefined;
   ProIdType: ProIdType | undefined;
   ProductCardIdType: ProductCardIdType | undefined;
-  ProductServiceIdType: ProductServiceIdType | undefined;
   ProductsServiceIdType: ProductsServiceIdType | undefined;
   ProjectIdType: ProjectIdType | undefined;
   RelationEnum: RelationEnum | undefined;
+  SignatureFieldBorderStyleEnum: SignatureFieldBorderStyleEnum | undefined;
+  SignatureFieldBorderWidthEnum: SignatureFieldBorderWidthEnum | undefined;
+  SubmittedEntryIdTypeEnum: SubmittedEntryIdTypeEnum | undefined;
   TagIdType: TagIdType | undefined;
   TaxonomyEnum: TaxonomyEnum | undefined;
   TaxonomyIdTypeEnum: TaxonomyIdTypeEnum | undefined;
@@ -28144,6 +40065,7 @@ export interface ScalarsEnums extends MakeNullable<Scalars> {
   TermObjectsConnectionOrderbyEnum:
     | TermObjectsConnectionOrderbyEnum
     | undefined;
+  TimeFieldFormatEnum: TimeFieldFormatEnum | undefined;
   UserNodeIdTypeEnum: UserNodeIdTypeEnum | undefined;
   UserRoleEnum: UserRoleEnum | undefined;
   UsersConnectionOrderbyEnum: UsersConnectionOrderbyEnum | undefined;
