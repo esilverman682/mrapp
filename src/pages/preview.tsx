@@ -2,6 +2,7 @@ import type { Page, Post } from 'client';
 import { client } from 'client';
 import { PostComponent } from './posts/[postSlug]';
 import { PageComponent } from './[...pageUri]';
+//import { ProductsComponent } from './products-services/[postSlug]';
 
 export default function Preview() {
   const isLoading = client.useIsLoading();

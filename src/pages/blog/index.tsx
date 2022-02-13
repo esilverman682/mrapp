@@ -1,15 +1,12 @@
 import { getNextStaticProps } from '@faustjs/next';
-import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from '../../client';
-import { Footer, Header, Pagination, Posts } from '../../components';
+import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
+import { Footer, Header, Pagination, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
+import Blog from '../../components/Blog'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import styles from 'scss/pages/posts.module.scss';
-import type { Post } from '../../client';
-import { Hero } from '../../components';
-
-
 
 const POSTS_PER_PAGE = 6;
 
@@ -44,7 +41,18 @@ export default function Page() {
       </Head>
 
       <main className="content content-index">
-        <Posts
+  
+      <Hero
+          title="Get Started with Faust.js"
+          buttonText={"Developer Docs"}
+          buttonURL="https://faustjs.org"
+          button2Text="Faust.js on GitHub"
+          button2URL="https://github.com/wpengine/faustjs"
+          bgImage="/images/headless_hero_background.webp"
+          id={styles.home_hero}
+        />
+
+        <Blog
           posts={posts.nodes}
           heading="Blog Posts"
           headingLevel="h2"
@@ -52,7 +60,7 @@ export default function Page() {
           id={styles.post_list}
         />
  
-        <Pagination pageInfo={posts.pageInfo} basePath="/posts" />
+        <Pagination pageInfo={posts.pageInfo} basePath="/blog" />
       </main>
 
       <Footer copyrightHolder={generalSettings.title} />

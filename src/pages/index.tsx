@@ -3,10 +3,10 @@ import { getNextStaticProps } from '@faustjs/next';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { CTA, Footer, Header, Hero, Posts } from 'components';
+import { CTA, Footer, Header, Hero } from 'components';
 import styles from 'scss/pages/home.module.scss';
 import { client } from 'client';
-
+import Blog from '../components/Blog'
 export default function Page() {
   const { usePosts, useQuery } = client;
   const generalSettings = useQuery().generalSettings;
@@ -15,7 +15,13 @@ export default function Page() {
     where: {
       categoryName: 'uncategorized',
     },
+
   });
+  const singularpost = usePosts({
+    first: 1,
+    where: {
+      categoryName: 'uncategorized',
+    }})
 
   return (
     <>
@@ -32,12 +38,13 @@ export default function Page() {
 
       <main className="content">
         <Hero
-          title="Get Started with Faust.js"
+ 
+         title="Get Started with Faust.js"
           buttonText={"Developer Docs"}
           buttonURL="https://faustjs.org"
           button2Text="Faust.js on GitHub"
           button2URL="https://github.com/wpengine/faustjs"
-          bgImage="/images/headless_hero_background.webp"
+       bgImage="/images/headless_hero_background.webp"
           id={styles.home_hero}
         >
           <p>
@@ -152,7 +159,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <Posts
+        <Blog
           posts={posts.nodes}
           heading="Latest Posts"
           intro="The Posts component in src/pages/index.tsx shows the latest six posts from the connected WordPress site."
