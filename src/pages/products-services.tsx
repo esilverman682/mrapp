@@ -19,7 +19,7 @@ export default function Page() {
         <title>Products Services - {generalSettings.title}</title>
       </Head>
 
-      <Hero title="Custom Page" />
+      <Hero title="Products Services" />
 
       <main className="content content-single">
         <div className="wrap">
