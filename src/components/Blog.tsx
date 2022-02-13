@@ -14,7 +14,7 @@ interface Props {
   readMoreText?: string;
 }
 
-function Posts({
+function Blog({
   posts,
   intro,
   heading,
@@ -65,4 +65,4 @@ function Posts({
   );
 }
 
-export default Posts;
+export default Blog;

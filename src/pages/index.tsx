@@ -3,10 +3,10 @@ import { getNextStaticProps } from '@faustjs/next';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import { CTA, Footer, Header, Hero, Posts } from 'components';
+import { CTA, Footer, Header, Hero } from 'components';
 import styles from 'scss/pages/home.module.scss';
 import { client } from 'client';
-
+import Blog from '../components/Blog'
 export default function Page() {
   const { usePosts, useQuery } = client;
   const generalSettings = useQuery().generalSettings;
@@ -152,7 +152,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <Posts
+        <Blog
           posts={posts.nodes}
           heading="Latest Posts"
           intro="The Posts component in src/pages/index.tsx shows the latest six posts from the connected WordPress site."
