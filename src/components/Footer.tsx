@@ -21,7 +21,7 @@ function Footer({
 }: Props): JSX.Element {
   const { menuItems } = client.useQuery()
   const links = menuItems({
-    where: { location: MenuLocationEnum.FOOTER },
+    where: { location: MenuLocationEnum.HCMS_MENU_FOOTER },
   }).nodes;
 
 // function Footer({ copyrightHolder = 'Company Name' }: Props): JSX.Element {
