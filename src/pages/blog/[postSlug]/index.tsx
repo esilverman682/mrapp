@@ -26,11 +26,9 @@ export function PostComponent({ post }: PostProps) {
       </Head>
 
       <Hero
-
-// This is for the actual individual posts
+      // This is for the actual individual posts
         title={post?.title()}
         bgImage={post?.featuredImage?.node?.sourceUrl()}
-        
       />
 
       <main className="content content-single">
