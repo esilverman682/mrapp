@@ -1,10 +1,16 @@
 import { getNextStaticProps } from '@faustjs/next';
-import { client } from 'client';
-import { Footer, Header, Hero } from 'components';
+ import { Footer, Header, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
-
-export default function Page() {
+ import { client, Page as PageType } from 'client';
+import Page from './[...pageUri]';
+ 
+ 
+ export interface PageProps {
+  page: PageType | PageType['preview']['node'] | null | undefined;
+}
+export function PageComponent({ page }: PageProps) {
+ 
   const { useQuery } = client;
   const generalSettings = useQuery().generalSettings;
 
@@ -20,7 +26,15 @@ export default function Page() {
       </Head>
 
       <Hero title="Products Services" />
-
+      <Hero
+       // title={page?.title()}
+       // bgImage={page?.featuredImage.node.sourceUrl()}
+       title={page?.standardPage?.heroTitle}
+       subtitle={page?.standardPage?.heroDescription}
+       buttonText={page?.standardPage?.buttonLink?.title}
+       buttonURL={page?.standardPage?.buttonLink?.url}
+       bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
+      />
       <main className="content content-single">
         <div className="wrap">
           <p>
