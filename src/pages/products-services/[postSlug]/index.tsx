@@ -1,14 +1,14 @@
 import { getNextStaticProps, is404 } from '@faustjs/next';
+import { client, Post } from 'client';
 import { Footer, Header, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
-import { client, Page as PageType } from 'client';
 
-export interface PageProps {
-  page: PageType | PageType['preview']['node'] | null | undefined;
+export interface PostProps {
+  post: Post | Post['preview']['node'] | null | undefined;
 }
 
-export function PageComponent({ page }: PageProps) {
+export function PostComponent({ post }: PostProps) {
   const { useQuery } = client;
   const generalSettings = useQuery().generalSettings;
 
@@ -21,23 +21,18 @@ export function PageComponent({ page }: PageProps) {
 
       <Head>
         <title>
-          {page?.title()} - {generalSettings.title}
+          {post?.title()} - {generalSettings.title}
         </title>
       </Head>
 
       <Hero
-       // title={page?.title()}
-       // bgImage={page?.featuredImage.node.sourceUrl()}
-       title={page?.standardPage?.heroTitle}
-       subtitle={page?.standardPage?.heroDescription}
-       buttonText={page?.standardPage?.buttonLink?.title}
-       buttonURL={page?.standardPage?.buttonLink?.url}
-       bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
+        title={post?.title()}
+        bgImage={post?.featuredImage?.node?.sourceUrl()}
       />
 
       <main className="content content-single">
         <div className="wrap">
-          <div dangerouslySetInnerHTML={{ __html: page?.content() ?? '' }} />
+          <div dangerouslySetInnerHTML={{ __html: post?.content() ?? '' }} />
         </div>
       </main>
 
@@ -47,12 +42,10 @@ export function PageComponent({ page }: PageProps) {
 }
 
 export default function Page() {
-  const { usePage } = client;
-  const page = usePage();
- // const page = usePage({
-//    id: 'hello-world'
-//});
-  return <PageComponent page={page} />;
+  const { usePost } = client;
+  const post = usePost();
+
+  return <PostComponent post={post} />;
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
