@@ -1,6 +1,6 @@
 import { getNextStaticProps } from '@faustjs/next';
 import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
-import { Footer, Header, Pagination } from 'components';
+import { Footer, Header, Pagination, Hero } from 'components';
 import { GetStaticPropsContext } from 'next';
 import Blog from '../../components/Blog'
 import Head from 'next/head';
@@ -41,6 +41,17 @@ export default function Page() {
       </Head>
 
       <main className="content content-index">
+  
+      <Hero
+          title="Get Started with Faust.js"
+          buttonText={"Developer Docs"}
+          buttonURL="https://faustjs.org"
+          button2Text="Faust.js on GitHub"
+          button2URL="https://github.com/wpengine/faustjs"
+          bgImage="/images/headless_hero_background.webp"
+          id={styles.home_hero}
+        />
+
         <Blog
           posts={posts.nodes}
           heading="Blog Posts"
