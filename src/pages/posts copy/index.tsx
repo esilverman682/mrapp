@@ -1,32 +1,15 @@
 import { getNextStaticProps } from '@faustjs/next';
-import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from 'client';
-import { Footer, Header, Pagination, Posts } from 'components';
+import { client, OrderEnum, PostObjectsConnectionOrderbyEnum } from '../../client';
+import { Footer, Header, Pagination, Posts } from '../../components';
 import { GetStaticPropsContext } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import styles from 'scss/pages/posts.module.scss';
 
-
-import {  is404 } from '@faustjs/next';
-import {  Hero } from 'components';
- 
-import {  Page as PageType } from 'client';
-import Page from 'pages';
-
-
-
 const POSTS_PER_PAGE = 6;
 
-
-export interface PageProps {
-  page: PageType | PageType['preview']['node'] | null | undefined;
-}
-
-export function PageComponent({ page }: PageProps) {
-  
-
- 
+export default function Page() {
   const { query = {} } = useRouter();
   const { postSlug, postCursor } = query;
   const { usePosts, useQuery } = client;
@@ -57,16 +40,6 @@ export function PageComponent({ page }: PageProps) {
       </Head>
 
       <main className="content content-index">
-      <Hero
-       // title={page?.title()}
-       // bgImage={page?.featuredImage.node.sourceUrl()}
-       title={page?.standardPage?.heroTitle}
-       subtitle={page?.standardPage?.heroDescription}
-       buttonText={page?.standardPage?.buttonLink?.title}
-       buttonURL={page?.standardPage?.buttonLink?.url}
-       bgImage={page?.standardPage?.heroBanner?.mediaItemUrl}
-      />
-
         <Posts
           posts={posts.nodes}
           heading="Blog Posts"
