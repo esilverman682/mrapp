@@ -23,7 +23,7 @@ export interface PageProps {
   page: PageType | PageType['preview']['node'] | null | undefined;
 }
 
-export function PageComponent({ page }: PageProps) {
+export default function PageComponent({ page }: PageProps) {
   
 
  
