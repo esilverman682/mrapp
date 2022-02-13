@@ -24,6 +24,10 @@ export default function Preview() {
       const post = node as Post;
       return <PostComponent post={post} />;
     }
+    case 'ProductService': {
+      const productz = node as Post;
+      return <PostComponent post={productz} />;
+    }
     // Add custom post types here as needed
     default: {
       throw new Error(`Unknown post type: ${typeName}`);
