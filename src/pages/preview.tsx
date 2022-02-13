@@ -25,6 +25,10 @@ export default function Preview() {
       const post = node as Post;
       return <PostComponent post={post} />;
     }
+    case 'ProductService': {
+      const productz = node as Post;
+      return <PostComponent post={productz} />;
+    }
  //   case 'ProductsComponent': {
    //   const post = node as Post;
   //    return <ProductsComponent post={post} />;
